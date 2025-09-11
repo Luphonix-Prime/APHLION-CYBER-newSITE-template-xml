@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+
+{% block title %}Compliance Summary | Aphelion Cyber Security{% endblock %}
+{% block meta_description %}Compliance summary dashboard with policy and asset grades, pass/fail analytics, and
+compliance frameworks.{% endblock %}
+
+{% block content %}
+<div class="pt-32 pb-20 bg-gradient-cyber min-h-screen">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="bg-[#1e293b] border border-[#6e3691]/30 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 space-y-4 lg:space-y-0">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full lg:w-auto">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">Compliance Summary</h1>
+                    <a href="{% url 'addons' %}"
+                        class="hover:bg-transparent text-purple-500 bg-white border border-transparent hover:border-purple-500 rounded font-bold py-2 px-4 rounded-r w-full sm:w-auto text-center">
+                        <i class="ri-add-line mr-2"></i> More Addons
+                    </a>
+                </div>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full lg:w-auto">
+                    <span class="text-sm text-gray-400">View as User:</span>
+                    <div class="relative inline-block text-left w-full sm:w-auto">
+                        <button type="button" onclick="toggleUserDropdown()"
+                            class="w-full sm:w-auto bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2 text-sm flex items-center justify-between space-x-2">
+                            <span id="selectedUser">All Users</span>
+                            <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="userDropdown"
+                            class="hidden absolute z-10 mt-2 w-full sm:w-auto rounded-lg bg-[#1e293b] shadow-lg ring-1 ring-black ring-opacity-5">
+                            <div class="py-1" role="menu">
+                                <button onclick="selectUser('all', 'All Users')"
+                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">All
+                                    Users</button>
+                                <button onclick="selectUser('pratik', 'Pratik Patel')"
+                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">
+                                    <div class="flex items-center space-x-2">
+                                        <img src="/static/images/AWS-Marketplace-Logo-PNG-to-svg-1.png"
+                                            alt="AWS" class="w-5 h-5">
+                                        <span>Pratik Patel</span>
+                                    </div>
+                                </button>
+                                <button onclick="selectUser('saumya', 'Saumya')"
+                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">Saumya</button>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        function toggleUserDropdown() {
+                            const dropdown = document.getElementById('userDropdown');
+                            dropdown.classList.toggle('hidden');
+                        }
+                        function selectUser(value, label) {
+                            document.getElementById('selectedUser').textContent = label;
+                            document.getElementById('userDropdown').classList.add('hidden');
+                            switchUser(value);
+                        }
+                        document.addEventListener('click', function (event) {
+                            const dropdown = document.getElementById('userDropdown');
+                            const button = event.target.closest('button');
+                            if (!button || !button.hasAttribute('onclick') || !button.getAttribute('onclick').includes('toggleUserDropdown')) {
+                                dropdown.classList.add('hidden');
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <p class="text-gray-400 mb-8">Scan completed 9 hours ago</p>
+            <div class="space-y-8">
+                <!-- Overall Policy Checks Grade -->
+                <div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mb-2 space-y-2 sm:space-y-0">
+                        <span class="text-sm font-medium text-gray-300 mr-2">Overall Policy Checks Grade</span>
+                        <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Grade: D</span>
+                    </div>
+                    <div class="w-full h-3 bg-gray-700 rounded-full overflow-hidden mb-1">
+                        <div class="bg-red-600 h-3 rounded-full" style="width:36%"></div>
+                    </div>
+                    <span class="text-xs text-gray-400">36%</span>
+                </div>
+                <!-- Overall Assets Grade -->
+                <div>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center mb-2 space-y-2 sm:space-y-0">
+                        <span class="text-sm font-medium text-gray-300 mr-2">Overall Assets Grade</span>
+                        <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">Grade: C</span>
+                    </div>
+                    <div class="w-full h-3 bg-gray-700 rounded-full overflow-hidden mb-1">
+                        <div class="bg-blue-600 h-3 rounded-full" style="width:52%"></div>
+                    </div>
+                    <span class="text-xs text-gray-400">52%</span>
+                </div>
+            </div>
+        </div>
+        <!-- Policy Checks Pass/Fail Percent -->
+        <div class="bg-[#1e293b] border border-gray-800 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
+            <h2 class="text-2xl font-bold mb-6">Policy Checks Pass/Fail Percent</h2>
+            <div class="space-y-8">
+                <!-- CIS Level 1 -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <span class="font-medium text-gray-300">CIS Level 1</span>
+                        <span class="ml-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Grade: D
+                            (25%)</span>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <div class="w-1/4 h-4 bg-green-400 rounded-l-full"></div>
+                        <div class="w-3/4 h-4 bg-red-400 rounded-r-full"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-400">
+                        <span>Pass: 25%</span>
+                        <span>Fail: 60%</span>
+                    </div>
+                </div>
+                <!-- CIS Level 2 -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <span class="font-medium text-gray-300">CIS Level 2</span>
+                        <span class="ml-4 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Grade: D
+                            (38%)</span>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <div class="w-2/5 h-4 bg-green-400 rounded-l-full"></div>
+                        <div class="w-3/5 h-4 bg-red-400 rounded-r-full"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-400">
+                        <span>Pass: 38%</span>
+                        <span>Fail: 62%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Assets Pass/Fail Percent -->
+        <div class="bg-[#1e293b] border border-gray-800 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
+            <h2 class="text-2xl font-bold mb-6">Assets Pass/Fail Percent</h2>
+            <div class="space-y-8">
+                <!-- CIS Level 1 -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <span class="font-medium text-gray-300">CIS Level 1</span>
+                        <span class="ml-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">Grade: C
+                            (48%)</span>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <div class="w-1/2 h-4 bg-green-400 rounded-l-full"></div>
+                        <div class="w-1/2 h-4 bg-red-400 rounded-r-full"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-400">
+                        <span>Pass: 48%</span>
+                        <span>Fail: 52%</span>
+                    </div>
+                </div>
+                <!-- CIS Level 2 -->
+                <div>
+                    <div class="flex items-center mb-2">
+                        <span class="font-medium text-gray-300">CIS Level 2</span>
+                        <span class="ml-4 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">Grade: C
+                            (56%)</span>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <div class="w-3/5 h-4 bg-green-400 rounded-l-full"></div>
+                        <div class="w-2/5 h-4 bg-red-400 rounded-r-full"></div>
+                    </div>
+                    <!-- <div class="flex justify-between items-center mb-8">
+                        <div class="flex items-center justify-between mb-8">
+                            <h1 class="text-3xl md:text-4xl font-bold">Compliance Summary</h1>
+                            <a href="#"
+                                class="inline-flex items-center bg-white text-[#6e3691] border border-[#6e3691] hover:bg-[#6e3691] hover:text-white font-semibold px-6 py-2 rounded-lg shadow transition-colors">
+                                <i class="ri-add-line mr-2"></i> More Addons
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-sm text-gray-400">View as User:</span>
+                            <div class="relative inline-block text-left">
+                                <button type="button" onclick="toggleUserDropdown()"
+                                    class="bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2 text-sm flex items-center space-x-2">
+                                    <span id="selectedUser">All Users</span>
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </button>
+                                <div id="userDropdown"
+                                    class="hidden absolute z-10 mt-2 w-56 rounded-lg bg-[#1e293b] shadow-lg ring-1 ring-black ring-opacity-5">
+                                    <div class="py-1" role="menu">
+                                        <button onclick="selectUser('all', 'All Users')"
+                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">All
+                                            Users</button>
+                                        <button onclick="selectUser('pratik', 'Pratik Patel')"
+                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">
+                                            <div class="flex items-center space-x-2">
+                                                <img src="/static/images/AWS-Marketplace-Logo-PNG-to-svg-1.png"
+                                                    alt="AWS" class="w-5 h-5">
+                                                <span>Pratik Patel</span>
+                                            </div>
+                                        </button>
+                                        <button onclick="selectUser('saumya', 'Saumya')"
+                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">Saumya</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                function toggleUserDropdown() {
+                                    const dropdown = document.getElementById('userDropdown');
+                                    dropdown.classList.toggle('hidden');
+                                }
+                                function selectUser(value, label) {
+                                    document.getElementById('selectedUser').textContent = label;
+                                    document.getElementById('userDropdown').classList.add('hidden');
+                                    switchUser(value);
+                                }
+                                document.addEventListener('click', function (event) {
+                                    const dropdown = document.getElementById('userDropdown');
+                                    const button = event.target.closest('button');
+                                    if (!button || !button.hasAttribute('onclick') || !button.getAttribute('onclick').includes('toggleUserDropdown')) {
+                                        dropdown.classList.add('hidden');
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

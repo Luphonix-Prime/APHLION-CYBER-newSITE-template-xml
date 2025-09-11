@@ -1,0 +1,788 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Aphelion Cyber Security{% endblock %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'images/new logo.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'images/new logo.png' %}">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{% block meta_description %}Advanced Cybersecurity for the Digital Enterprise. Protect your organization with our comprehensive security platform.{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Aphelion Cyber Security - Advanced Protection for Enterprises{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Protect your organization with our comprehensive security platform. Detect, respond, and remediate threats before they impact your business.{% endblock %}">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="/static/css/main.css" rel="stylesheet">
+    
+    <style>
+        /* Base */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f;
+            color: #f8fafc;
+        }
+        
+        /* Services Dropdown Animations */
+        #servicesMenu {
+            opacity: 0;
+            transform: translateY(-10px) scale(0.95);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+        
+        #servicesMenu:not(.hidden) {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+        
+        /* Service Section Animations */
+        .service-section {
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-section:hover {
+            background-color: rgba(15, 23, 42, 0.3);
+        }
+        
+        .service-section-button {
+            transition: all 0.3s ease;
+        }
+        
+        .service-section-button:hover {
+            background-color: rgba(15, 23, 42, 0.5);
+            transform: translateX(4px);
+        }
+        
+        .service-section-list {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(-8px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-section-list:not(.hidden) {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-section-arrow {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-section-arrow.rotated {
+            transform: rotate(180deg);
+        }
+        
+        .service-link {
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(150, 85, 189, 0.1), rgba(150, 85, 189, 0.2));
+            transition: width 0.3s ease;
+        }
+        
+        .service-link:hover::before {
+            width: 100%;
+        }
+        
+        .service-link:hover {
+            background-color: rgba(15, 23, 42, 0.7);
+            transform: translateX(8px);
+            padding-left: 20px;
+        }
+        
+        /* Staggered Animation for Service Items */
+        .service-section-list li {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInStagger 0.3s ease forwards;
+        }
+        
+        .service-section-list:not(.hidden) li:nth-child(1) { animation-delay: 0.05s; }
+        .service-section-list:not(.hidden) li:nth-child(2) { animation-delay: 0.1s; }
+        .service-section-list:not(.hidden) li:nth-child(3) { animation-delay: 0.15s; }
+        .service-section-list:not(.hidden) li:nth-child(4) { animation-delay: 0.2s; }
+        .service-section-list:not(.hidden) li:nth-child(5) { animation-delay: 0.25s; }
+        .service-section-list:not(.hidden) li:nth-child(6) { animation-delay: 0.3s; }
+        .service-section-list:not(.hidden) li:nth-child(7) { animation-delay: 0.35s; }
+        .service-section-list:not(.hidden) li:nth-child(8) { animation-delay: 0.4s; }
+        .service-section-list:not(.hidden) li:nth-child(9) { animation-delay: 0.45s; }
+        .service-section-list:not(.hidden) li:nth-child(10) { animation-delay: 0.5s; }
+        
+        @keyframes slideInStagger {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        /* Hover effect for main Services button */
+        .services-button {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .services-button::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #6e3691;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .services-button:hover::after {
+            width: 100%;
+        }
+        
+        /* Orbital Animation */
+        .orbital-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            margin: auto;
+        }
+    
+        .center-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: clamp(40px, 16%, 80px);
+            height: clamp(40px, 16%, 80px);
+            background: #6e3691;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+    
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 50%;
+        }
+    
+        .orbit-1 { width: 40%; height: 40%; animation: rotate 20s linear infinite; }
+        .orbit-2 { width: 60%; height: 60%; animation: rotate 25s linear infinite reverse; }
+        .orbit-3 { width: 80%; height: 80%; animation: rotate 30s linear infinite; }
+    
+        .orbital-icon {
+            position: absolute;
+            width: clamp(20px, 8%, 40px);
+            height: clamp(20px, 8%, 40px);
+            background: rgba(99, 102, 241, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    
+        .orbital-icon i {
+            font-size: 1.25rem;
+        }
+    
+        .feature-label {
+            position: absolute;
+            background: rgba(99, 102, 241, 0.1);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            backdrop-filter: blur(4px);
+        }
+        
+        /* Custom colors */
+        :root {
+            --color-primary: #141c2e;
+            --color-primary-light: #1e293b;
+            --color-secondary: #6e3691;
+            --color-secondary-dark: #6e3691;
+            --color-accent: #8b5cf6;
+            --color-accent-light: #a78bfa;
+            --color-dark: #0f0f0f;
+            --color-dark-light: #1e293b;
+        }
+        
+        /* Gradients and effects */
+        .text-gradient {
+            background-image: linear-gradient(to right, #6e3691, #6e3691);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .bg-cyber-pattern {
+            background-image: radial-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .bg-gradient-cyber {
+            background: linear-gradient(125deg, #141c2e 0%, #0f0f0f 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(99, 102, 241, 0.04);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        
+        #particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(1px);
+        }
+    </style>
+    
+    {% block extra_css %}{% endblock %}
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-4">
+                    <a href="{% url 'home' %}" class="flex items-center">
+                        <img src="{% static 'images/new logo.png' %}" alt="Aphelion Cyber" class="h-10 w-auto mr-3">
+                        <span class="text-2xl font-bold text-white">Aphelion<span class="text-[#6e3691]">Cyber</span></span>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <nav>
+                        <ul class="flex space-x-8">
+                            <li><a href="{% url 'home' %}" class="text-gray-300 hover:text-white font-medium">Home</a></li>
+                            <li class="group relative">
+                                <button onmouseenter="showServicesMenu()" class="services-button text-gray-300 hover:text-white font-medium flex items-center">
+                                    Services
+                                    <i class="ri-arrow-down-s-line ml-1 text-gray-400 group-hover:text-secondary transition-all duration-300"></i>
+                                </button>
+                                <div id="servicesMenu" class="absolute left-0 top-full mt-2 w-72 hidden z-50" onmouseleave="hideServicesMenu()">
+                                    <div class="bg-[#1e293b] rounded-xl shadow-2xl border border-gray-700 backdrop-blur-sm">
+                                        <div class="py-3">
+                                            <!-- Managed Security Services -->
+                                            <div class="service-category group/category relative">
+                                                <button class="w-full flex items-center justify-between px-4 py-3 text-white font-medium hover:bg-[#0f172a]/50 rounded-lg mx-2 transition-all duration-200">
+                                                    <span class="text-sm">Managed Security Services</span>
+                                                    <i class="ri-arrow-right-s-line text-gray-400"></i>
+                                                </button>
+                                                <div class="absolute left-full top-0 ml-1 w-72 bg-[#1e293b] rounded-xl shadow-2xl border border-gray-700 backdrop-blur-sm opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-300 z-50">
+                                                    <div class="py-3">
+                                                        <a href="{% url 'incident_response' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Incident Response</a>
+                                                        <a href="{% url 'deep_web_monitoring' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Deep Web Monitoring</a>
+                                                        <a href="{% url 'security_operations_center' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Security Operation Center</a>
+                                                        <a href="{% url 'identity_access_management' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Identity & Access Management</a>
+                                                        <a href="{% url 'third_party_risk_management' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Third Party Risk Management</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Cyber Defense -->
+                                            <div class="service-category group/category relative">
+                                                <button class="w-full flex items-center justify-between px-4 py-3 text-white font-medium hover:bg-[#0f172a]/50 rounded-lg mx-2 transition-all duration-200">
+                                                    <span class="text-sm">Cyber Defense</span>
+                                                    <i class="ri-arrow-right-s-line text-gray-400"></i>
+                                                </button>
+                                                <div class="absolute left-full top-0 ml-1 w-80 bg-[#1e293b] rounded-xl shadow-2xl border border-gray-700 backdrop-blur-sm opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-300 z-50">
+                                                    <div class="py-3">
+                                                        <a href="{% url 'vapt' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">VAPT</a>
+                                                        <a href="{% url 'website_application_security' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Website App Security Testing</a>
+                                                        <a href="{% url 'mobile_application_security' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Mobile App Security Testing</a>
+                                                        <a href="{% url 'api_security_assessment' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">API Security Assessment</a>
+                                                        <a href="{% url 'wireless_device_security' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Wireless Device Security Testing</a>
+                                                        <a href="{% url 'cloud_security_testing' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Cloud Security Testing</a>
+                                                        <a href="{% url 'source_code_review' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Source Code Security Review</a>
+                                                        <a href="{% url 'ot_iot_security' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">OT/IOT Security</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Governance, Risk & Compliance -->
+                                            <div class="service-category group/category relative">
+                                                <button class="w-full flex items-center justify-between px-4 py-3 text-white font-medium hover:bg-[#0f172a]/50 rounded-lg mx-2 transition-all duration-200">
+                                                    <span class="text-sm">Governance, Risk & Compliance</span>
+                                                    <i class="ri-arrow-right-s-line text-gray-400"></i>
+                                                </button>
+                                                <div class="absolute left-full top-0 ml-1 w-80 bg-[#1e293b] rounded-xl shadow-2xl border border-gray-700 backdrop-blur-sm opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-300 z-50">
+                                                    <div class="py-3">
+                                                        <a href="{% url 'iso_27001' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">ISO 27001: 2022</a>
+                                                        <a href="{% url 'hipaa' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">HIPAA</a>
+                                                        <a href="{% url 'iso_27701' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">ISO 27701</a>
+                                                        <a href="{% url 'gdpr' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">GDPR</a>
+                                                        <a href="{% url 'soc2' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">SOC 2</a>
+                                                        <a href="{% url 'dpdp' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">DPDP</a>
+                                                        <a href="{% url 'iso_27017' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">ISO 27017</a>
+                                                        <a href="{% url 'iso_27018' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">ISO 27018</a>
+                                                        <a href="{% url 'it_general_control_audit' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">IT- General Control Audit</a>
+                                                        <a href="{% url 'third_party_vendor_audit' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Third-Party Vendor Audit Services</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Cybersecurity Operations -->
+                                            <div class="service-category group/category relative">
+                                                <button class="w-full flex items-center justify-between px-4 py-3 text-white font-medium hover:bg-[#0f172a]/50 rounded-lg mx-2 transition-all duration-200">
+                                                    <span class="text-sm">Cybersecurity Operations</span>
+                                                    <i class="ri-arrow-right-s-line text-gray-400"></i>
+                                                </button>
+                                                <div class="absolute left-full top-0 ml-1 w-72 bg-[#1e293b] rounded-xl shadow-2xl border border-gray-700 backdrop-blur-sm opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-300 z-50">
+                                                    <div class="py-3">
+                                                        <a href="{% url 'network_architecture_review' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Network Architecture Review</a>
+                                                        <a href="{% url 'brand_exploitation' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Brand Exploitation</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Training and Awareness -->
+                                            <div class="service-category group/category relative">
+                                                <button class="w-full flex items-center justify-between px-4 py-3 text-white font-medium hover:bg-[#0f172a]/50 rounded-lg mx-2 transition-all duration-200">
+                                                    <span class="text-sm">Training and Awareness</span>
+                                                    <i class="ri-arrow-right-s-line text-gray-400"></i>
+                                                </button>
+                                                <div class="absolute left-full top-0 ml-1 w-72 bg-[#1e293b] rounded-xl shadow-2xl border border-gray-700 backdrop-blur-sm opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-300 z-50">
+                                                    <div class="py-3">
+                                                        <a href="{% url 'phishing_simulation' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Phishing Simulation</a>
+                                                        <a href="{% url 'employee_awareness_training' %}" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#0f172a]/50 mx-2 rounded transition-all duration-200">Employee Awareness Training</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="{% url 'pricing' %}" class="text-gray-300 hover:text-white font-medium">Pricing</a></li>
+                            <li><a href="{% url 'resources' %}" class="text-gray-300 hover:text-white font-medium">Resources</a></li>
+                            <li><a href="{% url 'company' %}" class="text-gray-300 hover:text-white font-medium">Company</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="{% url 'login' %}" class="text-gray-300 hover:text-white font-medium">Login</a>
+                    <a href="{% url 'contact' %}" class="bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium px-6 py-2 rounded-lg transition-colors">
+                        Request Demo
+                    </a>
+                </div>
+
+                <button 
+                    class="lg:hidden text-gray-300 hover:text-white" 
+                    id="mobileMenuButton"
+                    aria-label="Toggle mobile menu"
+                >
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="lg:hidden hidden" id="mobileMenu">
+            <div class="px-4 py-5 space-y-4 bg-[#141c2e] border-t border-gray-700">
+                <a href="{% url 'home' %}" class="block py-2 text-gray-300 hover:text-white font-medium">Home</a>
+                <!-- Platform Menu -->
+                <div>
+                    <button onclick="toggleMobileSubmenu('mobilePlatformMenu')" class="flex items-center justify-between w-full py-2 text-gray-300 hover:text-white font-medium">
+                        <span>Platform</span>
+                        <i class="ri-arrow-down-s-line text-gray-400"></i>
+                    </button>
+                    <div id="mobilePlatformMenu" class="hidden pl-4 mt-2 space-y-2 border-l border-gray-700">
+                        <a href="#" class="block py-2 text-gray-400 hover:text-white">Risk Assessment</a>
+                        <a href="#" class="block py-2 text-gray-400 hover:text-white">Threat Detection</a>
+                        <a href="#" class="block py-2 text-gray-400 hover:text-white">Security Automation</a>
+                        <a href="#" class="block py-2 text-gray-400 hover:text-white">Compliance Management</a>
+                    </div>
+                </div>
+
+                <!-- Services Menu -->
+                <div>
+                    <button onclick="toggleMobileSubmenu('mobileServicesMenu')" class="flex items-center justify-between w-full py-2 text-gray-300 hover:text-white font-medium">
+                        <span>Services</span>
+                        <i class="ri-arrow-down-s-line text-gray-400"></i>
+                    </button>
+                    <div id="mobileServicesMenu" class="hidden pl-4 mt-2 space-y-4 border-l border-gray-700">
+                        <!-- Managed Security Services -->
+                        <div>
+                            <h4 class="text-white font-medium mb-2">Managed Security Services</h4>
+                            <div class="pl-3 space-y-1">
+                                <a href="{% url 'incident_response' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Incident Response</a>
+                                <a href="{% url 'deep_web_monitoring' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Deep Web Monitoring</a>
+                                <a href="{% url 'security_operations_center' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Security Operation Center</a>
+                                <a href="{% url 'identity_access_management' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Identity & Access Management</a>
+                                <a href="{% url 'third_party_risk_management' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Third Party Risk Management</a>
+                            </div>
+                        </div>
+
+                        <!-- Cyber Defense -->
+                        <div>
+                            <h4 class="text-white font-medium mb-2">Cyber Defense</h4>
+                            <div class="pl-3 space-y-1">
+                                <a href="{% url 'vapt' %}" class="block py-1 text-sm text-gray-400 hover:text-white">VAPT</a>
+                                <a href="{% url 'website_application_security' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Website App Security Testing</a>
+                                <a href="{% url 'mobile_application_security' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Mobile App Security Testing</a>
+                                <a href="{% url 'api_security_assessment' %}" class="block py-1 text-sm text-gray-400 hover:text-white">API Security Assessment</a>
+                                <a href="{% url 'wireless_device_security' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Wireless Device Security Testing</a>
+                                <a href="{% url 'cloud_security_testing' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Cloud Security Testing</a>
+                                <a href="{% url 'source_code_review' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Source Code Security Review</a>
+                                <a href="{% url 'ot_iot_security' %}" class="block py-1 text-sm text-gray-400 hover:text-white">OT/IOT Security</a>
+                            </div>
+                        </div>
+
+                        <!-- Governance, Risk & Compliance -->
+                        <div>
+                            <h4 class="text-white font-medium mb-2">Governance, Risk & Compliance</h4>
+                            <div class="pl-3 space-y-1">
+                                <a href="{% url 'iso_27001' %}" class="block py-1 text-sm text-gray-400 hover:text-white">ISO 27001: 2022</a>
+                                <a href="{% url 'hipaa' %}" class="block py-1 text-sm text-gray-400 hover:text-white">HIPAA</a>
+                                <a href="{% url 'iso_27701' %}" class="block py-1 text-sm text-gray-400 hover:text-white">ISO 27701</a>
+                                <a href="{% url 'gdpr' %}" class="block py-1 text-sm text-gray-400 hover:text-white">GDPR</a>
+                                <a href="{% url 'soc2' %}" class="block py-1 text-sm text-gray-400 hover:text-white">SOC 2</a>
+                                <a href="{% url 'dpdp' %}" class="block py-1 text-sm text-gray-400 hover:text-white">DPDP</a>
+                                <a href="{% url 'iso_27017' %}" class="block py-1 text-sm text-gray-400 hover:text-white">ISO 27017</a>
+                                <a href="{% url 'iso_27018' %}" class="block py-1 text-sm text-gray-400 hover:text-white">ISO 27018</a>
+                                <a href="{% url 'it_general_control_audit' %}" class="block py-1 text-sm text-gray-400 hover:text-white">IT- General Control Audit</a>
+                                <a href="{% url 'third_party_vendor_audit' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Third-Party Vendor Audit Services</a>
+                            </div>
+                        </div>
+
+                        <!-- Cybersecurity Operations -->
+                        <div>
+                            <h4 class="text-white font-medium mb-2">Cybersecurity Operations</h4>
+                            <div class="pl-3 space-y-1">
+                                <a href="{% url 'network_architecture_review' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Network Architecture Review</a>
+                                <a href="{% url 'brand_exploitation' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Brand Exploitation</a>
+                            </div>
+                        </div>
+
+                        <!-- Training and Awareness -->
+                        <div>
+                            <h4 class="text-white font-medium mb-2">Training and Awareness</h4>
+                            <div class="pl-3 space-y-1">
+                                <a href="{% url 'phishing_simulation' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Phishing Simulation</a>
+                                <a href="{% url 'employee_awareness_training' %}" class="block py-1 text-sm text-gray-400 hover:text-white">Employee Awareness Training</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="{% url 'pricing' %}" class="block py-2 text-gray-300 hover:text-white font-medium">Pricing</a>
+                <a href="{% url 'resources' %}" class="block py-2 text-gray-300 hover:text-white font-medium">Resources</a>
+                <a href="{% url 'company' %}" class="block py-2 text-gray-300 hover:text-white font-medium">Company</a>
+                <div class="pt-4 space-y-3">
+                    <a href="{% url 'login' %}" class="block text-center text-gray-300 hover:text-white font-medium py-2">Login</a>
+                    <a href="{% url 'contact' %}" class="block text-center bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium px-6 py-2 rounded-lg transition-colors">
+                        Request Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#101728] py-12 mt-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+                <div class="lg:col-span-2">
+                    <a href="{% url 'home' %}" class="inline-block mb-6">
+                        <span class="text-2xl font-bold text-white">Aphelion<span class="text-[#6e3691]">Cyber</span></span>
+                    </a>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Comprehensive cybersecurity solutions for the modern enterprise. Protecting your digital assets from evolving threats.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#0f0f0f] flex items-center justify-center hover:bg-[#6e3691]/20 transition-colors">
+                            <i class="ri-linkedin-fill text-xl text-gray-300 hover:text-[#6e3691]"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#0f0f0f] flex items-center justify-center hover:bg-[#6e3691]/20 transition-colors">
+                            <i class="ri-twitter-fill text-xl text-gray-300 hover:text-[#6e3691]"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#0f0f0f] flex items-center justify-center hover:bg-[#6e3691]/20 transition-colors">
+                            <i class="ri-facebook-fill text-xl text-gray-300 hover:text-[#6e3691]"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-[#0f0f0f] flex items-center justify-center hover:bg-[#6e3691]/20 transition-colors">
+                            <i class="ri-github-fill text-xl text-gray-300 hover:text-[#6e3691]"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Platform</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Threat Detection</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Vulnerability Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Compliance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Risk Assessment</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Security Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Solutions</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Healthcare</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Financial Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Government</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Retail</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Enterprise</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Company</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Press</a></li>
+                        <li><a href="{% url 'contact' %}" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 mt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">© 2023 Aphelion Cyber. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% block extra_js %}
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                this.innerHTML = '<i class="ri-close-line text-2xl"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                this.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('bg-[#0f172a]/90', 'backdrop-blur-md', 'border-b', 'border-[#141c2e]/30');
+            } else {
+                navbar.classList.remove('bg-[#0f172a]/90', 'backdrop-blur-md', 'border-b', 'border-[#141c2e]/30');
+            }
+        });
+        
+        // Particles effect
+        function createParticles() {
+            const particles = document.getElementById('particles');
+            if (!particles) return;
+            
+            // Clear any existing particles
+            particles.innerHTML = '';
+            
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 1-4px
+                const size = Math.random() * 3 + 1;
+                
+                // Style the particle
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.background = i % 2 === 0 ? 'rgba(99, 102, 241, 0.4)' : 'rgba(139, 92, 246, 0.4)';
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.animation = `pulse-glow ${(Math.random() * 2) + 2}s infinite ease-in-out`;
+                
+                particles.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles if present
+        document.addEventListener('DOMContentLoaded', function() {
+            if (document.getElementById('particles')) {
+                createParticles();
+                window.addEventListener('resize', createParticles);
+            }
+        });
+        
+        // Smooth scroll function
+        function scrollToElement(elementId, offset = 100) {
+            const element = document.getElementById(elementId);
+            if (element) {
+                const yPosition = element.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: yPosition - offset,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        // Horizontal flyout menu functions
+    function showServicesMenu() {
+        const menu = document.getElementById('servicesMenu');
+        menu.classList.remove('hidden');
+    }
+
+    function hideServicesMenu() {
+        const menu = document.getElementById('servicesMenu');
+        // Add a small delay to prevent menu from disappearing when moving mouse between elements
+        setTimeout(() => {
+            if (!menu.matches(':hover')) {
+                menu.classList.add('hidden');
+            }
+        }, 100);
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+        const servicesMenu = document.getElementById('servicesMenu');
+        const servicesButton = event.target.closest('.services-button');
+        
+        if (!servicesButton && !servicesMenu.contains(event.target)) {
+            servicesMenu.classList.add('hidden');
+        }
+    });
+
+    // Mobile submenu toggle
+    function toggleMobileSubmenu(menuId) {
+        const submenu = document.getElementById(menuId);
+        const arrow = event.currentTarget.querySelector('.ri-arrow-down-s-line');
+        
+        if (submenu.classList.contains('hidden')) {
+            submenu.classList.remove('hidden');
+            arrow.style.transform = 'rotate(180deg)';
+        } else {
+            submenu.classList.add('hidden');
+            arrow.style.transform = 'rotate(0deg)';
+        }
+    }
+   
+    </script>
+
+    
+    {% endblock %}
+</body>
+</html>
+
+<style>
+    /* Add this to your existing styles */
+    .trusted-organizations {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .scroll-container {
+        display: flex;
+        animation: scroll 20s linear infinite;
+        width: max-content;
+    }
+
+    .scroll-container:hover {
+        animation-play-state: paused;
+    }
+
+    .org-item {
+        flex: 0 0 auto;
+        margin-right: 24px;
+        min-width: 150px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    
+</style>
+
+</body>
+</html>

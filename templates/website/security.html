@@ -1,0 +1,466 @@
+{% extends 'base.html' %}
+
+{% block title %}Security Dashboard | Aphelion Cyber Security{% endblock %}
+{% block meta_description %}Real-time security monitoring dashboard with threat detection, security checks, and compliance status.{% endblock %}
+
+{% block content %}
+<div class="pt-32 pb-20 bg-[#0f172a]">
+    <div class="container mx-auto px-4 md:px-6">
+        <!-- Admin User Switching Menu -->
+        <div class="flex justify-between items-center mb-8">
+            <!-- <div class="flex space-x-4">
+                <button class="bg-[#6e3691] px-4 py-2 rounded-lg text-sm font-medium">Security Posture</button>
+                <button class="text-gray-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium">CIS Level1</button>
+                <button class="text-gray-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium">CIS Level2</button>
+                <button class="text-gray-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium">CIS Level3</button>
+                <button class="text-gray-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium">CIS Level4</button>
+            </div> -->
+            <div class="flex items-center space-x-4">
+                <span class="text-sm text-gray-400">View as User:</span>
+                <!-- Replace the select element with a custom dropdown -->
+                <div class="relative inline-block text-left">
+                    <button type="button" onclick="toggleUserDropdown()" class="bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2 text-sm flex items-center space-x-2">
+                        <span id="selectedUser">All Users</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="userDropdown" class="hidden absolute z-10 mt-2 w-56 rounded-lg bg-[#1e293b] shadow-lg ring-1 ring-black ring-opacity-5">
+                        <div class="py-1" role="menu">
+                            <button onclick="selectUser('all', 'All Users')" class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">All Users</button>
+                            <button onclick="selectUser('pratik', 'Pratik Patel')" class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">
+                                <div class="flex items-center space-x-2">
+                                    <img src="/static/images/AWS-Marketplace-Logo-PNG-to-svg-1.png" alt="AWS" class="w-5 h-5">
+                                    <span>Pratik Patel</span>
+                                </div>
+                            </button>
+                            <button onclick="selectUser('saumya', 'Saumya')" class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">Saumya</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add this JavaScript to handle the custom dropdown -->
+                <script>
+                function toggleUserDropdown() {
+                    const dropdown = document.getElementById('userDropdown');
+                    dropdown.classList.toggle('hidden');
+                }
+
+                function selectUser(value, label) {
+                    document.getElementById('selectedUser').textContent = label;
+                    document.getElementById('userDropdown').classList.add('hidden');
+                    switchUser(value);
+                }
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    const dropdown = document.getElementById('userDropdown');
+                    const button = event.target.closest('button');
+                    if (!button || !button.hasAttribute('onclick') || !button.getAttribute('onclick').includes('toggleUserDropdown')) {
+                        dropdown.classList.add('hidden');
+                    }
+                });
+                </script>
+            </div>
+        </div>
+        <!-- Security Posture Tabs with JavaScript -->
+        <div class="flex flex-wrap gap-2 mb-8 overflow-x-auto pb-2">
+            <button onclick="showSection('security-posture')" class="tab-button bg-[#6e3691] px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap min-w-fit">Security Posture</button>
+            <button onclick="showSection('cis-level1')" class="tab-button text-gray-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap min-w-fit">CIS Level1</button>
+            <button onclick="showSection('cis-level2')" class="tab-button text-gray-400 hover:text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap min-w-fit">CIS Level2</button>
+        </div>
+
+        <!-- Security Posture Section -->
+        <div id="security-posture" class="section-content">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Existing Security Score and Metrics -->
+                <div class="bg-[#1e293b] p-6 rounded-xl">
+                    <h3 class="text-lg font-medium mb-4">Security Score</h3>
+                    <div class="relative w-48 h-48 mx-auto">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-4xl font-bold">91%</span>
+                        </div>
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="#1e293b" stroke-width="2"></circle>
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="#6e3691" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="9"></circle>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Security Metrics -->
+                <div class="lg:col-span-2 bg-[#1e293b] p-6 rounded-xl">
+                    <h3 class="text-lg font-medium mb-4">Failed Checks by Service</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">CloudTrail</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-red-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">S3Bucket</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-red-500 h-2 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">IAM</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-gray-200 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">SecurityHub</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CIS Level 1 Section -->
+        <div id="cis-level1" class="section-content hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- CIS Level 1 Score -->
+                <div class="bg-[#1e293b] p-6 rounded-xl">
+                    <h3 class="text-lg font-medium mb-4">CIS Level 1 Score</h3>
+                    <div class="relative w-48 h-48 mx-auto">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-4xl font-bold">75%</span>
+                        </div>
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="#1e293b" stroke-width="2"></circle>
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="#6e3691" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="25"></circle>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- CIS Level 1 Metrics -->
+                <div class="lg:col-span-2 bg-[#1e293b] p-6 rounded-xl">
+                    <h3 class="text-lg font-medium mb-4">CIS Level 1 Compliance by Control</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Account and Access Management</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Network Security</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Logging and Monitoring</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-red-500 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CIS Level 2 Section -->
+        <div id="cis-level2" class="section-content hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <!-- CIS Level 2 Score -->
+                <div class="bg-[#1e293b] p-6 rounded-xl">
+                    <h3 class="text-lg font-medium mb-4">CIS Level 2 Score</h3>
+                    <div class="relative w-48 h-48 mx-auto">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="text-4xl font-bold">82%</span>
+                        </div>
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="#1e293b" stroke-width="2"></circle>
+                            <circle cx="18" cy="18" r="16" fill="none" stroke="#6e3691" stroke-width="2" stroke-dasharray="100" stroke-dashoffset="18"></circle>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- CIS Level 2 Metrics -->
+                <div class="lg:col-span-2 bg-[#1e293b] p-6 rounded-xl">
+                    <h3 class="text-lg font-medium mb-4">CIS Level 2 Compliance by Control</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Configuration Management</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Vulnerability Management</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-yellow-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm">Incident Response</span>
+                            <div class="w-2/3 bg-[#0f172a] rounded-full h-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.add('hidden');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            // Update button styles
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('bg-[#6e3691]');
+                button.classList.add('text-gray-400');
+            });
+            
+            // Highlight active button
+            event.target.classList.remove('text-gray-400');
+            event.target.classList.add('bg-[#6e3691]');
+        }
+        </script>
+        <!-- Security Checks Table -->
+        <div class="bg-[#1e293b] rounded-xl p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-lg font-medium">Security Checks</h3>
+                <div class="flex items-center space-x-4">
+                    <span class="text-sm text-gray-400">Filter by:</span>
+                    <select class="bg-[#0f172a] border border-gray-700 rounded-lg px-3 py-1 text-sm">
+                        <option>All checks</option>
+                        <option>Failed checks</option>
+                        <option>Passed checks</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="text-left text-sm text-gray-400 border-b border-gray-700">
+                            <th class="pb-3">Check Name</th>
+                            <th class="pb-3">Status</th>
+                            <th class="pb-3">Priority</th>
+                            <th class="pb-3">Asset Count</th>
+                            <th class="pb-3">Service</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-gray-700">
+                            <td class="py-4">Ensure CloudTrail is enabled in all regions</td>
+                            <td><span class="text-red-500">●</span> Failed</td>
+                            <td class="text-red-500">Critical</td>
+                            <td>5/7</td>
+                            <td>Cloud Trail</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-4">S3 buckets should have server-side encryption</td>
+                            <td><span class="text-red-500">●</span> Failed</td>
+                            <td class="text-red-500">Critical</td>
+                            <td>3/5</td>
+                            <td>S3</td>
+                        </tr>
+                        <tr class="border-b border-gray-700">
+                            <td class="py-4">IAM password policy requires minimum length</td>
+                            <td><span class="text-green-500">●</span> Passed</td>
+                            <td class="text-red-500">Critical</td>
+                            <td>7/7</td>
+                            <td>IAM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="pt-32 pb-20">
+    <div class="container mx-auto px-4 md:px-6">
+        <!-- Hero Section -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Security Solutions</h1>
+            <p class="text-xl text-gray-300">
+                Comprehensive security solutions to protect your organization from evolving cyber threats.
+            </p>
+        </div>
+
+        <!-- Security Features -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            <!-- Threat Detection -->
+            <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                    <i class="ri-radar-line text-3xl text-[#6e3691]"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Threat Detection</h3>
+                <p class="text-gray-300 mb-6">
+                    Advanced AI-powered threat detection system that identifies and alerts you to potential security threats in real-time.
+                </p>
+                <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                    Learn More
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Incident Response -->
+            <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                    <i class="ri-shield-flash-line text-3xl text-[#6e3691]"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Incident Response</h3>
+                <p class="text-gray-300 mb-6">
+                    Rapid incident response capabilities with automated workflows and expert guidance for quick threat mitigation.
+                </p>
+                <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                    Learn More
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Security Automation -->
+            <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                    <i class="ri-settings-5-line text-3xl text-[#6e3691]"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Security Automation</h3>
+                <p class="text-gray-300 mb-6">
+                    Automate security workflows and responses to reduce manual effort and improve incident response times.
+                </p>
+                <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                    Learn More
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Security Features Detail -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+                <div class="mb-6">
+                    <span class="bg-[#6e3691]/20 text-[#6e3691] px-4 py-1 rounded-full text-sm font-medium">Advanced Protection</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Enterprise-Grade Security</h2>
+                <p class="text-lg text-gray-300 mb-6">
+                    Our comprehensive security solutions provide enterprise-grade protection with advanced threat detection, automated response, and continuous monitoring.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <i class="ri-check-line text-[#6e3691] text-xl mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold mb-2">24/7 Security Monitoring</h3>
+                            <p class="text-gray-300">Continuous monitoring and threat detection</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="ri-check-line text-[#6e3691] text-xl mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold mb-2">Automated Response</h3>
+                            <p class="text-gray-300">Quick automated responses to security incidents</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="ri-check-line text-[#6e3691] text-xl mr-4 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold mb-2">Compliance Management</h3>
+                            <p class="text-gray-300">Built-in compliance monitoring and reporting</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative">
+                <div class="orbital-container">
+                    <div class="center-icon">
+                        <i class="ri-shield-line text-white text-3xl"></i>
+                    </div>
+                    <div class="orbit orbit-1">
+                        <div class="orbital-icon" style="top: 0; left: 50%; transform: translate(-50%, -50%);">
+                            <i class="ri-lock-line"></i>
+                        </div>
+                        <div class="orbital-icon" style="bottom: 0; left: 50%; transform: translate(-50%, 50%);">
+                            <i class="ri-database-2-line"></i>
+                        </div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="orbital-icon" style="top: 50%; right: 0; transform: translate(50%, -50%);">
+                            <i class="ri-cloud-line"></i>
+                        </div>
+                        <div class="orbital-icon" style="top: 50%; left: 0; transform: translate(-50%, -50%);">
+                            <i class="ri-code-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="bg-gradient-cyber rounded-2xl overflow-hidden relative p-12 text-center">
+            <div class="absolute inset-0 bg-cyber-pattern opacity-10"></div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to secure your organization?</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Get in touch with our security experts to learn how we can help protect your organization.
+                </p>
+                <a href="{% url 'contact' %}" class="inline-flex items-center bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium px-8 py-4 rounded-lg transition-colors">
+                    Contact Security Experts
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+<script>
+function switchUser() {
+    const selectedUser = document.getElementById('userSwitch').value;
+    // यहाँ AJAX कॉल करें जो सर्वर से चुने गए यूजर का डेटा लाएगा
+    // डेटा मिलने पर डैशबोर्ड अपडेट करें
+    fetch(`/api/security-data/${selectedUser}`)
+        .then(response => response.json())
+        .then(data => {
+            // डैशबोर्ड के विभिन्न सेक्शन अपडेट करें
+            updateSecurityScore(data.securityScore);
+            updateFailedChecks(data.failedChecks);
+            updateSecurityTable(data.securityChecks);
+        });
+}
+
+function updateSecurityScore(score) {
+    document.querySelector('.text-4xl.font-bold').textContent = `${score}%`;
+    // प्रोग्रेस सर्कल अपडेट करें
+    const circle = document.querySelector('circle:last-child');
+    circle.setAttribute('stroke-dashoffset', 100 - score);
+}
+
+function updateFailedChecks(checks) {
+    // सर्विस-वार फेल्ड चेक्स अपडेट करें
+    const progressBars = document.querySelectorAll('.bg-red-500, .bg-yellow-500, .bg-gray-200');
+    checks.forEach((check, index) => {
+        progressBars[index].style.width = `${check.percentage}%`;
+    });
+}
+
+function updateSecurityTable(checks) {
+    const tbody = document.querySelector('tbody');
+    tbody.innerHTML = checks.map(check => `
+        <tr class="border-b border-gray-700">
+            <td class="py-4">${check.name}</td>
+            <td><span class="text-${check.status === 'Failed' ? 'red' : 'green'}-500">●</span> ${check.status}</td>
+            <td class="text-${check.priority === 'Critical' ? 'red' : 'yellow'}-500">${check.priority}</td>
+            <td>${check.assetCount}</td>
+            <td>${check.service}</td>
+        </tr>
+    `).join('');
+}
+</script>

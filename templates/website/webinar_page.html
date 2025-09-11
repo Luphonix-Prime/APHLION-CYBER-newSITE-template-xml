@@ -1,0 +1,85 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ page.title }} - Aphelion Cyber Security{% endblock %}
+
+{% block content %}
+<main class="min-h-screen pt-20 bg-[#0a192f]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Webinar Header -->
+        <div class="mb-8">
+            <div class="flex items-center text-sm text-gray-400 mb-4">
+                <a href="{% url 'resources' %}" class="hover:text-[#6e3691]">Resources</a>
+                <i class="ri-arrow-right-s-line mx-2"></i>
+                <span>{{ page.title }}</span>
+            </div>
+            
+            {% if page.featured_image %}
+            <div class="w-full h-64 md:h-80 rounded-xl overflow-hidden mb-6 relative">
+                <img src="{{ page.featured_image.file.url }}" alt="{{ page.title }}" class="w-full h-full object-cover">
+                <div class="absolute top-4 left-4">
+                    <span class="{% if page.status == 'live' %}bg-green-500{% elif page.status == 'upcoming' %}bg-[#6e3691]{% else %}bg-blue-500{% endif %} text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {% if page.status == 'live' %}Live Now{% elif page.status == 'upcoming' %}Upcoming{% else %}On Demand{% endif %}
+                    </span>
+                </div>
+            </div>
+            {% endif %}
+            
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ page.title }}</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                <div class="bg-[#1e293b] rounded-lg p-4">
+                    <div class="flex items-center text-gray-400 mb-1">
+                        <i class="ri-calendar-line mr-2"></i>
+                        <span class="text-sm">Date & Time</span>
+                    </div>
+                    <p class="text-white font-medium">{{ page.date|date:"F j, Y \a\t g:i A" }}</p>
+                </div>
+                
+                <div class="bg-[#1e293b] rounded-lg p-4">
+                    <div class="flex items-center text-gray-400 mb-1">
+                        <i class="ri-time-line mr-2"></i>
+                        <span class="text-sm">Duration</span>
+                    </div>
+                    <p class="text-white font-medium">{{ page.duration_minutes }} minutes</p>
+                </div>
+                
+                <div class="bg-[#1e293b] rounded-lg p-4">
+                    <div class="flex items-center text-gray-400 mb-1">
+                        <i class="ri-user-line mr-2"></i>
+                        <span class="text-sm">Presenter</span>
+                    </div>
+                    <p class="text-white font-medium">{{ page.author.get_full_name|default:page.author.username }}</p>
+                </div>
+            </div>
+            
+            <p class="text-xl text-gray-300 leading-relaxed mb-6">{{ page.intro }}</p>
+            
+            {% if page.registration_link %}
+            <div class="flex gap-4">
+                <a href="{{ page.registration_link }}" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-8 py-3 rounded-lg font-medium transition-colors inline-flex items-center">
+                    {% if page.status == 'live' %}Join Live{% elif page.status == 'upcoming' %}Register Now{% else %}Watch Recording{% endif %}
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
+            {% endif %}
+        </div>
+        
+        <!-- Webinar Description -->
+        <div class="prose prose-lg prose-invert max-w-none mb-12">
+            {{ page.description|safe }}
+        </div>
+        
+        <!-- Additional Info -->
+        {% if page.max_attendees %}
+        <div class="bg-[#1e293b] rounded-xl p-6">
+            <h3 class="text-xl font-bold mb-2">Event Details</h3>
+            <p class="text-gray-300">
+                Limited to {{ page.max_attendees }} attendees. Register early to secure your spot.
+            </p>
+        </div>
+        {% endif %}
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,423 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Mobile Application Security Testing - Aphelion Cyber Security{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-cyber">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 bg-[#6e3691]/20 rounded-full mb-6">
+                    <i class="ri-smartphone-line text-[#6e3691] mr-2"></i>
+                    <span class="text-[#6e3691] font-medium">Mobile Application Security</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Comprehensive <span class="text-gradient">Mobile App</span>
+                    Security Testing
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Advanced security testing for iOS and Android applications to identify vulnerabilities, protect user data, and ensure mobile app security compliance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="btn-primary">
+                        <i class="ri-shield-check-line mr-2"></i>
+                        Our Services
+                    </a>
+                    <a href="#assessment" class="btn-secondary">
+                        <i class="ri-file-list-3-line mr-2"></i>
+                        Free Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="relative max-w-5xl mx-auto">
+                <img 
+                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                    alt="Mobile application security testing on various devices" 
+                    class="rounded-2xl shadow-2xl border border-gray-700 w-full"
+                />
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Mobile App Security -->
+    <section id="overview" class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Why <span class="text-gradient">Mobile App Security Testing?</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Mobile applications handle sensitive personal and business data, making them attractive targets for cybercriminals. Our comprehensive mobile application security testing identifies vulnerabilities across iOS and Android platforms, ensuring your apps protect user data and maintain trust. We follow OWASP Mobile Security standards and platform-specific security guidelines.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="ri-code-s-slash-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Static Code Analysis</h4>
+                                <p class="text-gray-400 text-sm">Deep analysis of application source code and binaries</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-play-circle-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Dynamic Runtime Testing</h4>
+                                <p class="text-gray-400 text-sm">Real-time testing of running applications</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-database-2-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Data Protection Analysis</h4>
+                                <p class="text-gray-400 text-sm">Assessment of data storage and transmission security</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Mobile security testing laboratory" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Services -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Comprehensive <span class="text-gradient">Testing Services</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Complete mobile application security testing for both iOS and Android platforms covering all security aspects.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- iOS Security Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-apple-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">iOS Security Testing</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Specialized security testing for iOS applications including jailbreak detection and iOS-specific vulnerabilities.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• iOS Binary Analysis</li>
+                        <li>• Keychain Security</li>
+                        <li>• App Transport Security</li>
+                        <li>• Code Signing Verification</li>
+                    </ul>
+                </div>
+
+                <!-- Android Security Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-android-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Android Security Testing</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Comprehensive Android application security testing including APK analysis and Android-specific vulnerabilities.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• APK Reverse Engineering</li>
+                        <li>• Intent Filter Analysis</li>
+                        <li>• Broadcast Receiver Security</li>
+                        <li>• Content Provider Testing</li>
+                    </ul>
+                </div>
+
+                <!-- Static Analysis -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-file-code-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Static Code Analysis</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Comprehensive analysis of mobile application source code and binaries to identify security vulnerabilities.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Source Code Review</li>
+                        <li>• Binary Analysis</li>
+                        <li>• Configuration Assessment</li>
+                        <li>• Hardcoded Secrets Detection</li>
+                    </ul>
+                </div>
+
+                <!-- Dynamic Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-play-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Dynamic Runtime Testing</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Real-time testing of running mobile applications to identify runtime vulnerabilities and behavioral issues.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Runtime Manipulation</li>
+                        <li>• Memory Analysis</li>
+                        <li>• API Hooking</li>
+                        <li>• Network Traffic Interception</li>
+                    </ul>
+                </div>
+
+                <!-- Data Security -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-shield-keyhole-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Data Protection Testing</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Assessment of data storage, transmission, and protection mechanisms within mobile applications.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Local Storage Security</li>
+                        <li>• Encryption Implementation</li>
+                        <li>• Secure Communication</li>
+                        <li>• Data Leakage Prevention</li>
+                    </ul>
+                </div>
+
+                <!-- Authentication Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-fingerprint-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Authentication & Authorization</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Testing of authentication mechanisms including biometric authentication and session management.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Biometric Authentication</li>
+                        <li>• OAuth Implementation</li>
+                        <li>• Session Management</li>
+                        <li>• Token Security</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Methodologies -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Advanced Testing <span class="text-gradient">Methodologies</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    We employ cutting-edge testing methodologies and tools to provide comprehensive mobile application security assessment.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Mobile security testing tools and analysis" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Automated Testing Tools</h3>
+                    <p class="text-gray-300 mb-6">
+                        State-of-the-art automated testing tools and frameworks for efficient and comprehensive security analysis of mobile applications.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">SAST Tools (Static Analysis)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">DAST Tools (Dynamic Analysis)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">IAST Tools (Interactive Testing)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Custom Security Frameworks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="order-2 lg:order-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">Manual Security Testing</h3>
+                    <p class="text-gray-300 mb-6">
+                        Expert manual testing by certified mobile security specialists to identify complex vulnerabilities that automated tools might miss.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Business Logic Testing</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Advanced Attack Scenarios</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Platform-Specific Testing</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Custom Exploit Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <img 
+                        src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Mobile security expert conducting manual testing" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Mobile application reverse engineering" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Reverse Engineering</h3>
+                    <p class="text-gray-300 mb-6">
+                        Advanced reverse engineering techniques to analyze mobile application binaries and understand internal security mechanisms.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Binary Disassembly</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Code Obfuscation Analysis</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Anti-Debug Bypass</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Runtime Instrumentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OWASP Mobile Top 10 -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    OWASP Mobile <span class="text-gradient">Top 10</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Our testing covers all OWASP Mobile Top 10 security risks to ensure comprehensive mobile application security.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Client-Side Risks</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M1</span>
+                            <span class="text-gray-300 text-sm">Improper Platform Usage</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M2</span>
+                            <span class="text-gray-300 text-sm">Insecure Data Storage</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M8</span>
+                            <span class="text-gray-300 text-sm">Code Tampering</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M9</span>
+                            <span class="text-gray-300 text-sm">Reverse Engineering</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M10</span>
+                            <span class="text-gray-300 text-sm">Extraneous Functionality</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Server-Side Risks</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M3</span>
+                            <span class="text-gray-300 text-sm">Insecure Communication</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M4</span>
+                            <span class="text-gray-300 text-sm">Insecure Authentication</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M5</span>
+                            <span class="text-gray-300 text-sm">Insufficient Cryptography</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M6</span>
+                            <span class="text-gray-300 text-sm">Insecure Authorization</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">M7</span>
+                            <span class="text-gray-300 text-sm">Client Code Quality</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="assessment" class="py-20 bg-[#6e3691]">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Secure Your Mobile Applications
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    Protect your users and business with comprehensive mobile application security testing.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact/" class="bg-white text-[#6e3691] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-file-list-3-line mr-2"></i>
+                        Free Mobile Security Assessment
+                    </a>
+                    <a href="/contact/" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6e3691] transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-phone-line mr-2"></i>
+                        Contact Mobile Security Experts
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

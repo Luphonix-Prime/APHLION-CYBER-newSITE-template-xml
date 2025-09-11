@@ -1,0 +1,49 @@
+TemplateSyntaxError at /security-operations-center/
+'block' tag with name 'primary_color' appears more than once
+Request Method:	GET
+Request URL:	http://a2b9102c-f8be-4332-bd7e-4456e8e3e678-00-1lxjfn8k4irfu.sisko.replit.dev/security-operations-center/
+Django Version:	5.2.5
+Exception Type:	TemplateSyntaxError
+Exception Value:	
+'block' tag with name 'primary_color' appears more than once
+Exception Location:	/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/django/template/loader_tags.py, line 228, in do_block
+Raised during:	aphelioncyber.website.views.security_operations_center
+Python Executable:	/home/runner/workspace/.pythonlibs/bin/python
+Python Version:	3.11.13
+Python Path:	
+['/home/runner/workspace',
+ '/nix/store/zz7i75jb78idaz0rb1y1i4rzdyxq28vf-sitecustomize/lib/python/site-packages',
+ '/nix/store/yaps09f01jp3fd1405qlr0qz6haf6z03-python3.11-pip-25.0.1/lib/python3.11/site-packages',
+ '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python311.zip',
+ '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11',
+ '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/lib-dynload',
+ '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages',
+ '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/site-packages',
+ '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages',
+ '/nix/store/y0iwy8ma2m45pr23bw4r7lyz69v2b6wf-python3.11-setuptools-80.7.1/lib/python3.11/site-packages']
+Server time:	Fri, 05 Sep 2025 07:40:46 +0000
+Error during template rendering
+In template /home/runner/workspace/templates/website/service_base.html, error at line 155
+
+'block' tag with name 'primary_color' appears more than once
+145	                    {% block process_description %}
+146	                    Following industry-standard frameworks and best practices to ensure comprehensive and effective security implementation.
+147	                    {% endblock %}
+148	                </p>
+149	            </div>
+150	
+151	            {% block process_steps %}
+152	            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+153	                <!-- Default process steps - override in child templates -->
+154	                <div class="{% block card_style %}bg-[#1e293b] border border-gray-700{% endblock %} rounded-xl p-6 hover:border-{% block primary_color %}[#6e3691]{% endblock %}/50 transition-all duration-300">
+155	                    <div class="w-12 h-12 bg-{% block primary_color %}[#6e3691]{% endblock %}/20 rounded-lg flex items-center justify-center mb-4">
+156	                        <i class="ri-search-line text-{% block primary_color %}[#6e3691]{% endblock %} text-xl"></i>
+157	                    </div>
+158	                    <h3 class="text-xl font-bold text-white mb-3">1. Assessment</h3>
+159	                    <p class="text-gray-300 text-sm">Comprehensive evaluation of current security posture and threat landscape.</p>
+160	                </div>
+161	                
+162	                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+163	                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+164	                        <i class="ri-shield-check-line text-[#6e3691] text-xl"></i>
+165	                    </div>

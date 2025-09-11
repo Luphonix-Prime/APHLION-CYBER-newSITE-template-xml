@@ -1,0 +1,451 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Identity & Access Management - Aphelion Cyber Security{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-cyber">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 bg-[#6e3691]/20 rounded-full mb-6">
+                    <i class="ri-user-settings-line text-[#6e3691] mr-2"></i>
+                    <span class="text-[#6e3691] font-medium">Identity & Access Management</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Advanced <span class="text-gradient">Identity & Access</span>
+                    Management
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Comprehensive IAM solutions to secure user identities, manage access rights, and ensure the right people have the right access at the right time.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="btn-primary">
+                        <i class="ri-shield-user-line mr-2"></i>
+                        IAM Services
+                    </a>
+                    <a href="#assessment" class="btn-secondary">
+                        <i class="ri-file-list-3-line mr-2"></i>
+                        Free Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="relative max-w-5xl mx-auto">
+                <img 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                    alt="Identity and access management dashboard" 
+                    class="rounded-2xl shadow-2xl border border-gray-700 w-full"
+                />
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is IAM -->
+    <section id="overview" class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        What is <span class="text-gradient">Identity & Access Management?</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Identity & Access Management (IAM) is a framework of policies, technologies, and processes that enable organizations to manage digital identities and control user access to critical resources. Our comprehensive IAM solutions ensure secure, compliant, and efficient access management across your entire IT environment.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="ri-shield-check-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Zero Trust Architecture</h4>
+                                <p class="text-gray-400 text-sm">Never trust, always verify approach to access control</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-fingerprint-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Multi-Factor Authentication</h4>
+                                <p class="text-gray-400 text-sm">Strong authentication across all systems and applications</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-user-follow-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Privileged Access Management</h4>
+                                <p class="text-gray-400 text-sm">Secure management of administrative and privileged accounts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Biometric authentication and access control" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IAM Services -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Comprehensive <span class="text-gradient">IAM Services</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    From identity governance to access certification, we provide end-to-end IAM services to secure your organization.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Identity Governance -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-government-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Identity Governance</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Establish policies and processes for identity lifecycle management, access certification, and compliance reporting.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Identity Lifecycle Management</li>
+                        <li>• Access Certification</li>
+                        <li>• Segregation of Duties</li>
+                        <li>• Compliance Reporting</li>
+                    </ul>
+                </div>
+
+                <!-- Single Sign-On -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-key-2-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Single Sign-On (SSO)</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Seamless access to multiple applications with a single set of credentials, improving user experience and security.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• SAML Integration</li>
+                        <li>• OAuth Implementation</li>
+                        <li>• Federation Services</li>
+                        <li>• Cloud Application SSO</li>
+                    </ul>
+                </div>
+
+                <!-- Multi-Factor Authentication -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-smartphone-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Multi-Factor Authentication</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Strong authentication mechanisms using multiple factors to verify user identity and prevent unauthorized access.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• SMS & Email OTP</li>
+                        <li>• Authenticator Apps</li>
+                        <li>• Biometric Authentication</li>
+                        <li>• Hardware Tokens</li>
+                    </ul>
+                </div>
+
+                <!-- Privileged Access Management -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-admin-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Privileged Access Management</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Secure management and monitoring of privileged accounts with just-in-time access and session recording.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Password Vaulting</li>
+                        <li>• Just-in-Time Access</li>
+                        <li>• Session Recording</li>
+                        <li>• Privileged Analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Directory Services -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-folder-user-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Directory Services</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Centralized directory services for user and resource management across on-premises and cloud environments.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Active Directory Integration</li>
+                        <li>• LDAP Services</li>
+                        <li>• Cloud Directory</li>
+                        <li>• Identity Synchronization</li>
+                    </ul>
+                </div>
+
+                <!-- Access Analytics -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-bar-chart-box-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Access Analytics</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Advanced analytics to identify access risks, detect anomalies, and optimize access permissions across your environment.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Risk Scoring</li>
+                        <li>• Anomaly Detection</li>
+                        <li>• Access Intelligence</li>
+                        <li>• Behavioral Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IAM Implementation Process -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Our IAM <span class="text-gradient">Implementation Process</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    A proven methodology to design, implement, and maintain your IAM infrastructure with minimal business disruption.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Phase 1 -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-search-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">1. Assessment</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Comprehensive evaluation of current identity and access management practices, systems, and requirements.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Current State Analysis</li>
+                        <li>• Gap Assessment</li>
+                        <li>• Requirements Gathering</li>
+                        <li>• Risk Evaluation</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-draft-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">2. Design</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Custom IAM architecture design tailored to your organization's specific needs and security requirements.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Architecture Design</li>
+                        <li>• Technology Selection</li>
+                        <li>• Integration Planning</li>
+                        <li>• Security Framework</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-settings-3-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">3. Implementation</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Phased deployment of IAM solutions with minimal business disruption and comprehensive testing.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Phased Deployment</li>
+                        <li>• System Integration</li>
+                        <li>• User Migration</li>
+                        <li>• Testing & Validation</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-tools-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">4. Support</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Ongoing support, monitoring, and optimization to ensure your IAM systems continue to meet evolving needs.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• 24/7 Support</li>
+                        <li>• Performance Monitoring</li>
+                        <li>• Regular Optimization</li>
+                        <li>• Compliance Reporting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Partners -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Leading <span class="text-gradient">Technology Partners</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    We partner with industry-leading IAM vendors to deliver best-in-class solutions tailored to your needs.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Enterprise IAM platform dashboard" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Enterprise IAM Platforms</h3>
+                    <p class="text-gray-300 mb-6">
+                        Integration with leading enterprise IAM platforms including Microsoft Azure AD, Okta, Ping Identity, and SailPoint.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Microsoft Azure AD</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Okta Identity Cloud</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Ping Identity</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">SailPoint IdentityIQ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h3 class="text-2xl font-bold text-white mb-4">PAM Solutions</h3>
+                    <p class="text-gray-300 mb-6">
+                        Specialized privileged access management solutions from CyberArk, BeyondTrust, and Thycotic for securing high-value accounts.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">CyberArk PAM</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">BeyondTrust Password Safe</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">Thycotic Secret Server</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="ri-checkbox-circle-line text-[#6e3691] mr-3"></i>
+                            <span class="text-gray-300">HashiCorp Vault</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <img 
+                        src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Privileged access management vault" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Benefits of Our <span class="text-gradient">IAM Solutions</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Transform your organization's security posture with comprehensive identity and access management.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-shield-check-line text-[#6e3691] text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Enhanced Security</h3>
+                    <p class="text-gray-400 text-sm">Reduced risk of data breaches and unauthorized access</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-user-smile-line text-[#6e3691] text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Improved User Experience</h3>
+                    <p class="text-gray-400 text-sm">Seamless access with single sign-on capabilities</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-file-shield-line text-[#6e3691] text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Regulatory Compliance</h3>
+                    <p class="text-gray-400 text-sm">Meet compliance requirements with automated reporting</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-money-dollar-circle-line text-[#6e3691] text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Cost Reduction</h3>
+                    <p class="text-gray-400 text-sm">Lower operational costs through automation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="assessment" class="py-20 bg-[#6e3691]">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Ready to Secure Your Digital Identity?
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    Start with a free IAM assessment to understand your current posture and identify improvement opportunities.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact/" class="bg-white text-[#6e3691] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-file-list-3-line mr-2"></i>
+                        Free IAM Assessment
+                    </a>
+                    <a href="/contact/" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6e3691] transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-phone-line mr-2"></i>
+                        Contact Experts
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

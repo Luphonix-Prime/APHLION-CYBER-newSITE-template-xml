@@ -1,0 +1,316 @@
+{% extends 'base.html' %}
+
+{% block title %}Resources | Aphelion Cyber Security{% endblock %}
+{% block meta_description %}Access cybersecurity resources, guides, whitepapers, and best practices to strengthen your security posture.{% endblock %}
+
+{% block content %}
+<div class="pt-32 pb-20">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Resources</h1>
+            <p class="text-xl text-gray-300">
+                Access guides, whitepapers, and best practices to strengthen your security posture.
+            </p>
+        </div>
+
+        <!-- Featured Resource -->
+        <div class="bg-gradient-cyber rounded-2xl overflow-hidden relative mb-16">
+            <div class="absolute inset-0 bg-cyber-pattern opacity-10"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center p-8 md:p-12">
+                <div class="relative z-10">
+                    <span class="bg-[#6e3691]/20 text-[#6e3691] px-4 py-1 rounded-full text-sm font-medium mb-6 inline-block">Featured Blog</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">2025 Cybersecurity Threat Landscape Report</h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Our comprehensive analysis of emerging cybersecurity threats, attack vectors, and defensive strategies for the coming year.
+                    </p>
+                    <a href="#" class="inline-flex items-center bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium px-6 py-10 rounded-lg transition-colors">
+                        Download Report
+                        <i class="ri-download-line ml-2"></i>
+                    </a>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Cybersecurity Threat Report" 
+                        class="rounded-xl shadow-2xl border border-gray-700 w-full"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Resource Categories -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <a href="#blogs" class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 hover:border-[#6e3691]/30 transition-all flex items-center card-hover">
+                <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4">
+                    <i class="ri-file-text-line text-2xl text-[#6e3691]"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Blogs</h3>
+                    <p class="text-gray-300">In-depth research and analysis</p>
+                </div>
+            </a>
+
+            <a href="#guides" class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 hover:border-[#6e3691]/30 transition-all flex items-center card-hover">
+                <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4">
+                    <i class="ri-book-open-line text-2xl text-[#6e3691]"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Guides & Best Practices</h3>
+                    <p class="text-gray-300">Practical security implementations</p>
+                </div>
+            </a>
+
+            <a href="#webinars" class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 hover:border-[#6e3691]/30 transition-all flex items-center card-hover">
+                <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4">
+                    <i class="ri-vidicon-line text-2xl text-[#6e3691]"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Webinars & Events</h3>
+                    <p class="text-gray-300">Live and on-demand presentations</p>
+                </div>
+            </a>
+        </div>
+
+        <!-- Blogs Section -->
+        <div id="blogs" class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold">Blogs</h2>
+                <a href="/blogs/" class="text-[#6e3691] hover:text-[#8b5cf6] flex items-center">
+                    View all
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {% for blog in latest_blogs %}
+                <div class="bg-[#1e293b] rounded-xl overflow-hidden border border-gray-800 card-hover">
+                    {% if blog.featured_image %}
+                    <img 
+                        src="{{ blog.featured_image.file.url }}" 
+                        alt="{{ blog.title }}" 
+                        class="w-full h-40 object-cover"
+                    />
+                    {% else %}
+                    <div class="w-full h-40 bg-gradient-to-br from-[#6e3691]/20 to-[#8b5cf6]/20 flex items-center justify-center">
+                        <i class="ri-article-line text-4xl text-[#6e3691]"></i>
+                    </div>
+                    {% endif %}
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            {% if blog.tags.exists %}
+                            <span class="text-xs text-[#6e3691] font-medium bg-[#6e3691]/10 px-2 py-1 rounded">{{ blog.tags.first }}</span>
+                            {% endif %}
+                            <span class="text-xs text-gray-400">{{ blog.date|date:"M d, Y" }}</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">{{ blog.title }}</h3>
+                        <p class="text-gray-300 mb-4">{{ blog.intro|truncatewords:20 }}</p>
+                        <div class="flex items-center justify-between">
+                            <a href="{{ blog.url }}" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                                Read more
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">by {{ blog.author.get_full_name|default:blog.author.username }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="bg-[#1e293b] rounded-xl overflow-hidden border border-gray-800 card-hover">
+                    <div class="w-full h-40 bg-gradient-to-br from-[#6e3691]/20 to-[#8b5cf6]/20 flex items-center justify-center">
+                        <i class="ri-article-line text-4xl text-[#6e3691]"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-[#6e3691] font-medium bg-[#6e3691]/10 px-2 py-1 rounded">Security Architecture</span>
+                            <span class="text-xs text-gray-400">Coming Soon</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Blog Posts Coming Soon</h3>
+                        <p class="text-gray-300 mb-4">We're working on exciting content about cybersecurity best practices and insights.</p>
+                        <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                            Learn more
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Guides Section -->
+        <div id="guides" class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold">Guides & Best Practices</h2>
+                <a href="#" class="text-[#6e3691] hover:text-[#8b5cf6] flex items-center">
+                    View all
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="ri-shield-check-line text-2xl text-[#6e3691]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">The Ultimate Security Checklist</h3>
+                            <p class="text-gray-300 mb-4">A comprehensive security checklist for organizations of all sizes to evaluate and improve their security posture.</p>
+                            <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                                Read guide
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="ri-user-settings-line text-2xl text-[#6e3691]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Building an Effective Security Awareness Program</h3>
+                            <p class="text-gray-300 mb-4">Learn how to develop and implement a security awareness program that actually changes employee behavior.</p>
+                            <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                                Read guide
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="ri-file-damage-line text-2xl text-[#6e3691]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Incident Response Playbook</h3>
+                            <p class="text-gray-300 mb-4">A step-by-step guide to creating an effective incident response plan to minimize damage from security breaches.</p>
+                            <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                                Read guide
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="ri-code-box-line text-2xl text-[#6e3691]"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Secure Development Practices</h3>
+                            <p class="text-gray-300 mb-4">Best practices for implementing security throughout the software development lifecycle.</p>
+                            <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                                Read guide
+                                <i class="ri-arrow-right-line ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Webinars Section -->
+        <div id="webinars" class="mb-20">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold">Webinars & Events</h2>
+                <a href="/webinars/" class="text-[#6e3691] hover:text-[#8b5cf6] flex items-center">
+                    View all
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {% for webinar in latest_webinars %}
+                <div class="bg-[#1e293b] rounded-xl overflow-hidden border border-gray-800 card-hover">
+                    <div class="relative">
+                        {% if webinar.featured_image %}
+                        <img 
+                            src="{{ webinar.featured_image.file.url }}" 
+                            alt="{{ webinar.title }}" 
+                            class="w-full h-40 object-cover"
+                        />
+                        {% else %}
+                        <div class="w-full h-40 bg-gradient-to-br from-[#6e3691]/20 to-[#8b5cf6]/20 flex items-center justify-center">
+                            <i class="ri-vidicon-line text-4xl text-[#6e3691]"></i>
+                        </div>
+                        {% endif %}
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] to-transparent opacity-70"></div>
+                        <div class="absolute bottom-3 left-3 {% if webinar.status == 'live' %}bg-green-500{% elif webinar.status == 'upcoming' %}bg-[#6e3691]{% else %}bg-blue-500{% endif %} text-white text-xs font-bold px-3 py-1 rounded">
+                            {% if webinar.status == 'live' %}LIVE{% elif webinar.status == 'upcoming' %}{{ webinar.date|date:"M d, Y" }}{% else %}ON DEMAND{% endif %}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">{{ webinar.title }}</h3>
+                        <p class="text-gray-300 mb-4">{{ webinar.intro|truncatewords:20 }}</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs text-gray-400">{{ webinar.duration_minutes }} mins</span>
+                            <span class="text-xs text-gray-400">by {{ webinar.author.get_full_name|default:webinar.author.username }}</span>
+                        </div>
+                        <a href="{% if webinar.registration_link %}{{ webinar.registration_link }}{% else %}{{ webinar.url }}{% endif %}" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                            {% if webinar.status == 'live' %}Join Live{% elif webinar.status == 'upcoming' %}Register Now{% else %}Watch Now{% endif %}
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="bg-[#1e293b] rounded-xl overflow-hidden border border-gray-800 card-hover">
+                    <div class="relative">
+                        <div class="w-full h-40 bg-gradient-to-br from-[#6e3691]/20 to-[#8b5cf6]/20 flex items-center justify-center">
+                            <i class="ri-vidicon-line text-4xl text-[#6e3691]"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] to-transparent opacity-70"></div>
+                        <div class="absolute bottom-3 left-3 bg-[#6e3691] text-white text-xs font-bold px-3 py-1 rounded">
+                            Coming Soon
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Webinars Coming Soon</h3>
+                        <p class="text-gray-300 mb-4">We're preparing exciting webinars and events about the latest cybersecurity trends and technologies.</p>
+                        <a href="#" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] font-medium">
+                            Stay Tuned
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <!-- <div class="bg-[#1e293b] p-8 md:p-12 rounded-2xl border border-gray-800">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">Stay updated with our newsletter</h2>
+                    <p class="text-gray-300 mb-6">
+                        Subscribe to receive the latest security insights, threat intelligence, and industry news directly to your inbox.
+                    </p>
+                </div>
+                <div> -->
+                    <!-- <form class="space-y-4">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input 
+                                type="email" 
+                                placeholder="Your email address" 
+                                class="bg-[#0f0f0f] border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 text-white"
+                                required
+                            />
+                            <button 
+                                type="submit" 
+                                class="bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium py-3 px-6 rounded-lg transition-colors whitespace-nowrap"
+                            >
+                                Subscribe
+                            </button>
+                        </div> -->
+                        <!-- <p class="text-xs text-gray-400">
+                            By subscribing, you agree to our Privacy Policy. You can unsubscribe at any time.
+                        </p>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

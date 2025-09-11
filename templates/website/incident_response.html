@@ -1,0 +1,618 @@
+{% extends 'base.html' %}
+
+<!-- Unique Emergency Response Theme -->
+{% block page_background %}bg-gradient-to-br from-[#1f0a0a] via-[#3a1a1a] to-[#1f0a0a]{% endblock %}
+{% block hero_background %}relative overflow-hidden{% endblock %}
+{% block primary_color %}[#ef4444]{% endblock %}
+{% block badge_color %}bg-[#ef4444]/20{% endblock %}
+{% block icon_color %}text-[#ef4444]{% endblock %}
+{% block badge_text_color %}text-[#ef4444]{% endblock %}
+{% block title_gradient %}bg-gradient-to-r from-[#ef4444] to-[#f97316] bg-clip-text text-transparent{% endblock %}
+{% block stat_color %}text-[#ef4444]{% endblock %}
+{% block card_style %}bg-[#2d1b1b] border border-[#ef4444]/20{% endblock %}
+{% block title_animation %}animate-pulse{% endblock %}
+{% block hero_pattern %}bg-pattern-emergency{% endblock %}
+
+{% block service_icon %}ri-shield-flash-line{% endblock %}
+{% block service_category %}Incident Response{% endblock %}
+
+{% block title %}Incident Response Services - Aphelion Cyber Security{% endblock %}
+
+{% block content %}
+<div class="min-h-screen {{ page_background }}">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 {{ badge_color }} rounded-full mb-6">
+                    <i class="{{ service_icon }} {{ icon_color }} mr-2"></i>
+                    <span class="{{ badge_text_color }} font-medium">{{ service_category }}</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Rapid <span class="{{ title_gradient }}">Incident Response</span>
+                    Services
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Improve your organization's incident response program, minimize the impact of a breach and experience rapid response to cybersecurity incidents.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="btn-primary">
+                        <i class="ri-shield-check-line mr-2"></i>
+                        Our Services
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="ri-phone-line mr-2"></i>
+                        Emergency Hotline
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="{{ hero_background }} max-w-5xl mx-auto">
+                <img 
+                    src="https://images.unsplash.com/photo-1550751827-4bd3774c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                    alt="Cybersecurity incident response team monitoring threats" 
+                    class="rounded-2xl shadow-2xl border border-gray-700 w-full"
+                />
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-20 bg-gray-900/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-bold {{ stat_color }}">68%</h2>
+                    <p class="text-gray-300">of businesses experience a data breach within the first two years of operation.</p>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-bold {{ stat_color }}">40%</h2>
+                    <p class="text-gray-300">of organizations don't have a formal Incident Response Plan, leaving them vulnerable to prolonged downtime and financial loss.</p>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-bold {{ stat_color }}">54%</h2>
+                    <p class="text-gray-300">of organizations don't have a formal Incident Response Plan, leaving them vulnerable to prolonged downtime and financial loss.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Incident Response -->
+    <section id="overview" class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        What is <span class="{{ title_gradient }}">Incident Response?</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        An Incident Response Service is a specialized service that helps organizations detect, respond to, and recover from cybersecurity incidents. It involves a structured approach to managing and mitigating the impact of security breaches, such as data breaches, ransomware attacks, phishing scams, or malware infections.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="ri-time-line {{ icon_color }} text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Rapid Response Time</h4>
+                                <p class="text-gray-400 text-sm">Average response time of under 1 hour for critical incidents</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-team-line {{ icon_color }} text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Expert Team</h4>
+                                <p class="text-gray-400 text-sm">Certified incident response professionals available 24/7</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-file-list-3-line {{ icon_color }} text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Detailed Reporting</h4>
+                                <p class="text-gray-400 text-sm">Comprehensive incident reports and lessons learned documentation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Security operations center monitoring cyber threats" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our IR Process -->
+    <section class="py-20 bg-gradient-to-b from-gray-900/50 to-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-4 mb-6">
+                    <div class="h-px bg-gradient-to-r from-transparent via-[#ef4444] to-transparent flex-1 max-w-20"></div>
+                    <span class="text-[#ef4444] font-medium uppercase tracking-wider">PROVEN METHODOLOGY</span>
+                    <div class="h-px bg-gradient-to-r from-transparent via-[#ef4444] to-transparent flex-1 max-w-20"></div>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    Our Proven <span class="{{ title_gradient }}">IR Process</span>
+                </h2>
+                <p class="text-xl text-gray-300 leading-relaxed mb-4">
+                    Following industry-standard NIST and SANS frameworks, our comprehensive 7-step incident response process ensures systematic and effective handling of security incidents.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm">
+                    <span class="px-4 py-2 bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-full text-[#ef4444]">NIST Compliant</span>
+                    <span class="px-4 py-2 bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-full text-[#ef4444]">SANS Framework</span>
+                    <span class="px-4 py-2 bg-[#ef4444]/10 border border-[#ef4444]/30 rounded-full text-[#ef4444]">ISO 27035</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Phase 1 -->
+                <div class="bg-gradient-to-br from-[#2d1b1b] to-[#1e1414] border border-[#ef4444]/20 rounded-xl p-6 hover:border-[#ef4444]/50 hover:shadow-lg hover:shadow-[#ef4444]/10 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-[#ef4444]/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/10 rounded-lg flex items-center justify-center">
+                                <i class="ri-shield-check-line text-[#ef4444] text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-[#ef4444]/60 bg-[#ef4444]/10 px-2 py-1 rounded-full">STEP 1</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#ef4444] transition-colors duration-300">Preparation</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Develop comprehensive incident response plans, define roles and responsibilities, establish communication channels, and conduct regular training exercises.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="bg-gradient-to-br from-[#2d1b1b] to-[#1e1414] border border-[#ef4444]/20 rounded-xl p-6 hover:border-[#ef4444]/50 hover:shadow-lg hover:shadow-[#ef4444]/10 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-[#ef4444]/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/10 rounded-lg flex items-center justify-center">
+                                <i class="ri-search-eye-line text-[#ef4444] text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-[#ef4444]/60 bg-[#ef4444]/10 px-2 py-1 rounded-full">STEP 2</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#ef4444] transition-colors duration-300">Detection & Identification</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Monitor systems for suspicious activity, analyze security alerts, and investigate reports to identify potential security incidents.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="bg-gradient-to-br from-[#2d1b1b] to-[#1e1414] border border-[#ef4444]/20 rounded-xl p-6 hover:border-[#ef4444]/50 hover:shadow-lg hover:shadow-[#ef4444]/10 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-[#ef4444]/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/10 rounded-lg flex items-center justify-center">
+                                <i class="ri-shield-line text-[#ef4444] text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-[#ef4444]/60 bg-[#ef4444]/10 px-2 py-1 rounded-full">STEP 3</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#ef4444] transition-colors duration-300">Containment</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Isolate affected systems, shut down compromised services, and block malicious activity to prevent further damage.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="bg-gradient-to-br from-[#2d1b1b] to-[#1e1414] border border-[#ef4444]/20 rounded-xl p-6 hover:border-[#ef4444]/50 hover:shadow-lg hover:shadow-[#ef4444]/10 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-[#ef4444]/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/10 rounded-lg flex items-center justify-center">
+                                <i class="ri-delete-bin-line text-[#ef4444] text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-[#ef4444]/60 bg-[#ef4444]/10 px-2 py-1 rounded-full">STEP 4</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#ef4444] transition-colors duration-300">Eradication</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Remove malware, close vulnerabilities, and patch systems to eliminate the root cause and prevent recurrence.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phase 5 -->
+                <div class="bg-gradient-to-br from-[#2d1b1b] to-[#1e1414] border border-[#ef4444]/20 rounded-xl p-6 hover:border-[#ef4444]/50 hover:shadow-lg hover:shadow-[#ef4444]/10 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-[#ef4444]/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/10 rounded-lg flex items-center justify-center">
+                                <i class="ri-restart-line text-[#ef4444] text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-[#ef4444]/60 bg-[#ef4444]/10 px-2 py-1 rounded-full">STEP 5</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#ef4444] transition-colors duration-300">Recovery</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Restore systems from backups, reconfigure security measures, and ensure normal operations resume safely.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phase 6 -->
+                <div class="bg-gradient-to-br from-[#2d1b1b] to-[#1e1414] border border-[#ef4444]/20 rounded-xl p-6 hover:border-[#ef4444]/50 hover:shadow-lg hover:shadow-[#ef4444]/10 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-[#ef4444]/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/10 rounded-lg flex items-center justify-center">
+                                <i class="ri-book-open-line text-[#ef4444] text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-[#ef4444]/60 bg-[#ef4444]/10 px-2 py-1 rounded-full">STEP 6</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#ef4444] transition-colors duration-300">Post-Incident Analysis</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Conduct thorough analysis, review forensic data, and identify lessons learned to improve security posture.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Phase 7 -->
+                <div class="bg-gradient-to-br from-[#2d1b1b] to-[#1e1414] border border-[#ef4444]/20 rounded-xl p-6 hover:border-[#ef4444]/50 hover:shadow-lg hover:shadow-[#ef4444]/10 transition-all duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-[#ef4444]/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/10 rounded-lg flex items-center justify-center">
+                                <i class="ri-message-3-line text-[#ef4444] text-xl"></i>
+                            </div>
+                            <span class="text-xs font-bold text-[#ef4444]/60 bg-[#ef4444]/10 px-2 py-1 rounded-full">STEP 7</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-[#ef4444] transition-colors duration-300">Communication</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Maintain clear stakeholder communication throughout the process and document policy changes for future incidents.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section id="benefits" class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-4 mb-6">
+                    <div class="h-px bg-[#6e3691] flex-1"></div>
+                    <span class="text-[#6e3691] font-medium uppercase tracking-wider">KEY BENEFITS</span>
+                    <div class="h-px bg-[#6e3691] flex-1"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Rapid Action, Minimized Impact, <br>and Enhanced Security
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Effective Response -->
+                <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 flex items-center justify-center mb-6">
+                            <i class="ri-arrow-up-double-line text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Effective Response</h3>
+                        <p class="text-purple-100">
+                            Quickly address security incidents to minimize damage and downtime
+                        </p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                </div>
+
+                <!-- Expert Guidance -->
+                <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 flex items-center justify-center mb-6">
+                            <i class="ri-arrow-up-double-line text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Expert Guidance</h3>
+                        <p class="text-purple-100">
+                            Access seasoned professionals for effective incident management and strategic advice.
+                        </p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                </div>
+
+                <!-- Enhanced Preparedness -->
+                <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 flex items-center justify-center mb-6">
+                            <i class="ri-arrow-up-double-line text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Enhanced Preparedness</h3>
+                        <p class="text-purple-100">
+                            Strengthen response plans and improve security posture through regular engagement and simulations.
+                        </p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Help -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-4 mb-6">
+                        <div class="h-px bg-[#6e3691] flex-1 max-w-20"></div>
+                        <span class="text-[#6e3691] font-medium uppercase tracking-wider">HOW WE HELP</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">
+                        We Help to ensure to Prevent your incidental damage
+                    </h2>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-3">Proactive Risk Assessment</h3>
+                            <p class="text-gray-300">
+                                Our experts identify vulnerabilities before they can cause harm, ensuring your business stays protected.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-3">24/7 Monitoring</h3>
+                            <p class="text-gray-300">
+                                We offer round-the-clock surveillance to detect and respond to threats in real time.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-3">Rapid Incident Response</h3>
+                            <p class="text-gray-300">
+                                In case of an emergency, our team provides quick and effective solutions to mitigate potential damages.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=500&q=80" 
+                        alt="Cybersecurity protection and shield" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Six Solutions -->
+    <section class="py-20 bg-[#0f172a]/30">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-4 mb-6">
+                    <div class="h-px bg-gradient-to-r from-transparent via-[#ef4444] to-transparent flex-1 max-w-32"></div>
+                    <span class="text-[#ef4444] font-medium uppercase tracking-wider">COMPREHENSIVE SOLUTIONS</span>
+                    <div class="h-px bg-gradient-to-r from-transparent via-[#ef4444] to-transparent flex-1 max-w-32"></div>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    Our Comprehensive <span class="{{ title_gradient }}">Incident Response Solutions</span>
+                </h2>
+                <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                    Advanced security services designed to detect, respond to, and recover from cyber incidents with precision and speed.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                    <div class="text-center p-4 bg-[#ef4444]/5 rounded-lg border border-[#ef4444]/20">
+                        <div class="text-2xl font-bold text-[#ef4444] mb-1">24/7</div>
+                        <div class="text-xs text-gray-400">Monitoring</div>
+                    </div>
+                    <div class="text-center p-4 bg-[#ef4444]/5 rounded-lg border border-[#ef4444]/20">
+                        <div class="text-2xl font-bold text-[#ef4444] mb-1">&lt;1hr</div>
+                        <div class="text-xs text-gray-400">Response Time</div>
+                    </div>
+                    <div class="text-center p-4 bg-[#ef4444]/5 rounded-lg border border-[#ef4444]/20">
+                        <div class="text-2xl font-bold text-[#ef4444] mb-1">99.9%</div>
+                        <div class="text-xs text-gray-400">Success Rate</div>
+                    </div>
+                    <div class="text-center p-4 bg-[#ef4444]/5 rounded-lg border border-[#ef4444]/20">
+                        <div class="text-2xl font-bold text-[#ef4444] mb-1">365</div>
+                        <div class="text-xs text-gray-400">Days/Year</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Threat Hunting -->
+                <div class="group bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-[#ef4444]/30 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#ef4444]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="ri-search-eye-line text-[#ef4444] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#ef4444] transition-colors duration-300">Threat Hunting</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Proactively search for threats within your environment using advanced analytics and threat intelligence.
+                        </p>
+                        <div class="flex items-center text-[#ef4444] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span>Advanced Detection</span>
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IOC Sweeping -->
+                <div class="group bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-[#ef4444]/30 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#ef4444]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="ri-radar-line text-[#ef4444] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#ef4444] transition-colors duration-300">IOC Sweeping</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Identify Indicators of Compromise across your infrastructure to detect potential security breaches.
+                        </p>
+                        <div class="flex items-center text-[#ef4444] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span>Threat Detection</span>
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MITRE ATTACK -->
+                <div class="group bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-[#ef4444]/30 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#ef4444]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="ri-shield-flash-line text-[#ef4444] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#ef4444] transition-colors duration-300">MITRE ATT&CK</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Leverage the MITRE ATT&CK framework to assess and enhance your security posture systematically.
+                        </p>
+                        <div class="flex items-center text-[#ef4444] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span>Framework Analysis</span>
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IOA Hunting -->
+                <div class="group bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-[#ef4444]/30 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#ef4444]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="ri-bug-line text-[#ef4444] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#ef4444] transition-colors duration-300">IOA Hunting</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Detect Indicators of Attack (IOAs) to identify and prevent threats before they fully materialize.
+                        </p>
+                        <div class="flex items-center text-[#ef4444] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span>Early Prevention</span>
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attack Simulations -->
+                <div class="group bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-[#ef4444]/30 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#ef4444]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="ri-sword-line text-[#ef4444] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#ef4444] transition-colors duration-300">Attack Simulations</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Test your defenses with realistic simulated attacks to identify vulnerabilities and gaps.
+                        </p>
+                        <div class="flex items-center text-[#ef4444] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span>Defense Testing</span>
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Threat Profiles -->
+                <div class="group bg-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/[0.04] hover:border-[#ef4444]/30 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#ef4444]/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative">
+                        <div class="w-16 h-16 bg-gradient-to-br from-[#ef4444]/20 to-[#ef4444]/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="ri-user-search-line text-[#ef4444] text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4 group-hover:text-[#ef4444] transition-colors duration-300">Threat Profiles</h3>
+                        <p class="text-gray-400 leading-relaxed mb-4">
+                            Develop detailed threat actor profiles to better understand and defend against specific risks.
+                        </p>
+                        <div class="flex items-center text-[#ef4444] text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <span>Risk Assessment</span>
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-4 mb-6">
+                    <div class="h-px bg-[#6e3691] flex-1"></div>
+                    <span class="text-[#6e3691] font-medium uppercase tracking-wider">WHY CHOOSE US</span>
+                    <div class="h-px bg-[#6e3691] flex-1"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    We Driving Results for Your Success
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Left Column -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Proactive Protection</h3>
+                        <p class="text-gray-300">We anticipate and neutralize threats before they impact your business.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">24/7 Monitoring</h3>
+                        <p class="text-gray-300">Around-the-clock surveillance to detect and respond to threats instantly.</p>
+                    </div>
+                </div>
+
+                <!-- Center Column - Visual -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <!-- Central security icon with decorative elements -->
+                        <div class="w-64 h-64 bg-gradient-to-br from-[#6e3691] to-[#9655BD] rounded-full flex items-center justify-center relative">
+                            <div class="w-48 h-48 bg-[#1e293b] rounded-full flex items-center justify-center">
+                                <i class="ri-shield-check-line text-6xl text-[#6e3691]"></i>
+                            </div>
+                            <!-- Decorative elements -->
+                            <div class="absolute -top-4 -left-4 w-8 h-8 bg-yellow-500 rounded-full"></div>
+                            <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-orange-500 rounded-full"></div>
+                            <div class="absolute top-8 -right-8 w-4 h-4 bg-purple-400 rounded-full"></div>
+                            <div class="absolute -bottom-8 left-8 w-3 h-3 bg-blue-400 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Tailored Solutions</h3>
+                        <p class="text-gray-300">Custom security strategies to meet your unique needs and industry standards.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Integrity and Trust</h3>
+                        <p class="text-gray-300">At Aphelioncyber, we uphold the highest standards of integrity. We believe in honesty and transparency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 {{ page_background }}">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+                    Need Emergency Incident Response?
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    Don't wait when security incidents occur. Contact our emergency response team immediately for rapid assistance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+1-800-CYBER-911" class="bg-white text-[#6e3691] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-phone-line mr-2"></i>
+                        Emergency Hotline: 1-800-CYBER-911
+                    </a>
+                    <a href="/contact/" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6e3691] transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-message-3-line mr-2"></i>
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+
+{% block title %}Addons | Aphelion Cyber Security{% endblock %}
+{% block meta_description %}Explore additional security certifications, attestations, and tools to enhance your security posture.{% endblock %}
+
+{% block content %}
+
+
+<!-- Pop-up Dialog -->
+<div id="popup" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-[#1e293b] rounded-xl p-8 max-w-md w-full mx-4">
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-xl font-bold" id="popupTitle">Purchase SOC2 Readiness?</h3>
+            <button onclick="closePopup()" class="text-gray-400 hover:text-white">
+                <i class="ri-close-line text-2xl"></i>
+            </button>
+        </div>
+        <p class="text-gray-300 mb-6" id="popupData">Schedule a demo to enable SOC2 Readiness for all cloud accounts</p>
+        <p class="text-gray-300 mb-6">Click "Schedule Demo" to proceed</p>
+        <div class="flex justify-end gap-4">
+            <button onclick="closePopup()" class="px-6 py-2 border border-gray-600 rounded-lg hover:bg-gray-700 transition-colors">
+                Cancel
+            </button>
+            <button onclick="scheduleDemo()" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                Schedule Demo
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+function showPopup(service) {
+    document.getElementById('popupTitle').textContent = `Purchase ${service}?`;
+    document.getElementById('popupData').textContent = `Schedule a demo to enable ${service}? for all cloud accounts`;
+    document.getElementById('popup').classList.remove('hidden');
+}
+
+function closePopup() {
+    document.getElementById('popup').classList.add('hidden');
+}
+
+function scheduleDemo() {
+    // Add your demo scheduling logic here
+    closePopup();
+}
+</script>
+
+
+
+
+
+<div class="pt-32 pb-20 bg-[#0f172a]">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold mb-6">Addons</h1>
+            
+            <!-- Certifications / Attestations Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6">Certifications / Attestations:</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- SOC2 Readiness -->
+                    <div  class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/soc2-image.png" alt="SOC2" class="w-16 h-16 mb-4">
+                        <h3 class="text-lg font-semibold mb-4">SOC2 Readiness</h3>
+                        <button onclick="showPopup('SOC2 Readiness')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+
+                    <!-- ISO27001 Readiness -->
+                    <div class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/ISO27001.dfdeb2d7.jpg" alt="ISO27001" class="w-16 h-16 mb-4">
+                        <h3 class="text-m font-semibold mb-4">ISO27001 Readiness</h3>
+                        <button onclick="showPopup('ISO27001 Readiness')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+
+                    <!-- HIPAA Readiness -->
+                    <div  class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/hippa.jpeg" alt="HIPAA" class="w-16 h-16 mb-4">
+                        <h3 class="text-lg font-semibold mb-4">HIPAA Readiness</h3>
+                        <button onclick="showPopup('HIPAA Readiness')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+
+                    <!-- SOC1 Readiness -->
+                    <div class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/soc1-image.png" alt="SOC1" class="w-16 h-16 mb-4">
+                        <h3 class="text-lg font-semibold mb-4">SOC1 Readiness</h3>
+                        <button onclick="showPopup('SOC1 Readiness')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Certifications Section -->
+            <div class="mb-12">
+                <!-- <h2 class="text-2xl font-bold mb-6">Additional Certifications:</h2> -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- NIST 800-171 -->
+                    <div class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/nist-800-171.png" alt="NIST" class="w-16 h-16 mb-4">
+                        <h3 class="text-lg font-semibold mb-4">NIST 800-171</h3>
+                        <button onclick="showPopup('NIST 800-171')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+
+                    <!-- NIST 800-53 -->
+                    <div class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/nist-800-53.png" alt="NIST" class="w-16 h-16 mb-4">
+                        <h3 class="text-lg font-semibold mb-4">NIST 800-53</h3>
+                        <button onclick="showPopup('NIST 800-53')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+
+                    <!-- CIS Levels -->
+                    <div class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/cis.jpg" alt="CIS" class="w-16 h-16 mb-4">
+                        <h3 class="text-lg font-semibold mb-4">CIS Level 1 and 2</h3>
+                        <span class="bg-green-500 text-white px-4 py-2 rounded-lg">Active</span>
+                    </div>
+
+                    <!-- BSI C5 -->
+                    <div class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/bis.png" alt="BSI" class="w-16 h-16 mb-4">
+                        <h3 class="text-lg font-semibold mb-4">BSI C5 Readiness Checks</h3>
+                        <button onclick="showPopup('BSI C5 Readiness Checks')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Tools Section -->
+            <div>
+                <h2 class="text-2xl font-bold mb-6">Security Tools & Additional Services:</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- WebApp Scanner -->
+                    <div class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/webapp-scanner.jpg" alt="WebApp Scanner" class="w-16 h-16 mb-4">
+                        <h3 class="text-lg font-semibold mb-4">WebApp Scanner</h3>
+                        <button onclick="showPopup('WebApp Scanner')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+
+                    <!-- AWS Well Architected -->
+                    <div class="bg-[#1e293b] border border-gray-800 rounded-xl p-6 flex flex-col items-center">
+                        <img src="../../static/images/aws-well.png" alt="AWS" class="w-18 h-16 mb-4">
+                        <h3 class="text-m font-semibold mb-4">AWS Well Architected</h3>
+                        <button onclick="showPopup('AWS Well Architected')" class="bg-[#6e3691] hover:bg-[#8b5cf6] text-white px-6 py-2 rounded-lg transition-colors">
+                            Enable
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

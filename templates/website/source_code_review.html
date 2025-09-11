@@ -1,0 +1,463 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Source Code Security Review - Aphelion Cyber{% endblock %}
+
+{% block extra_css %}
+<style>
+    .text-gradient {
+        background: linear-gradient(135deg, #6e3691 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(150, 85, 189, 0.2);
+    }
+    .code-block {
+        background: #0f172a;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        padding: 1rem;
+        font-family: 'Courier New', monospace;
+        font-size: 0.875rem;
+        color: #e5e7eb;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-[#0f172a]">
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239655BD" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center bg-[#6e3691]/10 border border-[#6e3691]/20 rounded-full px-6 py-2 mb-8">
+                    <i class="ri-code-line text-[#6e3691] mr-2"></i>
+                    <span class="text-[#6e3691] font-medium">Secure Code Excellence</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="text-white">Comprehensive</span><br>
+                    <span class="text-gradient">Source Code Security Review</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    Identify and eliminate security vulnerabilities in your source code before they reach production. Our expert security engineers conduct thorough manual and automated code reviews across all major programming languages and frameworks.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] hover:from-[#8b5cf6] hover:to-[#6e3691] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Start Code Review
+                    </a>
+                    <a href="#services" class="border border-[#6e3691] text-[#6e3691] hover:bg-[#6e3691] hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programming Languages Section -->
+    <section class="py-20 bg-[#0f172a]/80">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="text-gradient">Multi-Language</span> Code Security
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our security experts have deep knowledge across all major programming languages and frameworks, ensuring comprehensive security coverage for your codebase.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#F7DF1E]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-javascript-line text-2xl text-[#F7DF1E]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">JavaScript</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#3776AB]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-2xl text-[#3776AB]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Python</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#ED8B00]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-2xl text-[#ED8B00]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Java</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#239120]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-2xl text-[#239120]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">C#/.NET</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#777BB4]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-2xl text-[#777BB4]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">PHP</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#CC342D]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-2xl text-[#CC342D]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Ruby</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#00ADD8]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-2xl text-[#00ADD8]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Go</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#CE422B]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-2xl text-[#CE422B]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Rust</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#00599C]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-2xl text-[#00599C]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">C/C++</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#61DAFB]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-reactjs-line text-2xl text-[#61DAFB]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">React</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#4FC08D]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-vuejs-line text-2xl text-[#4FC08D]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Vue.js</h3>
+                </div>
+
+                <div class="bg-[#1e293b] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#DD0031]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-angularjs-line text-2xl text-[#DD0031]"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-white">Angular</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Process Section -->
+    <section id="services" class="py-20 bg-[#1e293b]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Our <span class="text-gradient">Code Review Process</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    We follow a systematic approach combining automated analysis with expert manual review to identify all security vulnerabilities in your source code.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-download-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">1. Code Collection & Setup</h3>
+                    <p class="text-gray-300 mb-4">Secure acquisition and environment setup for your source code with proper access controls and confidentiality measures.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Secure code repository access</li>
+                        <li>• Environment configuration</li>
+                        <li>• Dependency analysis</li>
+                        <li>• Build system review</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-search-2-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">2. Automated Security Analysis</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive automated scanning using multiple static analysis tools to identify common security vulnerabilities.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Static Application Security Testing (SAST)</li>
+                        <li>• Dependency vulnerability scanning</li>
+                        <li>• Code quality analysis</li>
+                        <li>• Security pattern detection</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-eye-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">3. Manual Code Review</h3>
+                    <p class="text-gray-300 mb-4">Expert security engineers conduct line-by-line manual review to identify complex vulnerabilities missed by automated tools.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Business logic flaws</li>
+                        <li>• Authentication bypass</li>
+                        <li>• Authorization issues</li>
+                        <li>• Custom cryptographic implementations</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-bug-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">4. Vulnerability Classification</h3>
+                    <p class="text-gray-300 mb-4">Detailed classification and risk assessment of identified vulnerabilities using industry standard frameworks.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• OWASP Top 10 mapping</li>
+                        <li>• CWE classification</li>
+                        <li>• CVSS scoring</li>
+                        <li>• Business impact assessment</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-tools-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">5. Proof of Concept Development</h3>
+                    <p class="text-gray-300 mb-4">Where applicable, development of proof-of-concept exploits to demonstrate vulnerability impact and exploitability.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Exploit development</li>
+                        <li>• Impact demonstration</li>
+                        <li>• Attack scenario documentation</li>
+                        <li>• Risk validation</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-file-text-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">6. Detailed Reporting & Remediation</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive reporting with detailed findings, remediation guidance, and secure coding recommendations.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Executive summary</li>
+                        <li>• Technical vulnerability details</li>
+                        <li>• Remediation code examples</li>
+                        <li>• Secure coding guidelines</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Vulnerabilities Section -->
+    <section class="py-20 bg-[#0f172a]/80">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="text-gradient">Common Vulnerabilities</span> We Identify
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our comprehensive source code review identifies a wide range of security vulnerabilities, from OWASP Top 10 issues to complex business logic flaws.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-shield-cross-line text-3xl text-red-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Injection Flaws</h3>
+                    <p class="text-gray-300 mb-4">SQL injection, NoSQL injection, LDAP injection, and command injection vulnerabilities.</p>
+                    <div class="code-block text-xs">
+// Vulnerable SQL query
+query = "SELECT * FROM users WHERE id = " + userId;
+
+// Secure parameterized query  
+query = "SELECT * FROM users WHERE id = ?";
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-key-2-line text-3xl text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Authentication Bypass</h3>
+                    <p class="text-gray-300 mb-4">Weak authentication mechanisms, session management flaws, and credential handling issues.</p>
+                    <div class="code-block text-xs">
+// Vulnerable authentication
+if (password == storedPassword) {
+    authenticate();
+}
+
+// Secure authentication
+if (bcrypt.compare(password, hashedPassword)) {
+    authenticate();
+}
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-spam-2-line text-3xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Cross-Site Scripting (XSS)</h3>
+                    <p class="text-gray-300 mb-4">Reflected, stored, and DOM-based XSS vulnerabilities in web applications.</p>
+                    <div class="code-block text-xs">
+// Vulnerable output
+output.innerHTML = userInput;
+
+// Secure output
+output.textContent = userInput;
+// or use proper encoding/sanitization
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-lock-unlock-line text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Insecure Cryptography</h3>
+                    <p class="text-gray-300 mb-4">Weak cryptographic implementations, hardcoded keys, and improper random number generation.</p>
+                    <div class="code-block text-xs">
+// Vulnerable - weak algorithm
+cipher = DES.encrypt(data, key);
+
+// Secure - strong algorithm
+cipher = AES.encrypt(data, key, iv);
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-file-transfer-line text-3xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Path Traversal</h3>
+                    <p class="text-gray-300 mb-4">Directory traversal vulnerabilities allowing unauthorized file system access.</p>
+                    <div class="code-block text-xs">
+// Vulnerable file access
+file = open("/uploads/" + filename);
+
+// Secure file access with validation
+if (isValidFilename(filename)) {
+    file = open(safePath + filename);
+}
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-user-forbid-line text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Access Control Issues</h3>
+                    <p class="text-gray-300 mb-4">Broken access control, privilege escalation, and unauthorized resource access.</p>
+                    <div class="code-block text-xs">
+// Vulnerable - no authorization check
+deleteUser(userId);
+
+// Secure - proper authorization
+if (currentUser.canDelete(userId)) {
+    deleteUser(userId);
+}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-[#1e293b]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Why Choose Our <span class="text-gradient">Source Code Review</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our source code security review service provides comprehensive vulnerability detection with expert analysis and actionable remediation guidance.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Expert Security Analysis</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Deep Security Expertise</h4>
+                                <p class="text-gray-300">Our security engineers have extensive experience in secure coding practices across all major programming languages and frameworks.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Comprehensive Coverage</h4>
+                                <p class="text-gray-300">Combined automated and manual analysis ensures we identify both common vulnerabilities and complex business logic flaws.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Actionable Results</h4>
+                                <p class="text-gray-300">Detailed remediation guidance with code examples and secure coding best practices to fix identified vulnerabilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800">
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-code-line text-4xl text-[#6e3691]"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-4">Secure Code Excellence</h4>
+                        <p class="text-gray-300">Building security into your code from the ground up with comprehensive vulnerability detection and remediation guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-[#6e3691]">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Secure Your Source Code Today
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    Don't wait for vulnerabilities to reach production. Get a comprehensive source code security review from our experts.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{% url 'contact' %}" class="bg-white text-[#6e3691] hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Start Code Review
+                    </a>
+                    <a href="tel:+1234567890" class="border border-white text-white hover:bg-white hover:text-[#6e3691] font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                        Call: +1 (234) 567-8900
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

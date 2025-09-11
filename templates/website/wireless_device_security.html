@@ -1,0 +1,544 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Wireless Device Security Testing - Aphelion Cyber Security{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-cyber">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 bg-[#6e3691]/20 rounded-full mb-6">
+                    <i class="ri-wireless-charging-line text-[#6e3691] mr-2"></i>
+                    <span class="text-[#6e3691] font-medium">Wireless Device Security</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Advanced <span class="text-gradient">Wireless Device</span>
+                    Security Testing
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Comprehensive security assessment of wireless networks, IoT devices, and wireless communication protocols to identify vulnerabilities and prevent unauthorized access.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="btn-primary">
+                        <i class="ri-shield-check-line mr-2"></i>
+                        Our Services
+                    </a>
+                    <a href="#assessment" class="btn-secondary">
+                        <i class="ri-wifi-line mr-2"></i>
+                        Free Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="relative max-w-5xl mx-auto">
+                <img 
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                    alt="Wireless device security testing and network analysis" 
+                    class="rounded-2xl shadow-2xl border border-gray-700 w-full"
+                />
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Wireless Device Security -->
+    <section id="overview" class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        What is <span class="text-gradient">Wireless Device Security Testing?</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                        Wireless Device Security Testing is a comprehensive assessment methodology that evaluates the security posture of wireless networks, devices, and communication protocols. Our testing covers Wi-Fi networks, Bluetooth devices, IoT systems, and other wireless technologies to identify vulnerabilities that could be exploited by attackers.
+                    </p>
+                    <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                        With the proliferation of wireless devices and IoT systems, organizations face increasing security challenges. Our wireless security testing helps identify weak encryption, insecure authentication, rogue access points, and other vulnerabilities that could compromise your network infrastructure.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-4">
+                            <div class="text-2xl font-bold text-[#6e3691] mb-2">500+</div>
+                            <div class="text-sm text-gray-300">Wireless Assessments</div>
+                        </div>
+                        <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-4">
+                            <div class="text-2xl font-bold text-[#6e3691] mb-2">98%</div>
+                            <div class="text-sm text-gray-300">Threat Detection Rate</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Wireless security testing tools and equipment" 
+                        class="rounded-xl border border-gray-700 w-full"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Methodologies -->
+    <section id="methodologies" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Wireless Security <span class="text-gradient">Testing Methodologies</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    Our comprehensive approach covers all aspects of wireless security testing using industry-standard methodologies and advanced testing tools.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Wi-Fi Security Assessment -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-wifi-line text-2xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Wi-Fi Security Assessment</h3>
+                    <p class="text-gray-300 mb-6">
+                        Comprehensive evaluation of wireless network security including WPA/WPA2/WPA3 implementations, encryption protocols, and access control mechanisms.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Encryption Protocol Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Authentication Bypass Testing
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Rogue Access Point Detection
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            WPS Vulnerability Assessment
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Bluetooth Security Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-bluetooth-line text-2xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Bluetooth Security Testing</h3>
+                    <p class="text-gray-300 mb-6">
+                        Thorough assessment of Bluetooth-enabled devices and connections, including BLE (Bluetooth Low Energy) security evaluation and pairing vulnerabilities.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Device Discovery Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Pairing Security Assessment
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            BLE Security Testing
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Man-in-the-Middle Testing
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- IoT Device Security -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-home-wifi-line text-2xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">IoT Device Security</h3>
+                    <p class="text-gray-300 mb-6">
+                        Specialized testing of Internet of Things devices, smart home systems, and industrial IoT infrastructure to identify security vulnerabilities.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Device Firmware Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Communication Protocol Testing
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Authentication Bypass
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Default Credential Testing
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cellular Network Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-signal-tower-line text-2xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Cellular Network Security</h3>
+                    <p class="text-gray-300 mb-6">
+                        Assessment of cellular network security including 4G/5G implementations, SIM card security, and mobile network infrastructure vulnerabilities.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            IMSI Catcher Detection
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            SIM Card Security Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Network Protocol Testing
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Baseband Security Assessment
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- RFID/NFC Security -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-contactless-line text-2xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">RFID/NFC Security Testing</h3>
+                    <p class="text-gray-300 mb-6">
+                        Specialized assessment of RFID and Near Field Communication (NFC) systems, including access control systems and contactless payment security.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            RFID Tag Cloning Testing
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            NFC Communication Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Access Control Bypass
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Replay Attack Testing
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Wireless Protocol Analysis -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-radar-line text-2xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Wireless Protocol Analysis</h3>
+                    <p class="text-gray-300 mb-6">
+                        Deep analysis of various wireless communication protocols including ZigBee, Z-Wave, LoRaWAN, and proprietary wireless protocols.
+                    </p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Protocol Reverse Engineering
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Encryption Analysis
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Traffic Interception
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-[#6e3691] mr-2"></i>
+                            Jamming Attack Testing
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Process -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Our Wireless Security <span class="text-gradient">Testing Process</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    We follow a systematic approach to ensure comprehensive coverage of all wireless security aspects in your environment.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-[#6e3691]">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Discovery & Reconnaissance</h3>
+                    <p class="text-gray-300">
+                        Comprehensive wireless network discovery, device enumeration, and information gathering about your wireless infrastructure.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-[#6e3691]">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Vulnerability Assessment</h3>
+                    <p class="text-gray-300">
+                        Systematic identification of security vulnerabilities in wireless networks, devices, and communication protocols.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-[#6e3691]">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Exploitation Testing</h3>
+                    <p class="text-gray-300">
+                        Controlled exploitation of identified vulnerabilities to assess the real-world impact and validate security weaknesses.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-[#6e3691]">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Reporting & Remediation</h3>
+                    <p class="text-gray-300">
+                        Detailed security report with findings, risk ratings, and comprehensive remediation guidance for all identified issues.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Vulnerabilities -->
+    <section id="vulnerabilities" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Common <span class="text-gradient">Wireless Vulnerabilities</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    Our testing identifies and helps remediate the most critical wireless security vulnerabilities found in modern environments.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <img 
+                        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="Wireless network vulnerability analysis" 
+                        class="rounded-xl border border-gray-700 w-full mb-8"
+                    />
+                </div>
+                <div>
+                    <div class="space-y-6">
+                        <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-[#6e3691] mb-3">Weak Encryption Protocols</h3>
+                            <p class="text-gray-300 text-sm">
+                                Legacy encryption methods like WEP, weak WPA implementations, and inadequate key management practices that expose networks to attacks.
+                            </p>
+                        </div>
+                        <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-[#6e3691] mb-3">Rogue Access Points</h3>
+                            <p class="text-gray-300 text-sm">
+                                Unauthorized wireless access points that can be used to intercept traffic, launch man-in-the-middle attacks, or gain network access.
+                            </p>
+                        </div>
+                        <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-[#6e3691] mb-3">IoT Device Vulnerabilities</h3>
+                            <p class="text-gray-300 text-sm">
+                                Default credentials, unencrypted communications, and firmware vulnerabilities in Internet of Things devices and smart systems.
+                            </p>
+                        </div>
+                        <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-[#6e3691] mb-3">Bluetooth Security Flaws</h3>
+                            <p class="text-gray-300 text-sm">
+                                Insecure pairing processes, information disclosure, and proximity-based attacks targeting Bluetooth-enabled devices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools and Techniques -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Advanced <span class="text-gradient">Testing Tools & Techniques</span>
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+                    We utilize industry-leading tools and custom techniques to provide comprehensive wireless security assessments.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6 text-center hover:border-[#6e3691]/50 transition-colors">
+                    <i class="ri-wifi-line text-3xl text-[#6e3691] mb-3"></i>
+                    <h3 class="text-sm font-bold mb-2">Aircrack-ng Suite</h3>
+                    <p class="text-xs text-gray-400">Wi-Fi security auditing</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6 text-center hover:border-[#6e3691]/50 transition-colors">
+                    <i class="ri-bluetooth-line text-3xl text-[#6e3691] mb-3"></i>
+                    <h3 class="text-sm font-bold mb-2">Bluez Tools</h3>
+                    <p class="text-xs text-gray-400">Bluetooth security testing</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6 text-center hover:border-[#6e3691]/50 transition-colors">
+                    <i class="ri-radar-line text-3xl text-[#6e3691] mb-3"></i>
+                    <h3 class="text-sm font-bold mb-2">GNU Radio</h3>
+                    <p class="text-xs text-gray-400">Software-defined radio</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6 text-center hover:border-[#6e3691]/50 transition-colors">
+                    <i class="ri-fingerprint-line text-3xl text-[#6e3691] mb-3"></i>
+                    <h3 class="text-sm font-bold mb-2">Wireshark</h3>
+                    <p class="text-xs text-gray-400">Protocol analysis</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6 text-center hover:border-[#6e3691]/50 transition-colors">
+                    <i class="ri-settings-3-line text-3xl text-[#6e3691] mb-3"></i>
+                    <h3 class="text-sm font-bold mb-2">Kismet</h3>
+                    <p class="text-xs text-gray-400">Wireless network detector</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6 text-center hover:border-[#6e3691]/50 transition-colors">
+                    <i class="ri-home-wifi-line text-3xl text-[#6e3691] mb-3"></i>
+                    <h3 class="text-sm font-bold mb-2">IoT Scanner</h3>
+                    <p class="text-xs text-gray-400">IoT device discovery</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6 text-center hover:border-[#6e3691]/50 transition-colors">
+                    <i class="ri-signal-tower-line text-3xl text-[#6e3691] mb-3"></i>
+                    <h3 class="text-sm font-bold mb-2">HackRF One</h3>
+                    <p class="text-xs text-gray-400">RF analysis platform</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-lg p-6 text-center hover:border-[#6e3691]/50 transition-colors">
+                    <i class="ri-contactless-line text-3xl text-[#6e3691] mb-3"></i>
+                    <h3 class="text-sm font-bold mb-2">Proxmark3</h3>
+                    <p class="text-xs text-gray-400">RFID/NFC testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Why Choose Our <span class="text-gradient">Wireless Security Testing?</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-shield-check-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Comprehensive Coverage</h3>
+                    <p class="text-gray-300">
+                        Complete assessment of all wireless technologies in your environment, from Wi-Fi networks to IoT devices and specialized protocols.
+                    </p>
+                </div>
+
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-tools-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Advanced Testing Tools</h3>
+                    <p class="text-gray-300">
+                        Utilization of cutting-edge wireless testing equipment and software to identify vulnerabilities that standard tools might miss.
+                    </p>
+                </div>
+
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-user-star-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Expert Team</h3>
+                    <p class="text-gray-300">
+                        Certified wireless security professionals with extensive experience in RF analysis, protocol reverse engineering, and IoT security.
+                    </p>
+                </div>
+
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-file-text-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Detailed Reporting</h3>
+                    <p class="text-gray-300">
+                        Comprehensive reports with technical details, risk assessments, and step-by-step remediation guidance for all findings.
+                    </p>
+                </div>
+
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-time-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Minimal Disruption</h3>
+                    <p class="text-gray-300">
+                        Testing conducted with minimal impact to your business operations while maintaining comprehensive security coverage.
+                    </p>
+                </div>
+
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-8">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-customer-service-2-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Ongoing Support</h3>
+                    <p class="text-gray-300">
+                        Post-assessment support including remediation assistance, retesting services, and wireless security consulting.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="assessment" class="py-20 bg-gradient-to-r from-[#6e3691]/20 to-[#8b5cf6]/20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Ready to Secure Your <span class="text-gradient">Wireless Infrastructure?</span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">
+                    Contact us today for a comprehensive wireless security assessment and protect your organization from wireless-based cyber threats.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact/" class="btn-primary">
+                        <i class="ri-phone-line mr-2"></i>
+                        Schedule Assessment
+                    </a>
+                    <a href="/pricing/" class="btn-secondary">
+                        <i class="ri-price-tag-3-line mr-2"></i>
+                        View Pricing
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

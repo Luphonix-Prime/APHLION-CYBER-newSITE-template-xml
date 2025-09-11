@@ -1,0 +1,49 @@
+TemplateSyntaxError at /deep-web-monitoring/
+'block' tag with name 'stat_color' appears more than once
+Request Method:	GET
+Request URL:	http://a2b9102c-f8be-4332-bd7e-4456e8e3e678-00-1lxjfn8k4irfu.sisko.replit.dev/deep-web-monitoring/
+Django Version:	5.2.5
+Exception Type:	TemplateSyntaxError
+Exception Value:	
+'block' tag with name 'stat_color' appears more than once
+Exception Location:	/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/django/template/loader_tags.py, line 228, in do_block
+Raised during:	aphelioncyber.website.views.deep_web_monitoring
+Python Executable:	/home/runner/workspace/.pythonlibs/bin/python
+Python Version:	3.11.13
+Python Path:	
+['/home/runner/workspace',
+ '/nix/store/zz7i75jb78idaz0rb1y1i4rzdyxq28vf-sitecustomize/lib/python/site-packages',
+ '/nix/store/yaps09f01jp3fd1405qlr0qz6haf6z03-python3.11-pip-25.0.1/lib/python3.11/site-packages',
+ '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python311.zip',
+ '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11',
+ '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/lib-dynload',
+ '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages',
+ '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/python3.11/site-packages',
+ '/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages',
+ '/nix/store/y0iwy8ma2m45pr23bw4r7lyz69v2b6wf-python3.11-setuptools-80.7.1/lib/python3.11/site-packages']
+Server time:	Fri, 05 Sep 2025 07:39:11 +0000
+Error during template rendering
+In template /home/runner/workspace/templates/website/service_base.html, error at line 69
+
+'block' tag with name 'stat_color' appears more than once
+59	    {% block statistics_section %}
+60	    <section class="py-20 bg-gray-900/50">
+61	        <div class="container mx-auto px-4 md:px-6">
+62	            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+63	                {% block statistics %}
+64	                <div class="space-y-4">
+65	                    <h2 class="text-4xl md:text-5xl font-bold {% block stat_color %}text-[#6e3691]{% endblock %}">90%</h2>
+66	                    <p class="text-gray-300">of cyber attacks could be prevented with proper security measures.</p>
+67	                </div>
+68	                <div class="space-y-4">
+69	                    <h2 class="text-4xl md:text-5xl font-bold {% block stat_color %}text-[#6e3691]{% endblock %}">24/7</h2>
+70	                    <p class="text-gray-300">monitoring and threat detection across all critical systems.</p>
+71	                </div>
+72	                <div class="space-y-4">
+73	                    <h2 class="text-4xl md:text-5xl font-bold {% block stat_color %}text-[#6e3691]{% endblock %}">99.9%</h2>
+74	                    <p class="text-gray-300">uptime guarantee with our advanced security infrastructure.</p>
+75	                </div>
+76	                {% endblock %}
+77	            </div>
+78	        </div>
+79	    </section>

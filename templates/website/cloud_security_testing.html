@@ -1,0 +1,373 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cloud Security Testing - Aphelion Cyber{% endblock %}
+
+{% block extra_css %}
+<style>
+    .text-gradient {
+        background: linear-gradient(135deg, #6e3691 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(150, 85, 189, 0.2);
+    }
+    .service-icon {
+        background: linear-gradient(135deg, #6e3691 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-[#0f172a]">
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239655BD" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center bg-[#6e3691]/10 border border-[#6e3691]/20 rounded-full px-6 py-2 mb-8">
+                    <i class="ri-cloud-line text-[#6e3691] mr-2"></i>
+                    <span class="text-[#6e3691] font-medium">Cloud Security Excellence</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="text-white">Comprehensive</span><br>
+                    <span class="text-gradient">Cloud Security Testing</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    Secure your cloud infrastructure with our comprehensive testing services. We identify vulnerabilities, misconfigurations, and security gaps across AWS, Azure, Google Cloud, and hybrid environments to ensure your data remains protected in the cloud.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] hover:from-[#8b5cf6] hover:to-[#6e3691] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Start Security Assessment
+                    </a>
+                    <a href="#services" class="border border-[#6e3691] text-[#6e3691] hover:bg-[#6e3691] hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cloud Platforms Section -->
+    <section class="py-20 bg-[#0f172a]/80">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="text-gradient">Multi-Cloud</span> Security Coverage
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our cloud security testing covers all major cloud platforms and hybrid environments, ensuring comprehensive protection across your entire cloud ecosystem.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-16 h-16 bg-[#FF9900]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-amazon-line text-3xl text-[#FF9900]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Amazon Web Services</h3>
+                    <p class="text-gray-300 text-sm">Comprehensive AWS security assessment including IAM, S3, EC2, Lambda, and VPC configurations.</p>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-16 h-16 bg-[#0078D4]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-microsoft-line text-3xl text-[#0078D4]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Microsoft Azure</h3>
+                    <p class="text-gray-300 text-sm">Azure security testing covering Active Directory, Storage, Virtual Machines, and Azure Security Center.</p>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-16 h-16 bg-[#4285F4]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-google-line text-3xl text-[#4285F4]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Google Cloud Platform</h3>
+                    <p class="text-gray-300 text-sm">GCP security assessment including IAM, Cloud Storage, Compute Engine, and Kubernetes configurations.</p>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="ri-cloud-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Hybrid & Multi-Cloud</h3>
+                    <p class="text-gray-300 text-sm">Security testing for complex hybrid and multi-cloud environments with interconnected services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Methodology Section -->
+    <section id="services" class="py-20 bg-[#1e293b]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Our <span class="text-gradient">Testing Methodology</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    We follow a systematic approach to cloud security testing, combining automated tools with manual verification to identify all potential security vulnerabilities.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-search-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">1. Discovery & Enumeration</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive discovery of cloud assets, services, and configurations across your entire cloud environment.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Asset inventory and mapping</li>
+                        <li>• Service enumeration</li>
+                        <li>• Network topology analysis</li>
+                        <li>• Configuration discovery</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-shield-check-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">2. Configuration Assessment</h3>
+                    <p class="text-gray-300 mb-4">Detailed analysis of cloud service configurations against security best practices and compliance standards.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Security group analysis</li>
+                        <li>• IAM policy review</li>
+                        <li>• Storage configuration</li>
+                        <li>• Network access controls</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-bug-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">3. Vulnerability Testing</h3>
+                    <p class="text-gray-300 mb-4">Active testing for security vulnerabilities in cloud infrastructure and applications.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Network penetration testing</li>
+                        <li>• Application security testing</li>
+                        <li>• Container security assessment</li>
+                        <li>• API security evaluation</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-key-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">4. Identity & Access Review</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive evaluation of identity and access management controls and policies.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Privilege escalation testing</li>
+                        <li>• Access policy analysis</li>
+                        <li>• Multi-factor authentication review</li>
+                        <li>• Service account security</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-database-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">5. Data Protection Analysis</h3>
+                    <p class="text-gray-300 mb-4">Assessment of data protection mechanisms, encryption, and data handling practices.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Encryption assessment</li>
+                        <li>• Data classification review</li>
+                        <li>• Backup security evaluation</li>
+                        <li>• Data loss prevention testing</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-file-text-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">6. Reporting & Remediation</h3>
+                    <p class="text-gray-300 mb-4">Detailed reporting with prioritized findings and actionable remediation guidance.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Executive summary reports</li>
+                        <li>• Technical findings documentation</li>
+                        <li>• Remediation roadmap</li>
+                        <li>• Compliance mapping</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-20 bg-[#0f172a]/80">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Why Choose Our <span class="text-gradient">Cloud Security Testing</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our cloud security testing service combines deep technical expertise with comprehensive coverage to protect your cloud infrastructure.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Comprehensive Cloud Coverage</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Multi-Cloud Expertise</h4>
+                                <p class="text-gray-300">Deep knowledge across AWS, Azure, GCP, and hybrid environments with platform-specific security considerations.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Automated & Manual Testing</h4>
+                                <p class="text-gray-300">Combines automated scanning tools with expert manual testing for comprehensive vulnerability detection.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Compliance Alignment</h4>
+                                <p class="text-gray-300">Testing aligned with major compliance frameworks including SOC 2, ISO 27001, HIPAA, and GDPR.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800">
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-cloud-line text-4xl text-[#6e3691]"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-4">Cloud Security Excellence</h4>
+                        <p class="text-gray-300">Protecting your cloud infrastructure with industry-leading security testing methodologies and expertise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Areas Section -->
+    <section class="py-20 bg-[#1e293b]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="text-gradient">Security Testing Areas</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our comprehensive cloud security testing covers all critical areas of your cloud infrastructure to ensure complete protection.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-server-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Infrastructure Security</h3>
+                    <p class="text-gray-400 text-sm">Virtual machines, containers, networks, and compute resources security assessment.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-database-2-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Data Storage Security</h3>
+                    <p class="text-gray-400 text-sm">Object storage, databases, and data warehouses security configuration review.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-route-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Network Security</h3>
+                    <p class="text-gray-400 text-sm">VPC, security groups, firewalls, and network segmentation analysis.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-user-settings-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Identity & Access</h3>
+                    <p class="text-gray-400 text-sm">IAM policies, roles, permissions, and authentication mechanisms review.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-apps-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Application Security</h3>
+                    <p class="text-gray-400 text-sm">Cloud-native applications, serverless functions, and API security testing.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-box-3-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Container Security</h3>
+                    <p class="text-gray-400 text-sm">Docker containers, Kubernetes clusters, and orchestration platform security.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-eye-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Monitoring & Logging</h3>
+                    <p class="text-gray-400 text-sm">Security monitoring, logging configurations, and incident response capabilities.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-shield-check-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Compliance Controls</h3>
+                    <p class="text-gray-400 text-sm">Regulatory compliance controls and governance framework implementation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-[#6e3691]">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Secure Your Cloud Infrastructure Today
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    Don't leave your cloud security to chance. Get a comprehensive security assessment from our cloud security experts.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{% url 'contact' %}" class="bg-white text-[#6e3691] hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Get Security Assessment
+                    </a>
+                    <a href="tel:+1234567890" class="border border-white text-white hover:bg-white hover:text-[#6e3691] font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                        Call: +1 (234) 567-8900
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,324 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Cyber Defense | Aphelion Cyber Security{% endblock %}
+{% block meta_description %}Advanced cyber defense solutions including endpoint protection, network security, and threat intelligence to protect your organization.{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f]">
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#6e3691] to-[#C084FC] bg-clip-text text-transparent">
+                    Cyber Defense
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Multi-layered security architecture designed to prevent, detect, and respond to advanced cyber threats
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Defense Strategy Overview -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8 text-white">Defense in Depth Strategy</h2>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        Our cyber defense approach implements multiple layers of security controls, creating a robust defense ecosystem that can withstand sophisticated attacks. We combine preventive, detective, and responsive controls to ensure comprehensive protection.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-[#6e3691]/20 rounded-full p-3 mr-4 mt-1">
+                                <i class="ri-shield-check-line text-[#6e3691] text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-2">Preventive Controls</h4>
+                                <p class="text-gray-400 text-sm">Firewalls, access controls, and endpoint protection to block threats before they enter</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-[#6e3691]/20 rounded-full p-3 mr-4 mt-1">
+                                <i class="ri-eye-line text-[#6e3691] text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-2">Detective Controls</h4>
+                                <p class="text-gray-400 text-sm">Continuous monitoring and threat detection to identify potential breaches</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-[#6e3691]/20 rounded-full p-3 mr-4 mt-1">
+                                <i class="ri-alarm-warning-line text-[#6e3691] text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-2">Responsive Controls</h4>
+                                <p class="text-gray-400 text-sm">Automated response and incident management to minimize impact</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-[#6e3691]/20 to-[#C084FC]/10 rounded-2xl p-8 border border-[#6e3691]/20">
+                    <div class="text-center">
+                        <i class="ri-shield-star-line text-6xl text-[#6e3691] mb-6"></i>
+                        <h3 class="text-2xl font-bold text-white mb-4">Advanced Threat Protection</h3>
+                        <p class="text-gray-300 mb-6">AI-powered defense systems that adapt to emerging threats</p>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-[#1e293b]/50 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-[#6e3691]">99.8%</div>
+                                <div class="text-sm text-gray-400">Threat Detection</div>
+                            </div>
+                            <div class="bg-[#1e293b]/50 rounded-lg p-4">
+                                <div class="text-2xl font-bold text-[#6e3691]">&lt;1sec</div>
+                                <div class="text-sm text-gray-400">Response Time</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Defense Layers -->
+    <section class="py-20 bg-[#0a0a0a]/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 text-white">Multi-Layer Defense Architecture</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive protection across all attack vectors</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Network Security -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="mb-6">
+                        <i class="ri-router-line text-4xl text-[#6e3691] mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Network Security</h3>
+                        <p class="text-gray-300 leading-relaxed">Advanced firewalls, intrusion prevention systems, and network segmentation to protect your infrastructure perimeter.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Next-Gen Firewalls (NGFW)</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Intrusion Prevention Systems</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Network Access Control (NAC)</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Network Segmentation</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>DDoS Protection</li>
+                    </ul>
+                </div>
+
+                <!-- Endpoint Protection -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="mb-6">
+                        <i class="ri-computer-line text-4xl text-[#6e3691] mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Endpoint Protection</h3>
+                        <p class="text-gray-300 leading-relaxed">Comprehensive endpoint detection and response (EDR) solutions protecting all devices in your network.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Endpoint Detection & Response</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Anti-malware Protection</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Behavioral Analysis</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Device Control</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Remote Remediation</li>
+                    </ul>
+                </div>
+
+                <!-- Email Security -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="mb-6">
+                        <i class="ri-mail-line text-4xl text-[#6e3691] mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Email Security</h3>
+                        <p class="text-gray-300 leading-relaxed">Advanced email protection against phishing, malware, and business email compromise attacks.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Phishing Protection</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Malware Scanning</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>BEC Prevention</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Email Encryption</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Attachment Sandboxing</li>
+                    </ul>
+                </div>
+
+                <!-- Web Security -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="mb-6">
+                        <i class="ri-global-line text-4xl text-[#6e3691] mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Web Security</h3>
+                        <p class="text-gray-300 leading-relaxed">Secure web gateways and web application firewalls to protect against web-based threats.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Web Application Firewall</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>URL Filtering</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>DNS Security</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>SSL/TLS Inspection</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Content Filtering</li>
+                    </ul>
+                </div>
+
+                <!-- Identity & Access -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="mb-6">
+                        <i class="ri-user-settings-line text-4xl text-[#6e3691] mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Identity & Access Management</h3>
+                        <p class="text-gray-300 leading-relaxed">Comprehensive identity governance and privileged access management solutions.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Multi-Factor Authentication</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Privileged Access Management</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Single Sign-On (SSO)</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Identity Governance</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Access Analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Cloud Security -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="mb-6">
+                        <i class="ri-cloud-line text-4xl text-[#6e3691] mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Cloud Security</h3>
+                        <p class="text-gray-300 leading-relaxed">Native cloud security solutions for AWS, Azure, and GCP environments with automated compliance.</p>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Cloud Security Posture</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Container Security</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>API Security</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>DevSecOps Integration</li>
+                        <li class="flex items-center"><i class="ri-check-line text-[#6e3691] mr-2"></i>Multi-Cloud Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Threat Intelligence -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 text-white">Advanced Threat Intelligence</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Real-time threat intelligence feeds and analysis</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Intelligence-Driven Defense</h3>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        Our threat intelligence platform aggregates data from global sources, providing contextual information about emerging threats, attacker tactics, and indicators of compromise to enhance your defense capabilities.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-[#1e293b]/50 p-6 rounded-xl border border-gray-800">
+                            <i class="ri-global-line text-2xl text-[#6e3691] mb-3"></i>
+                            <h4 class="font-bold text-white mb-2">Global Threat Feeds</h4>
+                            <p class="text-sm text-gray-400">Real-time intelligence from worldwide sources</p>
+                        </div>
+                        <div class="bg-[#1e293b]/50 p-6 rounded-xl border border-gray-800">
+                            <i class="ri-brain-line text-2xl text-[#6e3691] mb-3"></i>
+                            <h4 class="font-bold text-white mb-2">AI Analysis</h4>
+                            <p class="text-sm text-gray-400">Machine learning threat pattern recognition</p>
+                        </div>
+                        <div class="bg-[#1e293b]/50 p-6 rounded-xl border border-gray-800">
+                            <i class="ri-map-pin-line text-2xl text-[#6e3691] mb-3"></i>
+                            <h4 class="font-bold text-white mb-2">IOC Tracking</h4>
+                            <p class="text-sm text-gray-400">Indicators of compromise monitoring</p>
+                        </div>
+                        <div class="bg-[#1e293b]/50 p-6 rounded-xl border border-gray-800">
+                            <i class="ri-team-line text-2xl text-[#6e3691] mb-3"></i>
+                            <h4 class="font-bold text-white mb-2">Attribution Analysis</h4>
+                            <p class="text-sm text-gray-400">Threat actor profiling and attribution</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-[#6e3691]/10 to-[#C084FC]/5 rounded-2xl p-8 border border-[#6e3691]/20">
+                    <h4 class="text-xl font-bold text-white mb-6">Threat Intelligence Sources</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between bg-[#1e293b]/30 p-3 rounded-lg">
+                            <span class="text-gray-300">Commercial Feeds</span>
+                            <span class="text-[#6e3691]">15+ Sources</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-[#1e293b]/30 p-3 rounded-lg">
+                            <span class="text-gray-300">Open Source Intel</span>
+                            <span class="text-[#6e3691]">50+ Feeds</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-[#1e293b]/30 p-3 rounded-lg">
+                            <span class="text-gray-300">Dark Web Monitoring</span>
+                            <span class="text-[#6e3691]">24/7</span>
+                        </div>
+                        <div class="flex items-center justify-between bg-[#1e293b]/30 p-3 rounded-lg">
+                            <span class="text-gray-300">Honeypot Networks</span>
+                            <span class="text-[#6e3691]">Global</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Process -->
+    <section class="py-20 bg-[#0a0a0a]/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 text-white">Implementation Process</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Structured approach to deploying comprehensive cyber defense</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-[#6e3691]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-[#6e3691]">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Assessment</h3>
+                    <p class="text-gray-400">Comprehensive security assessment and risk analysis</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-[#6e3691]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-[#6e3691]">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Design</h3>
+                    <p class="text-gray-400">Custom defense architecture design and planning</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-[#6e3691]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-[#6e3691]">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Deploy</h3>
+                    <p class="text-gray-400">Phased implementation with minimal business disruption</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-[#6e3691]/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-[#6e3691]">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Optimize</h3>
+                    <p class="text-gray-400">Continuous monitoring and optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="bg-gradient-to-r from-[#6e3691]/20 to-[#C084FC]/10 rounded-2xl p-12 text-center border border-[#6e3691]/20">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Strengthen Your Cyber Defense</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Deploy multi-layered security architecture designed to protect against advanced threats and ensure business continuity.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{% url 'contact' %}" class="bg-[#6e3691] hover:bg-[#6e3691]/80 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105">
+                        Schedule Assessment
+                    </a>
+                    <a href="{% url 'solutions' %}" class="border border-[#6e3691] text-[#6e3691] hover:bg-[#6e3691] hover:text-white font-bold py-3 px-8 rounded-lg transition-all">
+                        View Solutions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.card-hover {
+    transition: all 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(150, 85, 189, 0.1);
+}
+</style>
+{% endblock %}

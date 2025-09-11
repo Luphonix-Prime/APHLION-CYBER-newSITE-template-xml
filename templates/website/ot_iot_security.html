@@ -1,0 +1,536 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}OT/IOT Security - Aphelion Cyber{% endblock %}
+
+{% block extra_css %}
+<style>
+    .text-gradient {
+        background: linear-gradient(135deg, #6e3691 0%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(150, 85, 189, 0.2);
+    }
+    .device-pulse {
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-[#0f172a]">
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239655BD" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center bg-[#6e3691]/10 border border-[#6e3691]/20 rounded-full px-6 py-2 mb-8">
+                    <i class="ri-cpu-line text-[#6e3691] mr-2 device-pulse"></i>
+                    <span class="text-[#6e3691] font-medium">Industrial Security Excellence</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="text-white">Comprehensive</span><br>
+                    <span class="text-gradient">OT/IOT Security Testing</span>
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    Secure your operational technology and Internet of Things devices with our specialized security assessment services. We identify vulnerabilities in industrial control systems, smart devices, and connected infrastructure to protect your critical operations.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] hover:from-[#8b5cf6] hover:to-[#6e3691] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Start Security Assessment
+                    </a>
+                    <a href="#services" class="border border-[#6e3691] text-[#6e3691] hover:bg-[#6e3691] hover:text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OT vs IT Security Section -->
+    <section class="py-20 bg-[#0f172a]/80">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="text-gradient">OT Security</span> vs Traditional IT Security
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Operational Technology requires specialized security approaches that consider safety, availability, and real-time operations alongside traditional security principles.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="ri-settings-2-line text-[#6e3691] text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Operational Technology (OT)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-[#6e3691]/20 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691] text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Safety First Priority</h4>
+                                <p class="text-gray-300 text-sm">Focus on preventing physical harm and environmental damage</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-[#6e3691]/20 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691] text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Real-time Operations</h4>
+                                <p class="text-gray-300 text-sm">Millisecond response times and continuous availability requirements</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-[#6e3691]/20 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691] text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Legacy Systems</h4>
+                                <p class="text-gray-300 text-sm">Decades-old systems with limited security capabilities</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-[#6e3691]/20 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691] text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Specialized Protocols</h4>
+                                <p class="text-gray-300 text-sm">Industrial protocols like Modbus, DNP3, and IEC 61850</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="ri-computer-line text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Information Technology (IT)</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Confidentiality Priority</h4>
+                                <p class="text-gray-300 text-sm">Focus on protecting data and intellectual property</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Flexible Scheduling</h4>
+                                <p class="text-gray-300 text-sm">Maintenance windows and planned downtime acceptable</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Modern Systems</h4>
+                                <p class="text-gray-300 text-sm">Regular updates and built-in security features</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 bg-blue-500/20 rounded-full flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-1">Standard Protocols</h4>
+                                <p class="text-gray-300 text-sm">TCP/IP, HTTP/HTTPS, and well-documented standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Device Categories Section -->
+    <section class="py-20 bg-[#1e293b]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="text-gradient">Device Categories</span> We Secure
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our OT/IOT security testing covers a wide range of industrial and consumer devices across multiple sectors.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-factory-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Industrial Control Systems</h3>
+                    <p class="text-gray-300 mb-4">SCADA, PLC, DCS, and HMI systems in manufacturing and utilities.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Programmable Logic Controllers (PLCs)</li>
+                        <li>• Supervisory Control and Data Acquisition (SCADA)</li>
+                        <li>• Distributed Control Systems (DCS)</li>
+                        <li>• Human Machine Interfaces (HMI)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-home-wifi-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Smart Building Systems</h3>
+                    <p class="text-gray-300 mb-4">Connected building automation and management systems.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• HVAC control systems</li>
+                        <li>• Access control and security systems</li>
+                        <li>• Lighting and energy management</li>
+                        <li>• Fire safety and monitoring systems</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-car-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Connected Vehicles</h3>
+                    <p class="text-gray-300 mb-4">Automotive systems and vehicle-to-everything communication.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Electronic Control Units (ECUs)</li>
+                        <li>• Telematics systems</li>
+                        <li>• Infotainment systems</li>
+                        <li>• Vehicle-to-Infrastructure (V2I)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-heart-pulse-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Medical Devices</h3>
+                    <p class="text-gray-300 mb-4">Connected healthcare and medical equipment systems.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Patient monitoring systems</li>
+                        <li>• Infusion pumps and ventilators</li>
+                        <li>• Medical imaging equipment</li>
+                        <li>• Electronic health record systems</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-flashlight-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Energy & Utilities</h3>
+                    <p class="text-gray-300 mb-4">Power generation, transmission, and distribution systems.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Smart grid infrastructure</li>
+                        <li>• Power plant control systems</li>
+                        <li>• Water treatment facilities</li>
+                        <li>• Renewable energy systems</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#0f172a] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-smartphone-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Consumer IoT</h3>
+                    <p class="text-gray-300 mb-4">Smart home devices and consumer connected products.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Smart home hubs and assistants</li>
+                        <li>• Security cameras and doorbells</li>
+                        <li>• Wearable devices and fitness trackers</li>
+                        <li>• Connected appliances</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Methodology Section -->
+    <section id="services" class="py-20 bg-[#0f172a]/80">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Our <span class="text-gradient">OT/IOT Testing Methodology</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    We follow a structured approach that respects operational requirements while thoroughly assessing security posture.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-map-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">1. Asset Discovery & Mapping</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive identification and inventory of all OT/IoT devices and network topology.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Passive network scanning</li>
+                        <li>• Protocol identification</li>
+                        <li>• Device fingerprinting</li>
+                        <li>• Network architecture mapping</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-scan-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">2. Vulnerability Assessment</h3>
+                    <p class="text-gray-300 mb-4">Non-intrusive vulnerability scanning tailored for operational environments.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Safe scanning techniques</li>
+                        <li>• Firmware analysis</li>
+                        <li>• Configuration review</li>
+                        <li>• Known vulnerability checks</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-radio-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">3. Protocol Analysis</h3>
+                    <p class="text-gray-300 mb-4">Deep analysis of industrial and IoT communication protocols.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Modbus/TCP analysis</li>
+                        <li>• DNP3 security evaluation</li>
+                        <li>• MQTT and CoAP testing</li>
+                        <li>• Wireless protocol assessment</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-key-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">4. Authentication Testing</h3>
+                    <p class="text-gray-300 mb-4">Evaluation of authentication mechanisms and access controls.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Default credential testing</li>
+                        <li>• Certificate validation</li>
+                        <li>• Multi-factor authentication review</li>
+                        <li>• Session management analysis</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-smartphone-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">5. Device-Level Testing</h3>
+                    <p class="text-gray-300 mb-4">Physical and logical security assessment of individual devices.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Hardware security analysis</li>
+                        <li>• Firmware extraction and analysis</li>
+                        <li>• Debug interface testing</li>
+                        <li>• Side-channel analysis</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-file-text-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">6. Risk Assessment & Reporting</h3>
+                    <p class="text-gray-300 mb-4">Comprehensive risk analysis with operational impact consideration.</p>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li>• Safety impact analysis</li>
+                        <li>• Business continuity assessment</li>
+                        <li>• Prioritized remediation plan</li>
+                        <li>• Compliance gap analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Vulnerabilities Section -->
+    <section class="py-20 bg-[#1e293b]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    <span class="text-gradient">Common OT/IOT Vulnerabilities</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our testing identifies critical vulnerabilities that pose unique risks to operational technology and IoT environments.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-key-2-line text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Default Credentials</h3>
+                    <p class="text-gray-400 text-sm">Unchanged default usernames and passwords on industrial devices and systems.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-shield-cross-line text-orange-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Unencrypted Communications</h3>
+                    <p class="text-gray-400 text-sm">Plain-text industrial protocols transmitting sensitive operational data.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-bug-line text-yellow-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Firmware Vulnerabilities</h3>
+                    <p class="text-gray-400 text-sm">Outdated firmware with known security vulnerabilities and no update mechanisms.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-wifi-off-line text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-White mb-3">Insecure Wireless</h3>
+                    <p class="text-gray-400 text-sm">Weak wireless security implementations in industrial wireless networks.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-door-open-line text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Debug Interfaces</h3>
+                    <p class="text-gray-400 text-sm">Exposed debug ports and maintenance interfaces allowing unauthorized access.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-route-line text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Network Segmentation</h3>
+                    <p class="text-gray-400 text-sm">Poor network segmentation allowing lateral movement between IT and OT networks.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-user-forbid-line text-pink-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Insufficient Access Control</h3>
+                    <p class="text-gray-400 text-sm">Lack of proper authentication and authorization mechanisms for device access.</p>
+                </div>
+
+                <div class="bg-[#0f172a] p-6 rounded-xl border border-gray-800 card-hover text-center">
+                    <div class="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-code-line text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Injection Attacks</h3>
+                    <p class="text-gray-400 text-sm">Command injection vulnerabilities in device management interfaces and protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-[#0f172a]/80">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Why Choose Our <span class="text-gradient">OT/IOT Security</span> Services
+                </h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Our specialized expertise in operational technology and IoT security ensures comprehensive protection for your critical infrastructure.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Specialized OT/IOT Expertise</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Industrial Experience</h4>
+                                <p class="text-gray-300">Deep understanding of industrial control systems, manufacturing processes, and operational requirements.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Safety-First Approach</h4>
+                                <p class="text-gray-300">Testing methodologies designed to ensure safety and minimize operational disruption.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-white mb-2">Protocol Expertise</h4>
+                                <p class="text-gray-300">Comprehensive knowledge of industrial protocols, IoT standards, and emerging technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800">
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-cpu-line text-4xl text-[#6e3691] device-pulse"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-4">Industrial Security Excellence</h4>
+                        <p class="text-gray-300">Protecting your operational technology and IoT infrastructure with specialized security expertise and proven methodologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-[#6e3691]">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Secure Your OT/IOT Infrastructure Today
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    Don't leave your critical operational technology and IoT devices vulnerable. Get a comprehensive security assessment from our OT/IOT security experts.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{% url 'contact' %}" class="bg-white text-[#6e3691] hover:bg-gray-100 font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                        Start Security Assessment
+                    </a>
+                    <a href="tel:+1234567890" class="border border-white text-white hover:bg-white hover:text-[#6e3691] font-semibold py-4 px-8 rounded-xl transition-all duration-300">
+                        Call: +1 (234) 567-8900
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

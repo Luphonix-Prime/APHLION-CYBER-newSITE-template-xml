@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+
+{% block title %}Solutions | Aphelion Cyber Security{% endblock %}
+{% block meta_description %}Industry-specific cybersecurity solutions for healthcare, financial services, government, retail, and enterprise organizations.{% endblock %}
+
+{% block content %}
+<div class="pt-32 pb-20">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Solutions</h1>
+            <p class="text-xl text-gray-300">
+                Industry-specific security solutions tailored to your organization's unique needs.
+            </p>
+        </div>
+        
+        <!-- Healthcare -->
+        <div class="mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <span class="bg-[#6e3691]/20 text-[#6e3691] px-4 py-1 rounded-full text-sm font-medium">Healthcare</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Healthcare Security Solutions</h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Protect patient data and ensure HIPAA compliance with our specialized healthcare security solutions designed for the unique challenges of the healthcare industry.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e3691]/20 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <p class="text-gray-300">HIPAA compliance automation and reporting</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e3691]/20 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <p class="text-gray-300">Medical device security monitoring</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e3691]/20 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <p class="text-gray-300">PHI data protection and access controls</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e3691]/20 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <p class="text-gray-300">Healthcare-specific threat intelligence</p>
+                        </li>
+                    </ul>
+                    
+                    <a href="{% url 'contact' %}" class="inline-flex items-center bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium px-6 py-3 rounded-lg transition-colors">
+                        Request Healthcare Solution Demo
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=800&q=80" 
+                        alt="Healthcare Cybersecurity" 
+                        class="rounded-2xl shadow-2xl border border-gray-700"
+                    />
+                    <div class="absolute -bottom-4 -right-4 w-40 h-40 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Financial Services -->
+        <div class="mb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&h=800&q=80" 
+                        alt="Financial Services Cybersecurity" 
+                        class="rounded-2xl shadow-2xl border border-gray-700"
+                    />
+                    <div class="absolute -bottom-4 -left-4 w-40 h-40 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                </div>
+                
+                <div class="order-1 lg:order-2">
+                    <div class="mb-6">
+                        <span class="bg-[#6e3691]/20 text-[#6e3691] px-4 py-1 rounded-full text-sm font-medium">Financial Services</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Financial Services Security</h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Secure financial data and transactions with advanced threat detection and regulatory compliance solutions designed for banks, credit unions, and financial institutions.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e3691]/20 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <p class="text-gray-300">PCI DSS compliance automation</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e3691]/20 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <p class="text-gray-300">Advanced fraud detection and prevention</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e3691]/20 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <p class="text-gray-300">Zero trust security architecture</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e3691]/20 flex items-center justify-center mr-3 mt-1">
+                                <i class="ri-check-line text-[#6e3691]"></i>
+                            </div>
+                            <p class="text-gray-300">Real-time transaction monitoring</p>
+                        </li>
+                    </ul>
+                    
+                    <a href="{% url 'contact' %}" class="inline-flex items-center bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium px-6 py-3 rounded-lg transition-colors">
+                        Request Financial Services Demo
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Solutions -->
+        <div class="mb-20">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Additional Industry Solutions</h2>
+                <p class="text-lg text-gray-300">
+                    We provide specialized security solutions for various industries with unique compliance requirements and threat landscapes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Government -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-government-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Government</h3>
+                    <p class="text-gray-300 mb-6">
+                        Specialized security for government agencies with FedRAMP compliance and advanced threat protection.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">FedRAMP compliant solutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">Classified data protection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">Critical infrastructure security</span>
+                        </li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] transition-colors font-medium">
+                        Learn more
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Retail -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-store-2-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Retail</h3>
+                    <p class="text-gray-300 mb-6">
+                        Protect customer data and point-of-sale systems with dedicated retail security solutions.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">POS system security</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">E-commerce protection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">Customer data safeguards</span>
+                        </li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] transition-colors font-medium">
+                        Learn more
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800 card-hover">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-6">
+                        <i class="ri-building-line text-3xl text-[#6e3691]"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-gray-300 mb-6">
+                        Comprehensive security management for large organizations with complex infrastructure needs.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">Enterprise-wide visibility</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">Cloud security posture</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-[#6e3691] mr-2 mt-1"></i>
+                            <span class="text-gray-300">Advanced SOC capabilities</span>
+                        </li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="inline-flex items-center text-[#6e3691] hover:text-[#8b5cf6] transition-colors font-medium">
+                        Learn more
+                        <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="bg-gradient-cyber rounded-2xl overflow-hidden relative p-12 text-center">
+            <div class="absolute inset-0 bg-cyber-pattern opacity-10"></div>
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Need a customized security solution?</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Our security experts can help create a tailored solution that meets your organization's specific needs and requirements.
+                </p>
+                <a href="{% url 'contact' %}" class="inline-flex items-center bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium px-8 py-4 rounded-lg transition-colors">
+                    Contact Us Today
+                    <i class="ri-arrow-right-line ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

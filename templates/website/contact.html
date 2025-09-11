@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us | Aphelion Cyber Security{% endblock %}
+{% block meta_description %}Contact Aphelion Cyber Security for information about our cybersecurity solutions. Request a demo or speak with our sales team.{% endblock %}
+
+{% block content %}
+<section class="pt-32 py-20" id="contact">
+    <div class="container mx-auto px-4 md:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+            <p class="text-xl text-gray-300">
+                Our security experts are ready to help you assess your security posture and identify the right solutions for your organization.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    Have questions about our cybersecurity solutions or want to schedule a demo? Fill out the form or use our contact information below.
+                </p>
+                
+                <div class="space-y-6 mb-8">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="ri-mail-line text-2xl text-[#6e3691]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">Email</h3>
+                            <p class="text-gray-300">contact@aphelioncyber.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="ri-phone-line text-2xl text-[#6e3691]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">Phone</h3>
+                            <p class="text-gray-300">+1 (888) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mr-4">
+                            <i class="ri-map-pin-line text-2xl text-[#6e3691]"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">Office</h3>
+                            <p class="text-gray-300">123 Security Blvd, Cyber City, CA 94103</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-[#6e3691]/20 transition-colors">
+                        <i class="ri-linkedin-fill text-xl text-gray-300 hover:text-[#6e3691]"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-[#6e3691]/20 transition-colors">
+                        <i class="ri-twitter-fill text-xl text-gray-300 hover:text-[#6e3691]"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-[#6e3691]/20 transition-colors">
+                        <i class="ri-facebook-fill text-xl text-gray-300 hover:text-[#6e3691]"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-[#6e3691]/20 transition-colors">
+                        <i class="ri-github-fill text-xl text-gray-300 hover:text-[#6e3691]"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-[#1e293b] p-8 rounded-xl border border-gray-800">
+                <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
+                {% if messages %}
+                    <div class="bg-[#6e3691]/20 p-6 rounded-lg text-center">
+                        <i class="ri-check-line text-4xl text-[#6e3691] mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Thank You!</h4>
+                        {% for message in messages %}
+                            <p class="text-gray-300">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="id_name" class="block text-sm font-medium mb-2">Full Name</label>
+                                <input 
+                                    type="text" 
+                                    name="name" 
+                                    id="id_name" 
+                                    placeholder="John Doe" 
+                                    class="bg-[#0f0f0f] border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 text-white"
+                                    required
+                                >
+                            </div>
+                            <div>
+                                <label for="id_email" class="block text-sm font-medium mb-2">Email</label>
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    id="id_email" 
+                                    placeholder="you@example.com" 
+                                    class="bg-[#0f0f0f] border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 text-white"
+                                    required
+                                >
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="id_company" class="block text-sm font-medium mb-2">Company</label>
+                            <input 
+                                type="text" 
+                                name="company" 
+                                id="id_company" 
+                                placeholder="Your Company" 
+                                class="bg-[#0f0f0f] border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 text-white"
+                                required
+                            >
+                        </div>
+                        <div class="mb-6">
+                            <label for="id_message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea 
+                                name="message" 
+                                id="id_message" 
+                                rows="4" 
+                                placeholder="Tell us how we can help..." 
+                                class="bg-[#0f0f0f] border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 text-white"
+                                required
+                            ></textarea>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <input id="id_agree" name="agree" type="checkbox" class="w-4 h-4 bg-[#0f0f0f] border-gray-700 rounded" required>
+                            <label for="id_agree" class="ml-2 text-sm text-gray-300">
+                                I agree to the <a href="#" class="text-[#6e3691] hover:text-[#8b5cf6]">Privacy Policy</a> and <a href="#" class="text-[#6e3691] hover:text-[#8b5cf6]">Terms of Service</a>.
+                            </label>
+                        </div>
+                        <button 
+                            type="submit" 
+                            class="w-full bg-[#6e3691] hover:bg-[#6e3691] text-white font-medium py-3 px-4 rounded-lg transition-colors"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

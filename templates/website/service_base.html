@@ -1,0 +1,356 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="min-h-screen {% block page_background %}bg-gradient-cyber{% endblock %}">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 {% block hero_background %}{% endblock %} {% block hero_pattern %}{% endblock %}">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                {% block service_badge %}
+                <div class="inline-flex items-center px-4 py-2 {% block badge_color %}bg-[#6e3691]/20{% endblock %} rounded-full mb-6">
+                    <i class="{% block service_icon %}ri-shield-flash-line{% endblock %} {% block icon_color %}text-[#6e3691]{% endblock %} mr-2"></i>
+                    <span class="{% block badge_text_color %}text-[#6e3691]{% endblock %} font-medium">{% block service_category %}Cybersecurity Service{% endblock %}</span>
+                </div>
+                {% endblock %}
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight {% block title_animation %}{% endblock %}">
+                    {% block service_title %}
+                    Advanced <span class="{% block title_gradient %}text-gradient{% endblock %}">Cybersecurity</span> Services
+                    {% endblock %}
+                </h1>
+                
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    {% block service_description %}
+                    Comprehensive cybersecurity solutions to protect your organization from evolving threats.
+                    {% endblock %}
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="btn-primary">
+                        <i class="ri-shield-check-line mr-2"></i>
+                        Our Services
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="ri-phone-line mr-2"></i>
+                        {% block cta_text %}Get Started{% endblock %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="relative max-w-5xl mx-auto">
+                <img 
+                    src="{% block hero_image %}https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80{% endblock %}" 
+                    alt="{% block hero_alt %}Cybersecurity protection{% endblock %}" 
+                    class="rounded-2xl shadow-2xl border border-gray-700 w-full"
+                />
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    {% block statistics_section %}
+    <section class="py-20 bg-gray-900/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                {% block statistics %}
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#6e3691]">90%</h2>
+                    <p class="text-gray-300">of cyber attacks could be prevented with proper security measures.</p>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#6e3691]">24/7</h2>
+                    <p class="text-gray-300">monitoring and threat detection across all critical systems.</p>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#6e3691]">99.9%</h2>
+                    <p class="text-gray-300">uptime guarantee with our advanced security infrastructure.</p>
+                </div>
+                {% endblock %}
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+
+    <!-- Service Overview -->
+    <section id="overview" class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        {% block overview_title %}
+                        What is <span class="text-gradient">Our Service?</span>
+                        {% endblock %}
+                    </h2>
+                    
+                    {% block overview_content %}
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Our comprehensive cybersecurity service provides advanced protection against modern threats, ensuring your organization's digital assets remain secure and compliant.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="ri-time-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Rapid Response</h4>
+                                <p class="text-gray-400 text-sm">Quick deployment and immediate threat mitigation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-team-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Expert Team</h4>
+                                <p class="text-gray-400 text-sm">Certified security professionals available 24/7</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-file-list-3-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Comprehensive Reporting</h4>
+                                <p class="text-gray-400 text-sm">Detailed analysis and actionable recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endblock %}
+                </div>
+                <div class="relative">
+                    <img 
+                        src="{% block overview_image %}https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80{% endblock %}" 
+                        alt="{% block overview_alt %}Security operations{% endblock %}" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process/Methodology Section -->
+    {% block process_section %}
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    {% block process_title %}
+                    Our Proven <span class="text-gradient">Methodology</span>
+                    {% endblock %}
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    {% block process_description %}
+                    Following industry-standard frameworks and best practices to ensure comprehensive and effective security implementation.
+                    {% endblock %}
+                </p>
+            </div>
+
+            {% block process_steps %}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Default process steps - override in child templates -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-search-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">1. Assessment</h3>
+                    <p class="text-gray-300 text-sm">Comprehensive evaluation of current security posture and threat landscape.</p>
+                </div>
+                
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-shield-check-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">2. Implementation</h3>
+                    <p class="text-gray-300 text-sm">Strategic deployment of security measures and controls.</p>
+                </div>
+                
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-eye-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">3. Monitoring</h3>
+                    <p class="text-gray-300 text-sm">Continuous surveillance and threat detection capabilities.</p>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </section>
+    {% endblock %}
+
+    <!-- Key Benefits -->
+    <section id="benefits" class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-4 mb-6">
+                    <div class="h-px bg-[#6e3691] flex-1"></div>
+                    <span class="text-[#6e3691] font-medium uppercase tracking-wider">KEY BENEFITS</span>
+                    <div class="h-px bg-[#6e3691] flex-1"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    {% block benefits_title %}
+                    Enhanced Security, Minimized Risk, <br>and Peace of Mind
+                    {% endblock %}
+                </h2>
+            </div>
+
+            {% block benefits_content %}
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 flex items-center justify-center mb-6">
+                            <i class="ri-shield-check-line text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Enhanced Protection</h3>
+                        <p class="text-purple-100">Advanced security measures to protect against evolving threats</p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                </div>
+
+                <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 flex items-center justify-center mb-6">
+                            <i class="ri-team-line text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Expert Guidance</h3>
+                        <p class="text-purple-100">Access to certified security professionals and strategic advice</p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                </div>
+
+                <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 flex items-center justify-center mb-6">
+                            <i class="ri-line-chart-line text-4xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Improved Resilience</h3>
+                        <p class="text-purple-100">Strengthen your security posture and operational continuity</p>
+                    </div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </section>
+
+    <!-- Service Offerings -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    {% block services_title %}
+                    Our Comprehensive <span class="text-gradient">Service Offerings</span>
+                    {% endblock %}
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    {% block services_description %}
+                    Advanced security services designed to meet your specific cybersecurity needs and requirements.
+                    {% endblock %}
+                </p>
+            </div>
+
+            {% block services_grid %}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Default services - override in child templates -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-shield-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Security Assessment</h3>
+                    <p class="text-gray-300 text-sm">Comprehensive evaluation of security controls and vulnerabilities.</p>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-4 mb-6">
+                    <div class="h-px bg-[#6e3691] flex-1"></div>
+                    <span class="text-[#6e3691] font-medium uppercase tracking-wider">WHY CHOOSE US</span>
+                    <div class="h-px bg-[#6e3691] flex-1"></div>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    We Driving Results for Your Success
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <!-- Left Column -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Proactive Protection</h3>
+                        <p class="text-gray-300">We anticipate and neutralize threats before they impact your business.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">24/7 Monitoring</h3>
+                        <p class="text-gray-300">Around-the-clock surveillance to detect and respond to threats instantly.</p>
+                    </div>
+                </div>
+
+                <!-- Center Column - Visual -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 bg-gradient-to-br from-[#6e3691] to-[#9655BD] rounded-full flex items-center justify-center relative">
+                            <div class="w-48 h-48 bg-[#1e293b] rounded-full flex items-center justify-center">
+                                <i class="ri-shield-check-line text-6xl text-[#6e3691]"></i>
+                            </div>
+                            <div class="absolute -top-4 -left-4 w-8 h-8 bg-yellow-500 rounded-full"></div>
+                            <div class="absolute -bottom-4 -right-4 w-6 h-6 bg-orange-500 rounded-full"></div>
+                            <div class="absolute top-8 -right-8 w-4 h-4 bg-purple-400 rounded-full"></div>
+                            <div class="absolute -bottom-8 left-8 w-3 h-3 bg-blue-400 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Tailored Solutions</h3>
+                        <p class="text-gray-300">Custom security strategies to meet your unique needs and industry standards.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Integrity and Trust</h3>
+                        <p class="text-gray-300">At Aphelioncyber, we uphold the highest standards of integrity. We believe in honesty and transparency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-[#6e3691]">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    {% block cta_title %}
+                    Ready to Enhance Your Security?
+                    {% endblock %}
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    {% block cta_description %}
+                    Contact our cybersecurity experts today to discuss how we can help protect your organization.
+                    {% endblock %}
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    {% block cta_buttons %}
+                    <a href="/contact/" class="bg-white text-[#6e3691] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-message-3-line mr-2"></i>
+                        Contact Us
+                    </a>
+                    <a href="tel:+1-800-CYBER-911" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6e3691] transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-phone-line mr-2"></i>
+                        Call Now
+                    </a>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

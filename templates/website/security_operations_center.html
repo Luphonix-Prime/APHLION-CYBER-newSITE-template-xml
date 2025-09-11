@@ -1,0 +1,293 @@
+{% extends 'website/service_base.html' %}
+
+{% block title %}Security Operations Center (SOC) Services - Aphelion Cyber Security{% endblock %}
+
+<!-- Unique SOC Tech Theme -->
+{% block page_background %}bg-gradient-to-br from-[#0a1a0a] via-[#1a2e1a] to-[#0a1a0a]{% endblock %}
+{% block hero_background %}relative overflow-hidden{% endblock %}
+{% block hero_pattern %}bg-pattern-matrix{% endblock %}
+{% block primary_color %}[#10b981]{% endblock %}
+{% block badge_color %}bg-[#10b981]/20{% endblock %}
+{% block icon_color %}text-[#10b981]{% endblock %}
+{% block badge_text_color %}text-[#10b981]{% endblock %}
+{% block title_gradient %}bg-gradient-to-r from-[#10b981] to-[#34d399] bg-clip-text text-transparent{% endblock %}
+{% block stat_color %}text-[#10b981]{% endblock %}
+{% block card_style %}bg-[#1f2937] border border-[#10b981]/20{% endblock %}
+
+{% block service_icon %}ri-command-line{% endblock %}
+{% block service_category %}Security Operations Center{% endblock %}
+
+{% block service_title %}
+24/7 <span class="text-gradient">Security Operations Center</span> Services
+{% endblock %}
+
+{% block service_description %}
+Comprehensive managed SOC services providing round-the-clock threat monitoring, detection, analysis, and response capabilities for your organization.
+{% endblock %}
+
+{% block cta_text %}SOC Services{% endblock %}
+
+{% block hero_image %}https://images.unsplash.com/photo-1551808525-51a94da548ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80{% endblock %}
+{% block hero_alt %}Security operations center monitoring dashboard{% endblock %}
+
+{% block statistics %}
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#10b981]">24/7</h2>
+    <p class="text-gray-300">continuous monitoring and threat detection across all your critical systems.</p>
+</div>
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#10b981]">3 min</h2>
+    <p class="text-gray-300">average threat detection and response time for critical security incidents.</p>
+</div>
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#10b981]">99.9%</h2>
+    <p class="text-gray-300">uptime guarantee for our SOC monitoring and alerting systems.</p>
+</div>
+{% endblock %}
+
+{% block overview_title %}
+What is a <span class="text-gradient">Security Operations Center?</span>
+{% endblock %}
+
+{% block overview_content %}
+<p class="text-gray-300 mb-6 leading-relaxed">
+    A Security Operations Center (SOC) is a centralized facility where our expert security analysts monitor, detect, analyze, and respond to cybersecurity threats in real-time. Our SOC provides 24/7 protection for your organization's digital infrastructure and assets.
+</p>
+
+<div class="space-y-4">
+    <div class="flex items-start">
+        <i class="ri-time-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">24/7 Operations</h4>
+            <p class="text-gray-400 text-sm">Round-the-clock monitoring with expert analysts always on duty</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-shield-flash-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Advanced Detection</h4>
+            <p class="text-gray-400 text-sm">AI-powered threat detection with human expertise validation</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-team-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Expert Team</h4>
+            <p class="text-gray-400 text-sm">Certified security analysts with specialized expertise</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block overview_image %}https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80{% endblock %}
+{% block overview_alt %}SOC analysts monitoring security dashboard{% endblock %}
+
+{% block process_title %}
+Our SOC <span class="text-gradient">Operations Framework</span>
+{% endblock %}
+
+{% block process_description %}
+Following industry-standard SOC methodologies and frameworks including NIST, MITRE ATT&CK, and SANS to ensure comprehensive threat detection and response.
+{% endblock %}
+
+{% block process_steps %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-eye-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">1. Continuous Monitoring</h3>
+        <p class="text-gray-300 text-sm mb-4">
+            24/7 monitoring of networks, endpoints, applications, and cloud infrastructure using advanced SIEM and threat detection tools.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-search-eye-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">2. Threat Detection</h3>
+        <p class="text-gray-300 text-sm mb-4">
+            Advanced threat detection using machine learning, behavioral analysis, and signature-based detection methods.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-brain-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">3. Alert Analysis</h3>
+        <p class="text-gray-300 text-sm mb-4">
+            Expert analysis of security alerts to determine severity, impact, and required response actions while reducing false positives.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-shield-flash-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">4. Incident Response</h3>
+        <p class="text-gray-300 text-sm mb-4">
+            Rapid response to confirmed threats including containment, eradication, and recovery coordination with your team.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-search-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">5. Threat Hunting</h3>
+        <p class="text-gray-300 text-sm mb-4">
+            Proactive threat hunting to identify advanced persistent threats and sophisticated attacks that may evade automated detection.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-file-list-3-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">6. Reporting</h3>
+        <p class="text-gray-300 text-sm mb-4">
+            Comprehensive reporting and documentation of security events, trends, and recommendations for security improvements.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block benefits_title %}
+Enhanced Security Posture, Reduced Risk, <br>and Operational Excellence
+{% endblock %}
+
+{% block benefits_content %}
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-time-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Faster Response</h3>
+            <p class="text-purple-100">
+                Reduce mean time to detection and response with 24/7 expert monitoring
+            </p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-money-dollar-circle-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Cost Effective</h3>
+            <p class="text-purple-100">
+                Reduce operational costs compared to building an internal SOC team
+            </p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#6e3691] to-[#9655BD] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-shield-check-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Enhanced Detection</h3>
+            <p class="text-purple-100">
+                Advanced threat detection capabilities with reduced false positives
+            </p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block services_title %}
+Our Comprehensive <span class="text-gradient">SOC Services</span>
+{% endblock %}
+
+{% block services_description %}
+Full-spectrum SOC services designed to provide complete visibility and protection across your entire IT infrastructure.
+{% endblock %}
+
+{% block services_grid %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-dashboard-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">SIEM Management</h3>
+        <p class="text-gray-300 text-sm">
+            Complete SIEM deployment, configuration, and management with custom correlation rules.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-search-eye-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Threat Hunting</h3>
+        <p class="text-gray-300 text-sm">
+            Proactive threat hunting to identify advanced threats and APTs in your environment.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-shield-flash-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Incident Response</h3>
+        <p class="text-gray-300 text-sm">
+            Rapid incident response with containment, investigation, and remediation support.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-bug-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Malware Analysis</h3>
+        <p class="text-gray-300 text-sm">
+            In-depth malware analysis and reverse engineering to understand attack vectors.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-pie-chart-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Security Analytics</h3>
+        <p class="text-gray-300 text-sm">
+            Advanced security analytics and metrics to measure and improve security posture.
+        </p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-shield-check-line text-[#6e3691] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Compliance Monitoring</h3>
+        <p class="text-gray-300 text-sm">
+            Continuous compliance monitoring and reporting for regulatory requirements.
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+{% block cta_title %}
+Ready to Enhance Your Security Operations?
+{% endblock %}
+
+{% block cta_description %}
+Get 24/7 protection with our managed SOC services. Contact our security experts to discuss your monitoring and response needs.
+{% endblock %}
+
+{% block cta_buttons %}
+<a href="/contact/" class="bg-white text-[#6e3691] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+    <i class="ri-message-3-line mr-2"></i>
+    Get SOC Services
+</a>
+<a href="tel:+1-800-CYBER-911" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6e3691] transition-colors duration-200 flex items-center justify-center">
+    <i class="ri-phone-line mr-2"></i>
+    Emergency SOC: 1-800-CYBER-911
+</a>
+{% endblock %}

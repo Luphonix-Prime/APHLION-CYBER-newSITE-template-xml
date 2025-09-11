@@ -1,0 +1,389 @@
+
+{% extends 'base.html' %}
+
+{% block title %}API Security Assessment - Aphelion Cyber Security{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gradient-cyber">
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 bg-[#6e3691]/20 rounded-full mb-6">
+                    <i class="ri-code-s-slash-line text-[#6e3691] mr-2"></i>
+                    <span class="text-[#6e3691] font-medium">API Security Assessment</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Comprehensive <span class="text-gradient">API Security</span>
+                    Assessment
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Advanced security testing for REST APIs, GraphQL endpoints, and web services to identify vulnerabilities and ensure API security compliance.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="btn-primary">
+                        <i class="ri-shield-check-line mr-2"></i>
+                        Our Services
+                    </a>
+                    <a href="#assessment" class="btn-secondary">
+                        <i class="ri-file-list-3-line mr-2"></i>
+                        Free API Assessment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image -->
+    <section class="pb-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="relative max-w-5xl mx-auto">
+                <img 
+                    src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80" 
+                    alt="API security testing and endpoint analysis" 
+                    class="rounded-2xl shadow-2xl border border-gray-700 w-full"
+                />
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-[#6e3691]/20 rounded-full blur-3xl"></div>
+                <div class="absolute -top-6 -right-6 w-40 h-40 bg-[#8b5cf6]/20 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is API Security -->
+    <section id="overview" class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Why <span class="text-gradient">API Security Assessment?</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        APIs are the backbone of modern applications and digital ecosystems, making them critical attack vectors for cybercriminals. Our comprehensive API security assessment identifies vulnerabilities in REST APIs, GraphQL endpoints, and web services, ensuring they remain secure against evolving threats. We follow OWASP API Security guidelines and industry best practices.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="ri-shield-cross-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">OWASP API Top 10</h4>
+                                <p class="text-gray-400 text-sm">Complete assessment of the most critical API security risks</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-key-2-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Authentication & Authorization</h4>
+                                <p class="text-gray-400 text-sm">Deep testing of API authentication and authorization mechanisms</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="ri-database-2-line text-[#6e3691] text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Data Protection</h4>
+                                <p class="text-gray-400 text-sm">Assessment of data handling and protection in API communications</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80" 
+                        alt="API security dashboard and monitoring" 
+                        class="rounded-xl shadow-xl border border-gray-700"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Testing Services -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Comprehensive <span class="text-gradient">API Testing Services</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Complete API security testing covering all modern API technologies and protocols.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- REST API Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-rest-api-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">REST API Security</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Comprehensive security testing of REST APIs including endpoint discovery, parameter fuzzing, and business logic testing.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Endpoint Discovery & Mapping</li>
+                        <li>• HTTP Method Testing</li>
+                        <li>• Parameter Manipulation</li>
+                        <li>• Rate Limiting Assessment</li>
+                    </ul>
+                </div>
+
+                <!-- GraphQL Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-code-box-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">GraphQL Security Testing</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Specialized testing of GraphQL endpoints including schema introspection, query complexity analysis, and injection testing.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Schema Introspection</li>
+                        <li>• Query Complexity Analysis</li>
+                        <li>• Injection Vulnerability Testing</li>
+                        <li>• Authorization Testing</li>
+                    </ul>
+                </div>
+
+                <!-- SOAP/XML Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-file-code-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">SOAP/XML Web Services</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Security assessment of SOAP-based web services and XML processing vulnerabilities.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• WSDL Analysis</li>
+                        <li>• XML Injection Testing</li>
+                        <li>• SOAP Message Manipulation</li>
+                        <li>• WS-Security Assessment</li>
+                    </ul>
+                </div>
+
+                <!-- Authentication Testing -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-shield-keyhole-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Authentication & Authorization</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Comprehensive testing of API authentication mechanisms including OAuth, JWT, and API key implementations.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• OAuth 2.0 Testing</li>
+                        <li>• JWT Token Analysis</li>
+                        <li>• API Key Security</li>
+                        <li>• Session Management</li>
+                    </ul>
+                </div>
+
+                <!-- Data Validation -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-input-cursor-move text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Input Validation & Sanitization</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Testing of input validation mechanisms and data sanitization processes in API endpoints.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Parameter Fuzzing</li>
+                        <li>• Injection Attack Testing</li>
+                        <li>• Data Type Validation</li>
+                        <li>• Boundary Testing</li>
+                    </ul>
+                </div>
+
+                <!-- Business Logic -->
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#6e3691]/50 transition-all duration-300">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mb-4">
+                        <i class="ri-flow-chart text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Business Logic Testing</h3>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Analysis of API business logic and workflows to identify logic-based vulnerabilities and bypass mechanisms.
+                    </p>
+                    <ul class="text-gray-400 text-xs space-y-1">
+                        <li>• Workflow Analysis</li>
+                        <li>• Business Rule Testing</li>
+                        <li>• Race Condition Testing</li>
+                        <li>• Logic Bypass Attempts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OWASP API Top 10 -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    OWASP API <span class="text-gradient">Top 10</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Our testing methodology covers all OWASP API Top 10 security risks to ensure comprehensive API security assessment.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Authentication & Authorization</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">API1</span>
+                            <span class="text-gray-300 text-sm">Broken Object Level Authorization</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">API2</span>
+                            <span class="text-gray-300 text-sm">Broken User Authentication</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">API5</span>
+                            <span class="text-gray-300 text-sm">Broken Function Level Authorization</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">API8</span>
+                            <span class="text-gray-300 text-sm">Injection</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-white mb-4">Data & Resource Management</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">API3</span>
+                            <span class="text-gray-300 text-sm">Excessive Data Exposure</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">API4</span>
+                            <span class="text-gray-300 text-sm">Lack of Resources & Rate Limiting</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">API6</span>
+                            <span class="text-gray-300 text-sm">Mass Assignment</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="bg-[#6e3691] text-white text-xs px-2 py-1 rounded mr-3 mt-0.5">API7</span>
+                            <span class="text-gray-300 text-sm">Security Misconfiguration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testing Process -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Our API Testing <span class="text-gradient">Process</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    A systematic approach to API security testing following industry best practices and methodologies.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-search-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">1. Discovery</h3>
+                    <p class="text-gray-400 text-sm">API endpoint discovery and documentation analysis</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-scan-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">2. Analysis</h3>
+                    <p class="text-gray-400 text-sm">Security configuration and implementation analysis</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-bug-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">3. Testing</h3>
+                    <p class="text-gray-400 text-sm">Comprehensive security testing and vulnerability assessment</p>
+                </div>
+                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-file-text-line text-[#6e3691] text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">4. Reporting</h3>
+                    <p class="text-gray-400 text-sm">Detailed reporting with remediation recommendations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-20 bg-[#0f172a]/50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Benefits of <span class="text-gradient">API Security Assessment</span>
+                </h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Protect your APIs and data with comprehensive security testing and vulnerability assessment.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-shield-check-line text-[#6e3691] text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Risk Mitigation</h3>
+                    <p class="text-gray-400 text-sm">Identify and fix API vulnerabilities before exploitation</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-database-2-line text-[#6e3691] text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Data Protection</h3>
+                    <p class="text-gray-400 text-sm">Secure sensitive data transmitted through APIs</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-file-shield-line text-[#6e3691] text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Compliance</h3>
+                    <p class="text-gray-400 text-sm">Meet regulatory requirements and security standards</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-[#6e3691]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-shield-user-line text-[#6e3691] text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Trust & Reliability</h3>
+                    <p class="text-gray-400 text-sm">Build customer trust with secure API implementations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="assessment" class="py-20 bg-[#6e3691]">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                    Secure Your APIs Today
+                </h2>
+                <p class="text-xl text-purple-100 mb-8">
+                    Don't leave your APIs vulnerable. Start with a comprehensive API security assessment.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="/contact/" class="bg-white text-[#6e3691] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-file-list-3-line mr-2"></i>
+                        Free API Security Assessment
+                    </a>
+                    <a href="/contact/" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#6e3691] transition-colors duration-200 flex items-center justify-center">
+                        <i class="ri-phone-line mr-2"></i>
+                        Contact API Security Experts
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
