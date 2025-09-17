@@ -10,6 +10,24 @@ import csv
 from reportlab.pdfgen import canvas
 from io import BytesIO
 
+def get_service_page_context(slug):
+    """Helper function to get service page content from database"""
+    try:
+        page_content = ServicePageContent.objects.get(slug=slug, is_active=True)
+        return {
+            'page_content': page_content,
+            'sections': page_content.get_sections(),
+            'benefits': page_content.get_benefits(),
+            'solutions': page_content.get_solutions(),
+            'process_steps': page_content.get_process_steps(),
+            'statistics': page_content.get_statistics(),
+        }
+    except ServicePageContent.DoesNotExist:
+        # Fallback to empty context if no dynamic content
+        return {}
+
+
+
 def home(request):
     return render(request, 'website/home.html')
 
@@ -95,44 +113,39 @@ def addons(request):
 
 # Managed Security Services subsections
 def incident_response(request):
-    return render(request, 'website/incident_response.html')
+    context = get_service_page_context('incident-response')
+    return render(request, 'website/incident_response.html', context)
+
+
 
 def deep_web_monitoring(request):
-    # Try to get dynamic content from database
-    try:
-        page_content = ServicePageContent.objects.get(slug='deep-web-monitoring', is_active=True)
-        context = {
-            'page_content': page_content,
-            'sections': page_content.get_sections(),
-            'benefits': page_content.get_benefits(),
-            'solutions': page_content.get_solutions(),
-            'process_steps': page_content.get_process_steps(),
-            'statistics': page_content.get_statistics(),
-        }
-    except ServicePageContent.DoesNotExist:
-        # Fallback to static template if no dynamic content
-        context = {}
-    
+    context = get_service_page_context('deep-web-monitoring')
     return render(request, 'website/deep_web_monitoring.html', context)
 
 def security_operations_center(request):
-    return render(request, 'website/security_operations_center.html')
+    context = get_service_page_context('security-operation-center')
+    return render(request, 'website/security_operations_center.html', context)
 
 def identity_access_management(request):
-    return render(request, 'website/identity_access_management.html')
+    context = get_service_page_context('identity-access-management')
+    return render(request, 'website/identity_access_management.html', context)
 
 def third_party_risk_management(request):
-    return render(request, 'website/third_party_risk_management.html')
+    context = get_service_page_context('third-party-risk-management')
+    return render(request, 'website/third_party_risk_management.html', context)
 
 # Cyber Defense subsections
 def vapt(request):
-    return render(request, 'website/vapt.html')
+    context = get_service_page_context('vapt')
+    return render(request, 'website/vapt.html', context)
 
 def website_application_security(request):
-    return render(request, 'website/website_application_security.html')
+    context = get_service_page_context('website-application-security')
+    return render(request, 'website/website_application_security.html', context)
 
 def mobile_application_security(request):
-    return render(request, 'website/mobile_application_security.html')
+    context = get_service_page_context('mobile-application-security')
+    return render(request, 'website/mobile_application_security.html', context)
 
 def api_security_assessment(request):
     return render(request, 'website/api_security_assessment.html')

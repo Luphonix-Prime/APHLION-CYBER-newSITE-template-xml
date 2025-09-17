@@ -1,26 +1,228 @@
 
-{% extends 'base.html' %}
+{% extends 'website/service_base.html' %}
 
 {% block title %}Network Architecture Review - Aphelion Cyber Security{% endblock %}
 
-{% block content %}
-<div class="min-h-screen bg-gradient-cyber">
-    <section class="pt-32 pb-20">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center px-4 py-2 bg-[#6e3691]/20 rounded-full mb-6">
-                    <i class="ri-router-line text-[#6e3691] mr-2"></i>
-                    <span class="text-[#6e3691] font-medium">Network Architecture Review</span>
-                </div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    Network Architecture
-                    <span class="text-gradient">Review & Assessment</span>
-                </h1>
-                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                    Comprehensive assessment of network design, vulnerabilities, and scalability to ensure secure and efficient network infrastructure.
-                </p>
-            </div>
-        </div>
-    </section>
+<!-- Network Architecture Review Theme -->
+{% block page_background %}bg-gradient-to-br from-[#1a0a1a] via-[#0a1a1a] to-[#1a1a0a]{% endblock %}
+{% block hero_background %}relative overflow-hidden{% endblock %}
+{% block hero_pattern %}bg-pattern-network{% endblock %}
+{% block badge_color %}bg-[#3b82f6]/20{% endblock %}
+{% block icon_color %}text-[#3b82f6]{% endblock %}
+{% block badge_text_color %}text-[#3b82f6]{% endblock %}
+{% block title_gradient %}bg-gradient-to-r from-[#3b82f6] to-[#60a5fa] bg-clip-text text-transparent{% endblock %}
+
+{% block service_icon %}ri-network-line{% endblock %}
+{% block service_category %}Infrastructure Security{% endblock %}
+
+{% block service_title %}
+Comprehensive <span class="text-gradient">Network Architecture</span> Review
+{% endblock %}
+
+{% block service_description %}
+A Network Architecture Review is a comprehensive assessment of your organization's network design and infrastructure. It identifies vulnerabilities, optimizes performance, and ensures that your network architecture aligns with best practices and security standards.
+{% endblock %}
+
+{% block hero_image %}https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80{% endblock %}
+{% block hero_alt %}Network architecture infrastructure{% endblock %}
+
+{% block statistics %}
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#3b82f6]">80%</h2>
+    <p class="text-gray-300">of network breaches are due to architectural vulnerabilities and misconfigurations.</p>
 </div>
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#3b82f6]">40%</h2>
+    <p class="text-gray-300">improvement in network performance after comprehensive architecture optimization.</p>
+</div>
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#3b82f6]">99.9%</h2>
+    <p class="text-gray-300">uptime guarantee with properly designed and reviewed network architecture.</p>
+</div>
+{% endblock %}
+
+{% block overview_title %}
+What is <span class="text-gradient">Network Architecture Review?</span>
+{% endblock %}
+
+{% block overview_content %}
+<p class="text-gray-300 mb-6 leading-relaxed">
+    A Network Architecture Review provides a thorough assessment of your network infrastructure, identifying potential security gaps, performance bottlenecks, and compliance issues. This service is crucial for maintaining a secure and efficient network that supports your business operations.
+</p>
+
+<div class="space-y-4">
+    <div class="flex items-start">
+        <i class="ri-shield-check-line text-[#3b82f6] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Enhanced Security</h4>
+            <p class="text-gray-400 text-sm">Uncover potential security gaps and fortify your network against threats</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-speed-line text-[#3b82f6] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Optimized Performance</h4>
+            <p class="text-gray-400 text-sm">Identify bottlenecks and inefficiencies for smooth, reliable operations</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-checkbox-circle-line text-[#3b82f6] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Compliance Assurance</h4>
+            <p class="text-gray-400 text-sm">Ensure your network meets industry regulations and compliance standards</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-scales-line text-[#3b82f6] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Legal Compliance</h4>
+            <p class="text-gray-400 text-sm">Reduce the risk of legal actions and maintain network integrity</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block process_title %}
+Our Comprehensive <span class="text-gradient">Review Methodology</span>
+{% endblock %}
+
+{% block process_description %}
+A systematic approach to network architecture assessment that identifies vulnerabilities, optimizes performance, and ensures compliance.
+{% endblock %}
+
+{% block process_steps %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-search-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">1. Initial Discovery</h3>
+        <p class="text-gray-300 text-sm">Comprehensive mapping and documentation of your current network infrastructure and components.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-shield-check-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">2. Security Assessment</h3>
+        <p class="text-gray-300 text-sm">Identify vulnerabilities, misconfigurations, and potential security risks in your network design.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-speed-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">3. Performance Analysis</h3>
+        <p class="text-gray-300 text-sm">Evaluate network performance, identify bottlenecks, and assess capacity planning requirements.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-checkbox-circle-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">4. Compliance Review</h3>
+        <p class="text-gray-300 text-sm">Verify adherence to industry standards, regulations, and organizational policies.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-file-chart-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">5. Detailed Reporting</h3>
+        <p class="text-gray-300 text-sm">Provide comprehensive findings, risk assessments, and prioritized recommendations.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-roadmap-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">6. Implementation Roadmap</h3>
+        <p class="text-gray-300 text-sm">Develop a strategic plan for implementing recommendations and improving network architecture.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block benefits_title %}
+Enhanced Security, Optimized Performance, <br>and Assured Compliance
+{% endblock %}
+
+{% block benefits_content %}
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-gradient-to-br from-[#3b82f6] to-[#60a5fa] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-shield-check-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Enhanced Security</h3>
+            <p class="text-blue-100">A thorough review uncovers potential security gaps, allowing you to fortify your network against threats and unauthorized access.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#3b82f6] to-[#60a5fa] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-speed-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Optimized Performance</h3>
+            <p class="text-blue-100">By identifying bottlenecks and inefficiencies, the review helps optimize your network's performance, ensuring smooth and reliable operations.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#3b82f6] to-[#60a5fa] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-checkbox-circle-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Compliance Assurance</h3>
+            <p class="text-blue-100">Ensures your network meets industry regulations and compliance standards, reducing the risk of penalties and data breaches.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block services_title %}
+Our Comprehensive <span class="text-gradient">Review Services</span>
+{% endblock %}
+
+{% block services_description %}
+Advanced network architecture assessment services designed to secure, optimize, and enhance your network infrastructure.
+{% endblock %}
+
+{% block services_grid %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-shield-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Security Architecture Review</h3>
+        <p class="text-gray-300 text-sm">Comprehensive evaluation of security controls, access management, and network segmentation.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-speed-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Performance Optimization</h3>
+        <p class="text-gray-300 text-sm">Analysis of network traffic patterns, bandwidth utilization, and performance bottlenecks.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#3b82f6]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#3b82f6]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-checkbox-circle-line text-[#3b82f6] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Compliance Assessment</h3>
+        <p class="text-gray-300 text-sm">Verification of adherence to industry standards and regulatory requirements.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block cta_title %}
+Ready to Optimize Your Network?
+{% endblock %}
+
+{% block cta_description %}
+Ensure your network infrastructure is secure, compliant, and performing at its best with our comprehensive architecture review.
 {% endblock %}

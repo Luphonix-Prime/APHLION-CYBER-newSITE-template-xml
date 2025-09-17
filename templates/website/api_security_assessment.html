@@ -272,7 +272,7 @@
         </div>
     </section>
 
-    <!-- Testing Process -->
+    <!-- Animated Testing Process -->
     <section class="py-20">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -284,17 +284,176 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center">
-                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <i class="ri-search-line text-[#6e3691] text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">1. Discovery</h3>
-                    <p class="text-gray-400 text-sm">API endpoint discovery and documentation analysis</p>
+            <!-- Animated Process Stepper -->
+            <div class="relative">
+                <!-- Progress Line -->
+                <div class="absolute top-16 left-0 right-0 h-1 bg-gray-700 hidden lg:block">
+                    <div class="progress-line h-full bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] w-0 transition-all duration-3000 ease-out"></div>
                 </div>
-                <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center">
-                    <div class="w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <i class="ri-scan-line text-[#6e3691] text-xl"></i>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                    <div class="process-step bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center opacity-0 transform translate-y-8 transition-all duration-700 ease-out" data-step="1">
+                        <div class="step-circle w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4 border-2 border-transparent transition-all duration-500">
+                            <i class="ri-search-line text-[#6e3691] text-xl"></i>
+                        </div>
+                        <div class="step-number absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#6e3691] rounded-full flex items-center justify-center text-white text-sm font-bold opacity-0 scale-0 transition-all duration-500">1</div>
+                        <h3 class="text-lg font-bold text-white mb-3">Discovery</h3>
+                        <p class="text-gray-400 text-sm">API endpoint discovery and documentation analysis</p>
+                        <div class="step-progress mt-4 h-1 bg-gray-600 rounded-full overflow-hidden">
+                            <div class="progress-bar h-full bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] w-0 transition-all duration-1000 ease-out"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center opacity-0 transform translate-y-8 transition-all duration-700 ease-out" data-step="2">
+                        <div class="step-circle w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4 border-2 border-transparent transition-all duration-500">
+                            <i class="ri-scan-line text-[#6e3691] text-xl"></i>
+                        </div>
+                        <div class="step-number absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#6e3691] rounded-full flex items-center justify-center text-white text-sm font-bold opacity-0 scale-0 transition-all duration-500">2</div>
+                        <h3 class="text-lg font-bold text-white mb-3">Analysis</h3>
+                        <p class="text-gray-400 text-sm">Comprehensive security analysis and vulnerability assessment</p>
+                        <div class="step-progress mt-4 h-1 bg-gray-600 rounded-full overflow-hidden">
+                            <div class="progress-bar h-full bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] w-0 transition-all duration-1000 ease-out"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center opacity-0 transform translate-y-8 transition-all duration-700 ease-out" data-step="3">
+                        <div class="step-circle w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4 border-2 border-transparent transition-all duration-500">
+                            <i class="ri-bug-line text-[#6e3691] text-xl"></i>
+                        </div>
+                        <div class="step-number absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#6e3691] rounded-full flex items-center justify-center text-white text-sm font-bold opacity-0 scale-0 transition-all duration-500">3</div>
+                        <h3 class="text-lg font-bold text-white mb-3">Testing</h3>
+                        <p class="text-gray-400 text-sm">Manual and automated security testing execution</p>
+                        <div class="step-progress mt-4 h-1 bg-gray-600 rounded-full overflow-hidden">
+                            <div class="progress-bar h-full bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] w-0 transition-all duration-1000 ease-out"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step bg-[#1e293b] border border-gray-700 rounded-xl p-6 text-center opacity-0 transform translate-y-8 transition-all duration-700 ease-out" data-step="4">
+                        <div class="step-circle w-12 h-12 bg-[#6e3691]/20 rounded-lg flex items-center justify-center mx-auto mb-4 border-2 border-transparent transition-all duration-500">
+                            <i class="ri-file-text-line text-[#6e3691] text-xl"></i>
+                        </div>
+                        <div class="step-number absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#6e3691] rounded-full flex items-center justify-center text-white text-sm font-bold opacity-0 scale-0 transition-all duration-500">4</div>
+                        <h3 class="text-lg font-bold text-white mb-3">Reporting</h3>
+                        <p class="text-gray-400 text-sm">Detailed security assessment report with recommendations</p>
+                        <div class="step-progress mt-4 h-1 bg-gray-600 rounded-full overflow-hidden">
+                            <div class="progress-bar h-full bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] w-0 transition-all duration-1000 ease-out"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Animation Control -->
+            <div class="text-center mt-12">
+                <button id="startApiProcess" class="bg-gradient-to-r from-[#6e3691] to-[#8b5cf6] hover:from-[#8b5cf6] hover:to-[#6e3691] text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+                    <i class="ri-play-line mr-2"></i>
+                    Watch Process Animation
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .process-step.active .step-circle {
+            border-color: #6e3691;
+            box-shadow: 0 0 20px rgba(110, 54, 145, 0.5);
+            animation: pulse-api 2s infinite;
+        }
+        
+        .process-step.active .step-number {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+        
+        .process-step.completed .step-circle {
+            background: linear-gradient(135deg, #6e3691, #8b5cf6);
+        }
+        
+        .process-step.completed .step-circle i {
+            color: white;
+        }
+        
+        @keyframes pulse-api {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .progress-line.animating {
+            animation: progress-flow 8s ease-in-out;
+        }
+        
+        @keyframes progress-flow {
+            0% { width: 0%; }
+            25% { width: 33%; }
+            50% { width: 66%; }
+            100% { width: 100%; }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startBtn = document.getElementById('startApiProcess');
+            const steps = document.querySelectorAll('.process-step');
+            const progressLine = document.querySelector('.progress-line');
+            
+            // Auto-start animation when section comes into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => startApiAnimation(), 500);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            observer.observe(document.querySelector('.process-step'));
+            
+            startBtn.addEventListener('click', startApiAnimation);
+            
+            function startApiAnimation() {
+                // Reset all steps
+                steps.forEach(step => {
+                    step.classList.remove('active', 'completed');
+                    step.style.opacity = '0';
+                    step.style.transform = 'translateY(32px)';
+                    const progressBar = step.querySelector('.progress-bar');
+                    progressBar.style.width = '0%';
+                });
+                
+                progressLine.style.width = '0%';
+                progressLine.classList.remove('animating');
+                
+                // Start animation sequence
+                setTimeout(() => {
+                    progressLine.classList.add('animating');
+                    animateSteps();
+                }, 100);
+            }
+            
+            function animateSteps() {
+                steps.forEach((step, index) => {
+                    setTimeout(() => {
+                        // Show step
+                        step.style.opacity = '1';
+                        step.style.transform = 'translateY(0)';
+                        step.classList.add('active');
+                        
+                        // Progress bar animation
+                        setTimeout(() => {
+                            const progressBar = step.querySelector('.progress-bar');
+                            progressBar.style.width = '100%';
+                        }, 300);
+                        
+                        // Complete step
+                        setTimeout(() => {
+                            step.classList.remove('active');
+                            step.classList.add('completed');
+                        }, 1500);
+                        
+                    }, index * 2000);
+                });
+            }
+        });
+    </script></div>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-3">2. Analysis</h3>
                     <p class="text-gray-400 text-sm">Security configuration and implementation analysis</p>

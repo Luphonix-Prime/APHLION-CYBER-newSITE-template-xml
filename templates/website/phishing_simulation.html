@@ -1,26 +1,474 @@
+{% extends 'website/service_base.html' %}
 
-{% extends 'base.html' %}
+{% block title %}Phishing Simulation Services - Aphelion Cyber Security{% endblock %}
 
-{% block title %}Phishing Simulation - Aphelion Cyber Security{% endblock %}
+<!-- Phishing Simulation Theme -->
+{% block page_background %}bg-gradient-to-br from-[#0a1a1a] via-[#1a0a1a] to-[#1a1a0a]{% endblock %}
+{% block hero_background %}relative overflow-hidden{% endblock %}
+{% block hero_pattern %}bg-pattern-security{% endblock %}
+{% block badge_color %}bg-[#ff5e2a]/20{% endblock %}
+{% block icon_color %}text-[#ff5e2a]{% endblock %}
+{% block badge_text_color %}text-[#ff5e2a]{% endblock %}
+{% block title_gradient %}bg-gradient-to-r from-[#ff5e2a] to-[#ff8a5b] bg-clip-text text-transparent{% endblock %}
 
-{% block content %}
-<div class="min-h-screen bg-gradient-cyber">
-    <section class="pt-32 pb-20">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center px-4 py-2 bg-[#6e3691]/20 rounded-full mb-6">
-                    <i class="ri-mail-line text-[#6e3691] mr-2"></i>
-                    <span class="text-[#6e3691] font-medium">Phishing Simulation</span>
+{% block service_icon %}ri-shield-user-line{% endblock %}
+{% block service_category %}Security Training{% endblock %}
+
+{% block service_title %}
+Advanced <span class="text-gradient">Phishing Simulation</span> Training
+{% endblock %}
+
+{% block service_description %}
+Phishing simulation is a security practice where simulated phishing emails are sent to employees to test their response. It helps identify vulnerabilities and educates staff on recognizing and handling phishing attempts.
+{% endblock %}
+
+{% block hero_image %}https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80{% endblock %}
+{% block hero_alt %}Phishing simulation training{% endblock %}
+
+{% block statistics %}
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#ff5e2a]">91%</h2>
+    <p class="text-gray-300">of cyber attacks start with a phishing email targeting employees.</p>
+</div>
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#ff5e2a]">60%</h2>
+    <p class="text-gray-300">reduction in phishing susceptibility after targeted training.</p>
+</div>
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#ff5e2a]">24/7</h2>
+    <p class="text-gray-300">continuous monitoring and immediate feedback for employees.</p>
+</div>
+{% endblock %}
+
+{% block overview_title %}
+What is <span class="text-gradient">Phishing Simulation?</span>
+{% endblock %}
+
+{% block overview_content %}
+<p class="text-gray-300 mb-6 leading-relaxed">
+    Phishing simulation services help identify vulnerabilities and educate employees on recognizing phishing attempts, significantly reducing the risk of successful attacks. This proactive approach strengthens your security posture and ensures compliance with industry standards.
+</p>
+
+<div class="space-y-4">
+    <div class="flex items-start">
+        <i class="ri-user-search-line text-[#ff5e2a] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Identifying Vulnerabilities</h4>
+            <p class="text-gray-400 text-sm">Reveals weaknesses in employee awareness and response to phishing threats</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-graduation-cap-line text-[#ff5e2a] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Improving Employee Awareness</h4>
+            <p class="text-gray-400 text-sm">Targeted training to enhance recognition of phishing attempts</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-shield-check-line text-[#ff5e2a] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Strengthening Security Posture</h4>
+            <p class="text-gray-400 text-sm">Reduce financial risk and improve overall security resilience</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block process_title %}
+Our Proven <span class="text-gradient">Simulation Methodology</span>
+{% endblock %}
+
+{% block process_description %}
+A comprehensive approach to phishing simulation that identifies vulnerabilities and builds employee resilience against cyber threats.
+{% endblock %}
+
+{% block process_steps %}
+<!-- Email Flow Animation Process -->
+<div class="email-flow-container relative max-w-6xl mx-auto">
+    <!-- Email Server -->
+    <div class="text-center mb-12">
+        <div class="server-icon w-24 h-24 bg-gradient-to-br from-[#ff5e2a] to-[#ff8a5b] rounded-xl flex items-center justify-center mx-auto mb-4 relative overflow-hidden">
+            <i class="ri-server-line text-3xl text-white relative z-10"></i>
+            <div class="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full transition-transform duration-1000" id="serverPulse"></div>
+        </div>
+        <h3 class="text-xl font-bold text-white">Phishing Simulation Server</h3>
+        <p class="text-gray-400 text-sm">Secure testing environment</p>
+    </div>
+
+    <!-- Email Flow Paths -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
+        <!-- Left Path - Email Creation -->
+        <div class="email-path space-y-6">
+            <div class="path-step bg-[#1e293b] border border-gray-700 rounded-xl p-4 opacity-0 transform -translate-y-8 transition-all duration-700" data-step="1">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 bg-[#ff5e2a]/20 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-target-line text-[#ff5e2a] text-lg"></i>
+                    </div>
+                    <div class="step-badge bg-[#ff5e2a] text-white text-xs px-2 py-1 rounded-full font-bold">STEP 1</div>
                 </div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    Phishing
-                    <span class="text-gradient">Simulation Services</span>
-                </h1>
-                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                    Test your employees' awareness of phishing attacks with realistic simulation campaigns and comprehensive training programs.
-                </p>
+                <h4 class="text-lg font-bold text-white mb-2">Identify Objectives</h4>
+                <p class="text-gray-300 text-xs">Define testing goals and success metrics</p>
+                <div class="progress-indicator mt-3 h-1 bg-gray-600 rounded-full">
+                    <div class="progress-fill h-full bg-gradient-to-r from-[#ff5e2a] to-[#ff8a5b] w-0 transition-all duration-1000"></div>
+                </div>
+            </div>
+
+            <div class="path-step bg-[#1e293b] border border-gray-700 rounded-xl p-4 opacity-0 transform -translate-y-8 transition-all duration-700" data-step="2">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 bg-[#ff5e2a]/20 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-draft-line text-[#ff5e2a] text-lg"></i>
+                    </div>
+                    <div class="step-badge bg-[#ff5e2a] text-white text-xs px-2 py-1 rounded-full font-bold">STEP 2</div>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Design Scenarios</h4>
+                <p class="text-gray-300 text-xs">Create realistic phishing email templates</p>
+                <div class="progress-indicator mt-3 h-1 bg-gray-600 rounded-full">
+                    <div class="progress-fill h-full bg-gradient-to-r from-[#ff5e2a] to-[#ff8a5b] w-0 transition-all duration-1000"></div>
+                </div>
             </div>
         </div>
-    </section>
+
+        <!-- Center Path - Email Sending -->
+        <div class="email-path space-y-6">
+            <!-- Animated Email -->
+            <div class="email-animation relative h-64 mb-6">
+                <div class="email-envelope absolute top-0 left-1/2 transform -translate-x-1/2 opacity-0" id="phishingEmail">
+                    <div class="w-16 h-12 bg-gradient-to-br from-[#ff5e2a] to-[#ff8a5b] rounded-lg flex items-center justify-center shadow-lg">
+                        <i class="ri-mail-line text-white text-xl"></i>
+                    </div>
+                    <div class="email-trail absolute top-1/2 left-8 w-32 h-px bg-gradient-to-r from-[#ff5e2a] to-transparent opacity-0"></div>
+                </div>
+
+                <!-- Employee Avatars -->
+                <div class="employee-grid grid grid-cols-3 gap-4 mt-16">
+                    <div class="employee-avatar w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center opacity-50 transition-all duration-500" data-employee="1">
+                        <i class="ri-user-line text-gray-300"></i>
+                    </div>
+                    <div class="employee-avatar w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center opacity-50 transition-all duration-500" data-employee="2">
+                        <i class="ri-user-line text-gray-300"></i>
+                    </div>
+                    <div class="employee-avatar w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center opacity-50 transition-all duration-500" data-employee="3">
+                        <i class="ri-user-line text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="path-step bg-[#1e293b] border border-gray-700 rounded-xl p-4 opacity-0 transform -translate-y-8 transition-all duration-700" data-step="3">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 bg-[#ff5e2a]/20 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-play-line text-[#ff5e2a] text-lg"></i>
+                    </div>
+                    <div class="step-badge bg-[#ff5e2a] text-white text-xs px-2 py-1 rounded-full font-bold">STEP 3</div>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Conduct Simulation</h4>
+                <p class="text-gray-300 text-xs">Execute phishing campaign targeting employees</p>
+                <div class="progress-indicator mt-3 h-1 bg-gray-600 rounded-full">
+                    <div class="progress-fill h-full bg-gradient-to-r from-[#ff5e2a] to-[#ff8a5b] w-0 transition-all duration-1000"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Path - Analysis -->
+        <div class="email-path space-y-6">
+            <div class="path-step bg-[#1e293b] border border-gray-700 rounded-xl p-4 opacity-0 transform -translate-y-8 transition-all duration-700" data-step="4">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 bg-[#ff5e2a]/20 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-bar-chart-line text-[#ff5e2a] text-lg"></i>
+                    </div>
+                    <div class="step-badge bg-[#ff5e2a] text-white text-xs px-2 py-1 rounded-full font-bold">STEP 4</div>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Analyze Results</h4>
+                <p class="text-gray-300 text-xs">Review response rates and click-through data</p>
+                <div class="progress-indicator mt-3 h-1 bg-gray-600 rounded-full">
+                    <div class="progress-fill h-full bg-gradient-to-r from-[#ff5e2a] to-[#ff8a5b] w-0 transition-all duration-1000"></div>
+                </div>
+
+                <!-- Results Chart -->
+                <div class="results-chart mt-4 opacity-0 transition-all duration-500">
+                    <div class="chart-bars space-y-2">
+                        <div class="chart-bar flex items-center">
+                            <span class="text-xs text-gray-400 w-16">Opened</span>
+                            <div class="flex-1 bg-gray-600 h-2 rounded-full ml-2">
+                                <div class="bar-fill h-full bg-[#10b981] rounded-full w-0 transition-all duration-1000" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar flex items-center">
+                            <span class="text-xs text-gray-400 w-16">Clicked</span>
+                            <div class="flex-1 bg-gray-600 h-2 rounded-full ml-2">
+                                <div class="bar-fill h-full bg-[#f59e0b] rounded-full w-0 transition-all duration-1000" data-width="45"></div>
+                            </div>
+                        </div>
+                        <div class="chart-bar flex items-center">
+                            <span class="text-xs text-gray-400 w-16">Reported</span>
+                            <div class="flex-1 bg-gray-600 h-2 rounded-full ml-2">
+                                <div class="bar-fill h-full bg-[#ef4444] rounded-full w-0 transition-all duration-1000" data-width="25"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="path-step bg-[#1e293b] border border-gray-700 rounded-xl p-4 opacity-0 transform -translate-y-8 transition-all duration-700" data-step="5">
+                <div class="flex items-center mb-3">
+                    <div class="w-10 h-10 bg-[#ff5e2a]/20 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-feedback-line text-[#ff5e2a] text-lg"></i>
+                    </div>
+                    <div class="step-badge bg-[#ff5e2a] text-white text-xs px-2 py-1 rounded-full font-bold">STEP 5</div>
+                </div>
+                <h4 class="text-lg font-bold text-white mb-2">Provide Feedback</h4>
+                <p class="text-gray-300 text-xs">Share results and offer targeted training</p>
+                <div class="progress-indicator mt-3 h-1 bg-gray-600 rounded-full">
+                    <div class="progress-fill h-full bg-gradient-to-r from-[#ff5e2a] to-[#ff8a5b] w-0 transition-all duration-1000"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-12">
+        <button id="startPhishingSimulation" class="bg-gradient-to-r from-[#ff5e2a] to-[#ff8a5b] hover:from-[#ff8a5b] hover:to-[#ff5e2a] text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105">
+            <i class="ri-mail-send-line mr-2"></i>
+            Launch Phishing Simulation
+        </button>
+    </div>
 </div>
+
+<style>
+    .path-step.active {
+        animation: path-reveal 0.8s ease-out forwards;
+        border-color: #ff5e2a;
+        box-shadow: 0 0 20px rgba(255, 94, 42, 0.3);
+    }
+
+    @keyframes path-reveal {
+        0% { opacity: 0; transform: translateY(-32px) rotateX(-15deg); }
+        100% { opacity: 1; transform: translateY(0) rotateX(0); }
+    }
+
+    .email-envelope.sending {
+        animation: email-send 2s ease-in-out forwards;
+    }
+
+    @keyframes email-send {
+        0% { opacity: 0; transform: translateX(-50%) translateY(-20px) scale(0.8); }
+        20% { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+        80% { opacity: 1; transform: translateX(-50%) translateY(60px) scale(0.9); }
+        100% { opacity: 0; transform: translateX(-50%) translateY(80px) scale(0.7); }
+    }
+
+    .employee-avatar.received {
+        animation: avatar-received 1s ease-out forwards;
+    }
+
+    @keyframes avatar-received {
+        0% { opacity: 0.5; background-color: #4b5563; }
+        50% { opacity: 1; background-color: #f59e0b; transform: scale(1.1); }
+        100% { opacity: 1; background-color: #10b981; transform: scale(1); }
+    }
+
+    .employee-avatar.clicked {
+        animation: avatar-clicked 0.5s ease-out forwards;
+        background-color: #ef4444 !important;
+    }
+
+    @keyframes avatar-clicked {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+
+    .server-icon.active #serverPulse {
+        animation: server-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes server-pulse {
+        0% { transform: translateX(-100%) skewX(-12deg); }
+        100% { transform: translateX(100%) skewX(-12deg); }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const startBtn = document.getElementById('startPhishingSimulation');
+        const steps = document.querySelectorAll('.path-step');
+        const phishingEmail = document.getElementById('phishingEmail');
+        const employeeAvatars = document.querySelectorAll('.employee-avatar');
+        const serverIcon = document.querySelector('.server-icon');
+        const resultsChart = document.querySelector('.results-chart');
+
+        // Auto-start when visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => startPhishingAnimation(), 1000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        observer.observe(document.querySelector('.email-flow-container'));
+
+        startBtn.addEventListener('click', startPhishingAnimation);
+
+        function startPhishingAnimation() {
+            // Reset animation
+            steps.forEach(step => {
+                step.classList.remove('active');
+                step.style.opacity = '0';
+                const progressFill = step.querySelector('.progress-fill');
+                progressFill.style.width = '0%';
+            });
+
+            employeeAvatars.forEach(avatar => {
+                avatar.classList.remove('received', 'clicked');
+                avatar.style.backgroundColor = '#4b5563';
+                avatar.style.opacity = '0.5';
+            });
+
+            phishingEmail.style.opacity = '0';
+            phishingEmail.classList.remove('sending');
+            serverIcon.classList.remove('active');
+            resultsChart.style.opacity = '0';
+
+            // Start server activity
+            setTimeout(() => {
+                serverIcon.classList.add('active');
+            }, 500);
+
+            // Animate steps
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    step.classList.add('active');
+                    step.style.opacity = '1';
+
+                    // Progress bar
+                    setTimeout(() => {
+                        const progressFill = step.querySelector('.progress-fill');
+                        progressFill.style.width = '100%';
+                    }, 300);
+
+                    // Special animations for specific steps
+                    if (index === 2) { // Step 3 - Email sending
+                        setTimeout(() => {
+                            phishingEmail.style.opacity = '1';
+                            phishingEmail.classList.add('sending');
+
+                            // Animate employee responses
+                            setTimeout(() => {
+                                employeeAvatars.forEach((avatar, i) => {
+                                    setTimeout(() => {
+                                        avatar.classList.add('received');
+                                        if (Math.random() > 0.6) { // 40% click rate
+                                            setTimeout(() => {
+                                                avatar.classList.add('clicked');
+                                            }, 1000);
+                                        }
+                                    }, i * 500);
+                                });
+                            }, 1000);
+                        }, 500);
+                    }
+
+                    if (index === 3) { // Step 4 - Results
+                        setTimeout(() => {
+                            resultsChart.style.opacity = '1';
+                            const barFills = resultsChart.querySelectorAll('.bar-fill');
+                            barFills.forEach((bar, i) => {
+                                setTimeout(() => {
+                                    const width = bar.getAttribute('data-width');
+                                    bar.style.width = `${width}%`;
+                                }, i * 200);
+                            });
+                        }, 800);
+                    }
+
+                }, index * 1200);
+            });
+        }
+    });
+</script>
+{% endblock %}
+
+{% block benefits_title %}
+Enhanced Security, Minimized Risk, <br>and Employee Resilience
+{% endblock %}
+
+{% block benefits_content %}
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-gradient-to-br from-[#ff5e2a] to-[#ff8a5b] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-arrow-up-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Employee Resilience</h3>
+            <p class="text-orange-100">Regular simulations train employees to recognize phishing attempts, reducing the likelihood of successful attacks.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#ff5e2a] to-[#ff8a5b] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-shield-check-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Enhanced Security</h3>
+            <p class="text-orange-100">Foster a culture of security where employees actively contribute to protecting sensitive information.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#ff5e2a] to-[#ff8a5b] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-target-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Targeted Training</h3>
+            <p class="text-orange-100">Reveal specific weaknesses, allowing for tailored training programs that address gaps in knowledge.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block services_title %}
+Our Comprehensive <span class="text-gradient">Simulation Services</span>
+{% endblock %}
+
+{% block services_description %}
+Advanced phishing simulation services designed to test, train, and strengthen your organization's human firewall.
+{% endblock %}
+
+{% block services_grid %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#ff5e2a]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#ff5e2a]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-mail-line text-[#ff5e2a] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Custom Phishing Campaigns</h3>
+        <p class="text-gray-300 text-sm">Design and execute tailored phishing campaigns to identify and address vulnerabilities.</p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#ff5e2a]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#ff5e2a]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-file-chart-line text-[#ff5e2a] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Reporting and Analytics</h3>
+        <p class="text-gray-300 text-sm">Analyze security data to provide detailed reports and actionable insights for improvements.</p>
+    </div>
+
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#ff5e2a]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#ff5e2a]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-graduation-cap-line text-[#ff5e2a] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Training and Awareness Programs</h3>
+        <p class="text-gray-300 text-sm">Deliver targeted training to enhance awareness and reduce susceptibility to security threats.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block cta_title %}
+Ready to Test Your Human Firewall?
+{% endblock %}
+
+{% block cta_description %}
+Start building a more security-aware workforce with our comprehensive phishing simulation services.
 {% endblock %}

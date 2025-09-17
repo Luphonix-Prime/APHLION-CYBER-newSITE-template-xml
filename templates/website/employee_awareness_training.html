@@ -1,26 +1,228 @@
 
-{% extends 'base.html' %}
+{% extends 'website/service_base.html' %}
 
 {% block title %}Employee Awareness Training - Aphelion Cyber Security{% endblock %}
 
-{% block content %}
-<div class="min-h-screen bg-gradient-cyber">
-    <section class="pt-32 pb-20">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="inline-flex items-center px-4 py-2 bg-[#6e3691]/20 rounded-full mb-6">
-                    <i class="ri-graduation-cap-line text-[#6e3691] mr-2"></i>
-                    <span class="text-[#6e3691] font-medium">Employee Awareness Training</span>
-                </div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    Employee Awareness
-                    <span class="text-gradient">Training Programs</span>
-                </h1>
-                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                    Comprehensive cybersecurity awareness training to build a security-conscious culture within your organization.
-                </p>
-            </div>
-        </div>
-    </section>
+<!-- Employee Awareness Training Theme -->
+{% block page_background %}bg-gradient-to-br from-[#0a0a1a] via-[#1a1a0a] to-[#0a1a1a]{% endblock %}
+{% block hero_background %}relative overflow-hidden{% endblock %}
+{% block hero_pattern %}bg-pattern-awareness{% endblock %}
+{% block badge_color %}bg-[#10b981]/20{% endblock %}
+{% block icon_color %}text-[#10b981]{% endblock %}
+{% block badge_text_color %}text-[#10b981]{% endblock %}
+{% block title_gradient %}bg-gradient-to-r from-[#10b981] to-[#34d399] bg-clip-text text-transparent{% endblock %}
+
+{% block service_icon %}ri-graduation-cap-line{% endblock %}
+{% block service_category %}Security Training{% endblock %}
+
+{% block service_title %}
+Comprehensive <span class="text-gradient">Employee Awareness</span> Training
+{% endblock %}
+
+{% block service_description %}
+Employee Awareness Training in cybersecurity educates employees on recognizing and preventing cyber threats. It focuses on safe online practices, data protection, and understanding common attack methods. The goal is to empower employees to protect the organization from security breaches.
+{% endblock %}
+
+{% block hero_image %}https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600&q=80{% endblock %}
+{% block hero_alt %}Employee cybersecurity training{% endblock %}
+
+{% block statistics %}
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#10b981]">95%</h2>
+    <p class="text-gray-300">of successful cyber attacks are due to human error that could be prevented with proper training.</p>
 </div>
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#10b981]">70%</h2>
+    <p class="text-gray-300">reduction in security incidents after comprehensive awareness training programs.</p>
+</div>
+<div class="space-y-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-[#10b981]">24/7</h2>
+    <p class="text-gray-300">continuous learning platform with updated threat intelligence and training modules.</p>
+</div>
+{% endblock %}
+
+{% block overview_title %}
+What is the Purpose of <span class="text-gradient">Employee Awareness Training?</span>
+{% endblock %}
+
+{% block overview_content %}
+<p class="text-gray-300 mb-6 leading-relaxed">
+    Employee Awareness Training is designed to empower your workforce with the skills to identify and prevent cyber threats. By turning employees into a proactive line of defense, this training reduces the risk of data breaches, strengthens data security, and ensures compliance with industry standards.
+</p>
+
+<div class="space-y-4">
+    <div class="flex items-start">
+        <i class="ri-shield-line text-[#10b981] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Reduces Cyber Threats</h4>
+            <p class="text-gray-400 text-sm">Proactive defense through educated and vigilant employees</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-lock-line text-[#10b981] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Enhances Data Protection</h4>
+            <p class="text-gray-400 text-sm">Strengthens data security practices across the organization</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-checkbox-circle-line text-[#10b981] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Ensures Regulatory Compliance</h4>
+            <p class="text-gray-400 text-sm">Meets industry standards and compliance requirements</p>
+        </div>
+    </div>
+    <div class="flex items-start">
+        <i class="ri-team-line text-[#10b981] text-xl mr-3 mt-1"></i>
+        <div>
+            <h4 class="text-white font-semibold mb-1">Builds a Security-First Culture</h4>
+            <p class="text-gray-400 text-sm">Fosters a culture of vigilance and security awareness</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block process_title %}
+How We Deliver <span class="text-gradient">Employee Awareness Training</span>
+{% endblock %}
+
+{% block process_description %}
+A comprehensive approach to building security awareness that transforms employees into your strongest line of defense.
+{% endblock %}
+
+{% block process_steps %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-search-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">1. Initial Assessment</h3>
+        <p class="text-gray-300 text-sm">Evaluate your organization's current awareness levels, identifying key knowledge gaps and potential vulnerabilities among employees.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-settings-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">2. Customized Training Plan</h3>
+        <p class="text-gray-300 text-sm">Design a tailored training program based on your organization's specific needs, industry, and risk profile.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-group-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">3. Interactive Workshops</h3>
+        <p class="text-gray-300 text-sm">Expert-led workshops with hands-on activities, covering phishing simulations, password security, and threat recognition.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-mail-check-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">4. Real-Time Phishing Simulations</h3>
+        <p class="text-gray-300 text-sm">Employees participate in real-world phishing scenarios to test their ability to identify and avoid common cyber threats.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-refresh-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">5. Regular Compliance Refreshers</h3>
+        <p class="text-gray-300 text-sm">Keep employees updated on key compliance standards and internal security policies through frequent, bite-sized learning sessions.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-file-chart-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">6. Ongoing Monitoring and Reporting</h3>
+        <p class="text-gray-300 text-sm">Provide detailed reports and assessments on employee performance and areas for improvement, ensuring continual growth.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block benefits_title %}
+Protect Your Business with <br>Employee Awareness Training
+{% endblock %}
+
+{% block benefits_content %}
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-gradient-to-br from-[#10b981] to-[#34d399] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-search-eye-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Identifies Vulnerabilities</h3>
+            <p class="text-green-100">Reveals weaknesses in employee awareness and response to security threats.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#10b981] to-[#34d399] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-graduation-cap-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Enhances Training</h3>
+            <p class="text-green-100">Provides targeted education to improve recognition of phishing threats and security best practices.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+
+    <div class="bg-gradient-to-br from-[#10b981] to-[#34d399] p-8 rounded-xl relative overflow-hidden">
+        <div class="relative z-10">
+            <div class="w-12 h-12 flex items-center justify-center mb-6">
+                <i class="ri-shield-check-line text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Strengthens Security</h3>
+            <p class="text-green-100">Offers insights to refine and enhance overall security measures and organizational resilience.</p>
+        </div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block services_title %}
+Our Comprehensive <span class="text-gradient">Training Services</span>
+{% endblock %}
+
+{% block services_description %}
+Advanced security awareness training designed to educate, engage, and empower your workforce against cyber threats.
+{% endblock %}
+
+{% block services_grid %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-play-circle-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Interactive Training Modules</h3>
+        <p class="text-gray-300 text-sm">Engage users with interactive training to enhance their understanding of security practices.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-mail-send-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Phishing Simulation & Feedback</h3>
+        <p class="text-gray-300 text-sm">Conduct phishing simulations and provide feedback to improve user awareness and response.</p>
+    </div>
+    
+    <div class="bg-[#1e293b] border border-gray-700 rounded-xl p-6 hover:border-[#10b981]/50 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#10b981]/20 rounded-lg flex items-center justify-center mb-4">
+            <i class="ri-radar-line text-[#10b981] text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Ongoing Security Awareness</h3>
+        <p class="text-gray-300 text-sm">Maintain continuous security awareness with regular updates and training to stay informed about threats.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block cta_title %}
+Ready to Empower Your Workforce?
+{% endblock %}
+
+{% block cta_description %}
+Transform your employees into your strongest line of defense with comprehensive security awareness training.
 {% endblock %}

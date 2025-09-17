@@ -479,6 +479,175 @@ function showNotification(message, type) {
       }, 300);
   }, 3000);
 }
+// Stepper Animation Utilities
+class StepperAnimation {
+    constructor(containerId, options = {}) {
+        this.container = document.getElementById(containerId);
+        this.steps = this.container?.querySelectorAll('.process-step, .timeline-step, .path-step, .monitoring-step, .spiral-step') || [];
+        this.currentStep = 0;
+        this.options = {
+            duration: options.duration || 1000,
+            delay: options.delay || 500,
+            autoStart: options.autoStart || false,
+            loop: options.loop || false,
+            ...options
+        };
+        
+        if (this.options.autoStart) {
+            this.init();
+        }
+    }
+    
+    init() {
+        if (this.container) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => this.start(), this.options.delay);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            observer.observe(this.container);
+        }
+    }
+    
+    start() {
+        this.reset();
+        this.animateSequentially();
+    }
+    
+    reset() {
+        this.currentStep = 0;
+        this.steps.forEach(step => {
+            step.classList.remove('active', 'completed');
+            step.style.opacity = '0';
+            step.style.transform = 'translateY(32px) scale(0.9)';
+            
+            const progressBar = step.querySelector('.progress-bar, .progress-fill');
+            if (progressBar) {
+                progressBar.style.width = '0%';
+            }
+        });
+    }
+    
+    animateSequentially() {
+        if (this.currentStep >= this.steps.length) {
+            if (this.options.loop) {
+                setTimeout(() => this.start(), 2000);
+            }
+            return;
+        }
+        
+        const step = this.steps[this.currentStep];
+        this.animateStep(step);
+        
+        setTimeout(() => {
+            this.currentStep++;
+            this.animateSequentially();
+        }, this.options.duration);
+    }
+    
+    animateStep(step) {
+        step.style.opacity = '1';
+        step.style.transform = 'translateY(0) scale(1)';
+        step.classList.add('active');
+        
+        // Animate progress bar
+        setTimeout(() => {
+            const progressBar = step.querySelector('.progress-bar, .progress-fill');
+            if (progressBar) {
+                progressBar.style.width = '100%';
+            }
+        }, 200);
+        
+        // Mark as completed after animation
+        setTimeout(() => {
+            step.classList.remove('active');
+            step.classList.add('completed');
+        }, this.options.duration - 200);
+    }
+}
+
+// Initialize steppers for different pages
+document.addEventListener('DOMContentLoaded', function() {
+    // API Security Assessment
+    if (document.getElementById('startApiProcess')) {
+        new StepperAnimation('api-process-container', {
+            duration: 2000,
+            delay: 1000,
+            autoStart: true
+        });
+    }
+    
+    // Brand Exploitation
+    if (document.querySelector('.spiral-container')) {
+        new StepperAnimation('brand-spiral-container', {
+            duration: 800,
+            delay: 1500,
+            autoStart: true
+        });
+    }
+    
+    // Deep Web Monitoring
+    if (document.querySelector('.radar-screen')) {
+        new StepperAnimation('deepweb-radar-container', {
+            duration: 1200,
+            delay: 2000,
+            autoStart: true
+        });
+    }
+    
+    // Incident Response
+    if (document.querySelector('.emergency-timeline')) {
+        new StepperAnimation('emergency-timeline-container', {
+            duration: 1500,
+            delay: 1000,
+            autoStart: true
+        });
+    }
+    
+    // Phishing Simulation
+    if (document.querySelector('.email-flow-container')) {
+        new StepperAnimation('phishing-flow-container', {
+            duration: 1200,
+            delay: 800,
+            autoStart: true
+        });
+    }
+});
+
+// Enhanced Animation Effects
+function addGlowEffect(element, color = '#6e3691') {
+    element.style.boxShadow = `0 0 20px ${color}50`;
+    element.style.borderColor = color;
+}
+
+function removeGlowEffect(element) {
+    element.style.boxShadow = '';
+    element.style.borderColor = '';
+}
+
+function pulseElement(element, duration = 2000) {
+    element.style.animation = `pulse ${duration}ms ease-in-out infinite`;
+    setTimeout(() => {
+        element.style.animation = '';
+    }, duration * 3);
+}
+
+// Custom animation triggers
+function triggerStepAnimation(stepElement, animationType = 'fadeInUp') {
+    const animations = {
+        fadeInUp: 'opacity: 1; transform: translateY(0) scale(1);',
+        slideInLeft: 'opacity: 1; transform: translateX(0) scale(1);',
+        bounceIn: 'opacity: 1; transform: scale(1); animation: bounceIn 0.8s ease-out;',
+        rotateIn: 'opacity: 1; transform: rotate(0deg) scale(1);'
+    };
+    
+    stepElement.style.cssText += animations[animationType] || animations.fadeInUp;
+    stepElement.classList.add('animated');
+}
+
 const form = document.getElementById("myForm");
 
   form.addEventListener("submit", function (e) {
