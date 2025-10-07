@@ -19,9 +19,9 @@
             <!-- Filters and Search -->
             <div class="flex flex-wrap gap-4 mb-6">
                 <div class="flex-1 min-w-[200px]">
-                    <input type="text" placeholder="Search users..." class="w-full bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2 text-sm" onkeyup="filterUsers()">
+                    <input type="text" placeholder="Search users..." class="w-full bg-[#0f0f0f] border border-[#64397f]/30 rounded-lg px-4 py-2 text-sm" onkeyup="filterUsers()">
                 </div>
-                <select class="bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2 text-sm" onchange="filterUsers()">
+                <select class="bg-[#0f0f0f] border border-[#64397f]/30 rounded-lg px-4 py-2 text-sm" onchange="filterUsers()">
                     <option value="all">All Subscriptions</option>
                     <option value="active">Active</option>
                     <option value="expired">Expired</option>
@@ -33,7 +33,7 @@
             <div class="overflow-x-auto">
                 <table class="w-full">
                     <thead>
-                        <tr class="text-left border-b border border-[#a78bfa]/30">
+                        <tr class="text-left border-b border border-[#64397f]/30">
                             <th class="pb-4">Name</th>
                             <th class="pb-4">Email</th>
                             <th class="pb-4">Subscription Type</th>
@@ -44,7 +44,7 @@
                     </thead>
                     <tbody>
                         {% for user in users %}
-                        <tr class="border-b border-[#a78bfa]/50 hover:bg-[#0f0f0f]/50">
+                        <tr class="border-b border-[#64397f]/50 hover:bg-[#0f0f0f]/50">
                             <td class="py-4">{{ user.get_full_name|default:user.username }}</td>
                             <td class="py-4">{{ user.email }}</td>
                             <td class="py-4">{{ user.usersubscription.subscription_type|title }}</td>
@@ -87,15 +87,15 @@
                     <input type="hidden" name="action" value="add">
                     <div>
                         <label class="block text-sm font-medium mb-2">Name</label>
-                        <input type="text" name="name" class="w-full bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2">
+                        <input type="text" name="name" class="w-full bg-[#0f0f0f] border border-[#64397f]/30 rounded-lg px-4 py-2">
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-2">Email</label>
-                        <input type="email" name="email" class="w-full bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2">
+                        <input type="email" name="email" class="w-full bg-[#0f0f0f] border border-[#64397f]/30 rounded-lg px-4 py-2">
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-2">Subscription Type</label>
-                        <select name="subscription_type" class="w-full bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2">
+                        <select name="subscription_type" class="w-full bg-[#0f0f0f] border border-[#64397f]/30 rounded-lg px-4 py-2">
                             <option value="trial">Trial</option>
                             <option value="basic">Basic</option>
                             <option value="professional">Professional</option>
