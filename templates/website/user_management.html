@@ -4,9 +4,9 @@
 {% block meta_description %}Manage user subscriptions and service access for Aphelion Cyber Security platform.{% endblock %}
 
 {% block content %}
-<div class="pt-32 pb-20 bg-gradient-cyber min-h-screen">
+<div class="pt-32 pb-20 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] min-h-screen">
     <div class="container mx-auto px-4 md:px-6">
-        <div class="bg-[#1e293b] border border-[#6e3691]/30 rounded-2xl shadow-lg p-8 md:p-12">
+        <div class="bg-[#1e1e1e] border border-[#6e3691]/30 rounded-2xl shadow-lg p-8 md:p-12">
             <!-- Header Section -->
             <div class="flex justify-between items-center mb-8">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">User Management</h1>
@@ -19,9 +19,9 @@
             <!-- Filters and Search -->
             <div class="flex flex-wrap gap-4 mb-6">
                 <div class="flex-1 min-w-[200px]">
-                    <input type="text" placeholder="Search users..." class="w-full bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2 text-sm" onkeyup="filterUsers()">
+                    <input type="text" placeholder="Search users..." class="w-full bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2 text-sm" onkeyup="filterUsers()">
                 </div>
-                <select class="bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2 text-sm" onchange="filterUsers()">
+                <select class="bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2 text-sm" onchange="filterUsers()">
                     <option value="all">All Subscriptions</option>
                     <option value="active">Active</option>
                     <option value="expired">Expired</option>
@@ -33,7 +33,7 @@
             <div class="overflow-x-auto">
                 <table class="w-full">
                     <thead>
-                        <tr class="text-left border-b border-gray-700">
+                        <tr class="text-left border-b border border-[#a78bfa]/30">
                             <th class="pb-4">Name</th>
                             <th class="pb-4">Email</th>
                             <th class="pb-4">Subscription Type</th>
@@ -44,7 +44,7 @@
                     </thead>
                     <tbody>
                         {% for user in users %}
-                        <tr class="border-b border-gray-700/50 hover:bg-[#0f172a]/50">
+                        <tr class="border-b border-[#a78bfa]/50 hover:bg-[#0f0f0f]/50">
                             <td class="py-4">{{ user.get_full_name|default:user.username }}</td>
                             <td class="py-4">{{ user.email }}</td>
                             <td class="py-4">{{ user.usersubscription.subscription_type|title }}</td>
@@ -79,7 +79,7 @@
 <!-- Add/Edit User Modal -->
 <div id="userModal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50">
     <div class="flex items-center justify-center min-h-screen px-4">
-        <div class="bg-[#1e293b] rounded-xl shadow-xl w-full max-w-md">
+        <div class="bg-[#1e1e1e] rounded-xl shadow-xl w-full max-w-md">
             <div class="p-6">
                 <h2 class="text-2xl font-bold mb-4">Add New User</h2>
                 <form id="userForm" method="post" class="space-y-4">
@@ -87,15 +87,15 @@
                     <input type="hidden" name="action" value="add">
                     <div>
                         <label class="block text-sm font-medium mb-2">Name</label>
-                        <input type="text" name="name" class="w-full bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2">
+                        <input type="text" name="name" class="w-full bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2">
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-2">Email</label>
-                        <input type="email" name="email" class="w-full bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2">
+                        <input type="email" name="email" class="w-full bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2">
                     </div>
                     <div>
                         <label class="block text-sm font-medium mb-2">Subscription Type</label>
-                        <select name="subscription_type" class="w-full bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2">
+                        <select name="subscription_type" class="w-full bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2">
                             <option value="trial">Trial</option>
                             <option value="basic">Basic</option>
                             <option value="professional">Professional</option>

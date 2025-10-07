@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="min-h-screen bg-[#0f172a] text-gray-100">
+<div class="min-h-screen bg-[#0f0f0f] text-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <!-- Header Section -->
         <div class="text-center mb-12">
@@ -16,7 +16,7 @@
         </div>
 
         <!-- Scanner Form Section -->
-        <div class="bg-[#1e293b]/50 backdrop-blur-xl rounded-2xl shadow-xl p-8 mb-12 border border-[#B23AFC]/20">
+        <div class="bg-[#1e1e1e]/50 backdrop-blur-xl rounded-2xl shadow-xl p-8 mb-12 border border-[#B23AFC]/20">
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="space-y-6">
                     <h2 class="text-2xl font-semibold text-[#B23AFC]">Scan Your Website</h2>
@@ -27,7 +27,7 @@
                             <div>
                                 <label for="scan-type" class="block text-sm font-medium text-[#B23AFC] mb-2">Select Scanner Type</label>
                                 <select id="scan-type" name="scan-type" 
-                                    class="w-full bg-[#0f172a]/50 border border-[#B23AFC]/30 rounded-lg px-4 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#B23AFC]/50">
+                                    class="w-full bg-[#0f0f0f]/50 border border-[#B23AFC]/30 rounded-lg px-4 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-[#B23AFC]/50">
                                     <option value="wasp2">O wasp Zap</option>
                                     <option value="nikto">NIKTO</option>
                                     <option value="sans">SANS</option>
@@ -36,19 +36,19 @@
                             <div>
                                 <label for="website-url" class="block text-sm font-medium text-[#B23AFC] mb-2">Website URL</label>
                                 <input type="text" name="website-url" id="website-url" 
-                                    class="w-full bg-[#0f172a]/50 border border-[#B23AFC]/30 rounded-lg px-4 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#B23AFC]/50"
+                                    class="w-full bg-[#0f0f0f]/50 border border-[#B23AFC]/30 rounded-lg px-4 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#B23AFC]/50"
                                     placeholder="https://example.com">
                             </div>  
                             <div>
                                 <label for="email-url" class="block text-sm font-medium text-[#B23AFC] mb-2">Your Email</label>
                                 <input type="email" name="email-url" id="email-url" 
-                                    class="w-full bg-[#0f172a]/50 border border-[#B23AFC]/30 rounded-lg px-4 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#B23AFC]/50"
+                                    class="w-full bg-[#0f0f0f]/50 border border-[#B23AFC]/30 rounded-lg px-4 py-2 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#B23AFC]/50"
                                     placeholder="example@gmail.com">
                             </div>
                         </div>
                         
                         <button id="scan-button" type="button" 
-                            class="w-full bg-gradient-to-r from-[#B23AFC] to-[#6e3691] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-[#B23AFC]/50 transition-all duration-300 flex items-center justify-center space-x-2">
+                            class="w-full bg-gradient-to-r from-[#B23AFC] to-[#a78bfa] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-[#B23AFC]/50 transition-all duration-300 flex items-center justify-center space-x-2">
                             <span>Scan Now</span>
                             <i class="fas fa-shield-alt"></i>
                         </button>
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Progress Section -->
-        <div id="scanning-progress" class="hidden bg-[#1e293b]/50 backdrop-blur-xl rounded-2xl shadow-xl p-8 mb-12 border border-[#B23AFC]/20">
+        <div id="scanning-progress" class="hidden bg-[#1e1e1e]/50 backdrop-blur-xl rounded-2xl shadow-xl p-8 mb-12 border border-[#B23AFC]/20">
             <div class="space-y-6">
                 <div class="flex items-center justify-center space-x-4">
                     <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-[#B23AFC]"></div>
@@ -81,7 +81,7 @@
                             <span class="text-gray-300">Initializing Security Scan</span>
                         </div>
                         <div class="ml-11 mt-2">
-                            <div class="h-1 bg-[#1e293b] rounded overflow-hidden">
+                            <div class="h-1 bg-[#1e1e1e] rounded overflow-hidden">
                                 <div class="h-full bg-[#B23AFC] w-1/2 animate-pulse"></div>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
         </div>
 
         <!-- Results Section -->
-        <div id="scan-results" class="hidden bg-[#1e293b]/50 backdrop-blur-xl rounded-2xl shadow-xl p-8 border border-[#B23AFC]/20">
+        <div id="scan-results" class="hidden bg-[#1e1e1e]/50 backdrop-blur-xl rounded-2xl shadow-xl p-8 border border-[#B23AFC]/20">
             <div class="space-y-8">
                 <div class="text-center">
                     <h2 class="text-3xl font-bold text-[#B23AFC] mb-4">Scan Complete</h2>
@@ -136,7 +136,7 @@
 
                 <!-- Summary Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-[#0f172a]/50 p-6 rounded-xl border border-[#B23AFC]/20">
+                    <div class="bg-[#0f0f0f]/50 p-6 rounded-xl border border-[#B23AFC]/20">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
                                 <i class="fas fa-exclamation-triangle text-red-500 text-xl"></i>
@@ -148,7 +148,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-[#0f172a]/50 p-6 rounded-xl border border-[#B23AFC]/20">
+                    <div class="bg-[#0f0f0f]/50 p-6 rounded-xl border border-[#B23AFC]/20">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center">
                                 <i class="fas fa-exclamation-circle text-yellow-500 text-xl"></i>
@@ -160,7 +160,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-[#0f172a]/50 p-6 rounded-xl border border-[#B23AFC]/20">
+                    <div class="bg-[#0f0f0f]/50 p-6 rounded-xl border border-[#B23AFC]/20">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
                                 <i class="fas fa-check-circle text-green-500 text-xl"></i>
@@ -175,11 +175,11 @@
 
                 <!-- Action Buttons -->
                 <div class="flex flex-col sm:flex-row justify-center gap-4 pt-6">
-                    <button class="bg-[#B23AFC] hover:bg-[#6e3691] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-[#B23AFC]/50 transition-all duration-300 flex items-center justify-center space-x-2">
+                    <button class="bg-[#B23AFC] hover:bg-[#a78bfa] text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-[#B23AFC]/50 transition-all duration-300 flex items-center justify-center space-x-2">
                         <i class="fas fa-download"></i>
                         <span>Download Full Report</span>
                     </button>
-                    <button class="bg-[#0f172a] hover:bg-[#1e293b] text-white font-semibold px-6 py-3 rounded-lg border border-[#B23AFC]/30 shadow-lg hover:shadow-[#B23AFC]/50 transition-all duration-300 flex items-center justify-center space-x-2">
+                    <button class="bg-[#0f0f0f] hover:bg-[#1e1e1e] text-white font-semibold px-6 py-3 rounded-lg border border-[#B23AFC]/30 shadow-lg hover:shadow-[#B23AFC]/50 transition-all duration-300 flex items-center justify-center space-x-2">
                         <i class="fas fa-redo"></i>
                         <span>Start New Scan</span>
                     </button>

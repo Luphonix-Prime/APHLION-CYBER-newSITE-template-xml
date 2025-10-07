@@ -5,9 +5,9 @@
 compliance frameworks.{% endblock %}
 
 {% block content %}
-<div class="pt-32 pb-20 bg-gradient-cyber min-h-screen">
+<div class="pt-32 pb-20 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] min-h-screen">
     <div class="container mx-auto px-4 md:px-6">
-        <div class="bg-[#1e293b] border border-[#6e3691]/30 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
+        <div class="bg-[#1e1e1e] border border-[#6e3691]/30 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
             <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 space-y-4 lg:space-y-0">
                 <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full lg:w-auto">
                     <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">Compliance Summary</h1>
@@ -20,7 +20,7 @@ compliance frameworks.{% endblock %}
                     <span class="text-sm text-gray-400">View as User:</span>
                     <div class="relative inline-block text-left w-full sm:w-auto">
                         <button type="button" onclick="toggleUserDropdown()"
-                            class="w-full sm:w-auto bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2 text-sm flex items-center justify-between space-x-2">
+                            class="w-full sm:w-auto bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2 text-sm flex items-center justify-between space-x-2">
                             <span id="selectedUser">All Users</span>
                             <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -28,13 +28,13 @@ compliance frameworks.{% endblock %}
                             </svg>
                         </button>
                         <div id="userDropdown"
-                            class="hidden absolute z-10 mt-2 w-full sm:w-auto rounded-lg bg-[#1e293b] shadow-lg ring-1 ring-black ring-opacity-5">
+                            class="hidden absolute z-10 mt-2 w-full sm:w-auto rounded-lg bg-[#1e1e1e] shadow-lg ring-1 ring-black ring-opacity-5">
                             <div class="py-1" role="menu">
                                 <button onclick="selectUser('all', 'All Users')"
-                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">All
+                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f0f0f]/50">All
                                     Users</button>
                                 <button onclick="selectUser('pratik', 'Pratik Patel')"
-                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">
+                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f0f0f]/50">
                                     <div class="flex items-center space-x-2">
                                         <img src="/static/images/AWS-Marketplace-Logo-PNG-to-svg-1.png"
                                             alt="AWS" class="w-5 h-5">
@@ -42,7 +42,7 @@ compliance frameworks.{% endblock %}
                                     </div>
                                 </button>
                                 <button onclick="selectUser('saumya', 'Saumya')"
-                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">Saumya</button>
+                                    class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f0f0f]/50">Saumya</button>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@ compliance frameworks.{% endblock %}
             </div>
         </div>
         <!-- Policy Checks Pass/Fail Percent -->
-        <div class="bg-[#1e293b] border border-gray-800 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
+        <div class="bg-[#1e1e1e] border border-gray-800 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
             <h2 class="text-2xl font-bold mb-6">Policy Checks Pass/Fail Percent</h2>
             <div class="space-y-8">
                 <!-- CIS Level 1 -->
@@ -131,7 +131,7 @@ compliance frameworks.{% endblock %}
             </div>
         </div>
         <!-- Assets Pass/Fail Percent -->
-        <div class="bg-[#1e293b] border border-gray-800 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
+        <div class="bg-[#1e1e1e] border border-gray-800 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
             <h2 class="text-2xl font-bold mb-6">Assets Pass/Fail Percent</h2>
             <div class="space-y-8">
                 <!-- CIS Level 1 -->
@@ -173,7 +173,7 @@ compliance frameworks.{% endblock %}
                             <span class="text-sm text-gray-400">View as User:</span>
                             <div class="relative inline-block text-left">
                                 <button type="button" onclick="toggleUserDropdown()"
-                                    class="bg-[#0f172a] border border-gray-700 rounded-lg px-4 py-2 text-sm flex items-center space-x-2">
+                                    class="bg-[#0f0f0f] border border-[#a78bfa]/30 rounded-lg px-4 py-2 text-sm flex items-center space-x-2">
                                     <span id="selectedUser">All Users</span>
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -181,13 +181,13 @@ compliance frameworks.{% endblock %}
                                     </svg>
                                 </button>
                                 <div id="userDropdown"
-                                    class="hidden absolute z-10 mt-2 w-56 rounded-lg bg-[#1e293b] shadow-lg ring-1 ring-black ring-opacity-5">
+                                    class="hidden absolute z-10 mt-2 w-56 rounded-lg bg-[#1e1e1e] shadow-lg ring-1 ring-black ring-opacity-5">
                                     <div class="py-1" role="menu">
                                         <button onclick="selectUser('all', 'All Users')"
-                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">All
+                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f0f0f]/50">All
                                             Users</button>
                                         <button onclick="selectUser('pratik', 'Pratik Patel')"
-                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">
+                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f0f0f]/50">
                                             <div class="flex items-center space-x-2">
                                                 <img src="/static/images/AWS-Marketplace-Logo-PNG-to-svg-1.png"
                                                     alt="AWS" class="w-5 h-5">
@@ -195,7 +195,7 @@ compliance frameworks.{% endblock %}
                                             </div>
                                         </button>
                                         <button onclick="selectUser('saumya', 'Saumya')"
-                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f172a]/50">Saumya</button>
+                                            class="block w-full px-4 py-2 text-sm text-left hover:bg-[#0f0f0f]/50">Saumya</button>
                                     </div>
                                 </div>
                             </div>

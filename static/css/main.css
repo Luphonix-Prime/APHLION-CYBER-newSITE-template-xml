@@ -2,14 +2,17 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: #0f0f0f;
-    color: #f8fafc;
+    color: #ffffff;
 }
 
 /* Custom Colors */
 :root {
     --primary: #6e3691;
-    --primary-hover: #6e3691;
+    --primary-hover: #8b5cf6;
     --secondary: #8b5cf6;
+    --text-primary: #ffffff;
+    --text-secondary: #e5e7eb;
+    --text-muted: #d1d5db;
 }
 
 /* Common Components */
@@ -56,15 +59,17 @@ body {
 }
 
 .text-gradient {
-
-    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    background: linear-gradient(to right, #a78bfa, #c084fc);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .bg-gradient-cyber {
     background: linear-gradient(135deg, #1e293b, #0f0f0f);
+    background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.15) 1px, transparent 0), linear-gradient(135deg, #1e293b, #0f0f0f);
+    background-size: 20px 20px, 100% 100%;
 }
 
 .bg-cyber-pattern {
@@ -152,27 +157,29 @@ body {
     }
 }
 
+/* Universal dotted background pattern for all service pages */
+.bg-gradient-cyber,
+.bg-gradient-to-br,
+.min-h-screen,
+section {
+    background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+}
+
 /* Unique background patterns */
 .bg-pattern-circuit {
-    background-image: radial-gradient(circle at 1px 1px, rgba(139, 92, 246, 0.3) 1px, transparent 0);
+    background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.15) 1px, transparent 0);
     background-size: 20px 20px;
 }
 
 .bg-pattern-matrix {
-    background-image: 
-        linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px),
-        linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px);
-    background-size: 15px 15px;
+    background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
 }
 
 .bg-pattern-emergency {
-    background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(239, 68, 68, 0.1) 10px,
-        rgba(239, 68, 68, 0.1) 20px
-    );
+    background-image: radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
 }
 
 /* Compliance Template Custom Styles */
@@ -182,6 +189,16 @@ body {
 .compliance-card:hover {
     box-shadow: 0 8px 32px 0 rgba(150,85,189,0.25);
     border-color: #6e3691;
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(110, 54, 145, 0.3), 0 10px 10px -5px rgba(110, 54, 145, 0.2);
 }
 
 

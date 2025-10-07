@@ -8,7 +8,7 @@
 <br>
 <br>
 <br>
-<div class="min-h-screen bg-[#0f172a] text-gray-100 py-8">
+<div class="min-h-screen bg-[#0f0f0f] text-gray-100 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Cloud Connection Status -->
         <div class="mb-8">
@@ -27,7 +27,7 @@
             <!-- Asset Count and Graph -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <!-- Asset Count -->
-                <div class="bg-[#1e293b] rounded-lg p-6">
+                <div class="bg-[#1e1e1e] rounded-lg p-6">
                     <div class="flex items-baseline mb-4">
                         <span class="text-4xl font-bold text-[#6e3691]">47</span>
                         <span class="ml-2 text-gray-400">Unique Assets</span>
@@ -39,7 +39,7 @@
                 </div>
 
                 <!-- Assets by Service Graph -->
-                <div class="bg-[#1e293b] rounded-lg p-6">
+                <div class="bg-[#1e1e1e] rounded-lg p-6">
                     <h3 class="text-lg font-medium mb-4">Assets by Services</h3>
                     <div class="flex flex-wrap gap-4">
                         {% for i in '1234567' %}
@@ -54,8 +54,8 @@
             </div>
 
             <!-- Asset Inventory List -->
-            <div class="bg-[#1e293b] rounded-lg overflow-hidden">
-                <div class="p-4 border-b border-gray-700 flex justify-between items-center">
+            <div class="bg-[#1e1e1e] rounded-lg overflow-hidden">
+                <div class="p-4 border-b border border-[#a78bfa]/30 flex justify-between items-center">
                     <h3 class="text-lg font-medium">Asset Inventory List</h3>
                     <div class="flex space-x-3">
                         <a href="{% url 'export_pdf' %}" class="flex items-center space-x-2 px-3 py-1.5 bg-red-500/10 text-red-500 rounded-lg hover:bg-red-500/20 transition-colors">
@@ -70,7 +70,7 @@
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full">
-                        <thead class="bg-[#0f172a]">
+                        <thead class="bg-[#0f0f0f]">
                             <tr>
                                 <th class="px-4 py-3 text-left text-sm font-medium text-gray-400">Asset Name</th>
                                 <th class="px-4 py-3 text-left text-sm font-medium text-gray-400">Description</th>
@@ -79,7 +79,7 @@
                         </thead>
                         <tbody class="divide-y divide-gray-700">
                             {% for i in '12345678901234567890'|make_list %}
-                            <tr class="hover:bg-[#0f172a]/50">
+                            <tr class="hover:bg-[#0f0f0f]/50">
                                 <td class="px-4 py-3 text-sm">AMZN-EC2-Linux-App</td>
                                 <td class="px-4 py-3 text-sm text-gray-400">Server that is installed in project</td>
                                 <td class="px-4 py-3 text-sm">
@@ -91,10 +91,10 @@
                     </table>
                 </div>
                 <!-- Pagination -->
-                <div class="flex items-center justify-between px-4 py-3 border-t border-gray-700">
+                <div class="flex items-center justify-between px-4 py-3 border-t border border-[#a78bfa]/30">
                     <div class="flex items-center space-x-2">
                         <span class="text-sm text-gray-400">Showing</span>
-                        <select class="bg-[#0f172a] border border-gray-700 rounded px-2 py-1 text-sm">
+                        <select class="bg-[#0f0f0f] border border-[#a78bfa]/30 rounded px-2 py-1 text-sm">
                             <option>10</option>
                             <option>20</option>
                             <option>50</option>
@@ -102,11 +102,11 @@
                         <span class="text-sm text-gray-400">entries</span>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <button class="px-3 py-1 text-sm bg-[#0f172a] border border-gray-700 rounded hover:bg-[#1e293b]">Previous</button>
+                        <button class="px-3 py-1 text-sm bg-[#0f0f0f] border border-[#a78bfa]/30 rounded hover:bg-[#1e1e1e]">Previous</button>
                         <button class="px-3 py-1 text-sm bg-[#6e3691] rounded hover:bg-[#8b5cf6]">1</button>
-                        <button class="px-3 py-1 text-sm bg-[#0f172a] border border-gray-700 rounded hover:bg-[#1e293b]">2</button>
-                        <button class="px-3 py-1 text-sm bg-[#0f172a] border border-gray-700 rounded hover:bg-[#1e293b]">3</button>
-                        <button class="px-3 py-1 text-sm bg-[#0f172a] border border-gray-700 rounded hover:bg-[#1e293b]">Next</button>
+                        <button class="px-3 py-1 text-sm bg-[#0f0f0f] border border-[#a78bfa]/30 rounded hover:bg-[#1e1e1e]">2</button>
+                        <button class="px-3 py-1 text-sm bg-[#0f0f0f] border border-[#a78bfa]/30 rounded hover:bg-[#1e1e1e]">3</button>
+                        <button class="px-3 py-1 text-sm bg-[#0f0f0f] border border-[#a78bfa]/30 rounded hover:bg-[#1e1e1e]">Next</button>
                     </div>
                 </div>
             </div>

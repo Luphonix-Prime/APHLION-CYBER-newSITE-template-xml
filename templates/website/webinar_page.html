@@ -29,7 +29,7 @@
             <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ page.title }}</h1>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <div class="bg-[#1e293b] rounded-lg p-4">
+                <div class="bg-[#1e1e1e] rounded-lg p-4">
                     <div class="flex items-center text-gray-400 mb-1">
                         <i class="ri-calendar-line mr-2"></i>
                         <span class="text-sm">Date & Time</span>
@@ -37,7 +37,7 @@
                     <p class="text-white font-medium">{{ page.date|date:"F j, Y \a\t g:i A" }}</p>
                 </div>
                 
-                <div class="bg-[#1e293b] rounded-lg p-4">
+                <div class="bg-[#1e1e1e] rounded-lg p-4">
                     <div class="flex items-center text-gray-400 mb-1">
                         <i class="ri-time-line mr-2"></i>
                         <span class="text-sm">Duration</span>
@@ -45,7 +45,7 @@
                     <p class="text-white font-medium">{{ page.duration_minutes }} minutes</p>
                 </div>
                 
-                <div class="bg-[#1e293b] rounded-lg p-4">
+                <div class="bg-[#1e1e1e] rounded-lg p-4">
                     <div class="flex items-center text-gray-400 mb-1">
                         <i class="ri-user-line mr-2"></i>
                         <span class="text-sm">Presenter</span>
@@ -73,7 +73,7 @@
         
         <!-- Additional Info -->
         {% if page.max_attendees %}
-        <div class="bg-[#1e293b] rounded-xl p-6">
+        <div class="bg-[#1e1e1e] rounded-xl p-6">
             <h3 class="text-xl font-bold mb-2">Event Details</h3>
             <p class="text-gray-300">
                 Limited to {{ page.max_attendees }} attendees. Register early to secure your spot.

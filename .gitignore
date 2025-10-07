@@ -1,19 +1,45 @@
-__pycache__
-aphelioncyber\__pycache__\
-aphelioncyber/__pycache__/
-aphelioncyber/website/__pycache__/
-aphelioncyber\website\__pycache__\
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 
-node_modules
-dist
-.DS_Store
-server/public
-vite.config.ts.*
-*.tar.gz
-.env
+# Django
+*.log
+*.pot
+*.pyc
 db.sqlite3
+db.sqlite3-journal
 *.sqlite3
-/db.sqlite3
-/*.sqlite3
-aphelioncyber/website/__pycache__/urls.cpython-312.pyc
-aphelioncyber/website/__pycache__/views.cpython-312.pyc
+/media
+/staticfiles
+
+# Environment
+.env
+.env.local
+.venv
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Replit
+.replit
+replit.nix
+.config/
+
+# Node (if any)
+node_modules/
+dist/
+*.tar.gz
+
+# Other
+*.log

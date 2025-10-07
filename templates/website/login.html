@@ -4,7 +4,7 @@
 {% block meta_description %}Log in to your Aphelion Cyber Security account to access the platform.{% endblock %}
 
 {% block content %}
-<div class="pt-32 pb-20 min-h-screen flex items-center justify-center bg-gradient-cyber relative">
+<div class="pt-32 pb-20 min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] relative">
     <div class="absolute inset-0 bg-cyber-pattern opacity-10"></div>
     <div class="container max-w-4xl mx-auto px-4 relative z-10">
         <div class="flex items-center gap-12">
@@ -12,7 +12,7 @@
                 <img src="/static/images/logo.png" alt="Aphelion Cyber" class="w-full max-w-[200px]">
             </div>
             <div class="w-full md:w-2/3">
-                <div class="bg-[#1e293b]/80 backdrop-blur-xl border border-gray-800 rounded-xl shadow-xl overflow-hidden">
+                <div class="bg-[#1e1e1e]/80 backdrop-blur-xl border border-gray-800 rounded-xl shadow-xl overflow-hidden">
                     <div class="p-6 sm:p-8">
                         <div class="md:hidden text-center mb-8"">
                             <img src="/static/images/logo.png" alt="Aphelion Cyber" class=" w-24 mb-6" >
@@ -35,7 +35,7 @@
                                         id="email" 
                                         name="email" 
                                         placeholder="your.email@example.com" 
-                                        class="bg-[#0f0f0f]/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 pl-10 text-white"
+                                        class="bg-[#0f0f0f]/50 border border-[#a78bfa]/30 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 pl-10 text-white"
                                         required
                                     >
                                 </div>
@@ -50,7 +50,7 @@
                                         id="password" 
                                         name="password" 
                                         placeholder="••••••••"
-                                        class="bg-[#0f0f0f]/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 pl-10 text-white"
+                                        class="bg-[#0f0f0f]/50 border border-[#a78bfa]/30 rounded-lg focus:ring-2 focus:ring-[#6e3691] focus:border-[#6e3691] w-full p-3 pl-10 text-white"
                                         required
                                     >
                                 </div>
@@ -58,7 +58,7 @@
                             
                             <div class="flex items-center justify-between text-sm">
                                 <label class="flex items-center">
-                                    <input type="checkbox" class="rounded border-gray-700 text-[#6e3691] mr-2">
+                                    <input type="checkbox" class="rounded border border-[#a78bfa]/30 text-[#6e3691] mr-2">
                                     <span class="text-gray-400">Remember me</span>
                                 </label>
                                 <a href="{% url 'forgot_password' %}" class="text-[#6e3691] hover:text-[#8b5cf6] transition-colors">Forgot password?</a>
