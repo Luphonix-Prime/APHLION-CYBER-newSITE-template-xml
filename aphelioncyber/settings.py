@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-default-key-for-devel
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']  # For development only, restrict this in production
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', '[your_render_service_name].onrender.com']  # For development only, restrict this in production
 
 # CSRF settings for Replit
 CSRF_TRUSTED_ORIGINS = [
